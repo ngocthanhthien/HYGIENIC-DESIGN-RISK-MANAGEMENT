@@ -1,0 +1,1444 @@
+<!doctype html>
+<!-- HDRM Academy · © 2026 Đặng Thanh Bình <dangthanhbinh53@gmail.com> · Biên soạn tiếng Việt, thiết kế và phần mềm khóa học. Nội dung gốc: EHEDG Doc. 58 © EHEDG. -->
+<html lang="vi"><head><meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Đặng Thanh Bình"><meta name="copyright" content="© 2026 Đặng Thanh Bình"><meta name="description" content="Khóa học về quản lý rủi ro thiết kế vệ sinh (HDRM) cho nhà xưởng và thiết bị thực phẩm, biên soạn từ EHEDG Doc.58, 2024."><title>HDRM Academy · EHEDG Doc. 58</title>
+<style>
+:root{--bg:#f1f4f1;--paper:#fff;--ink:#173e35;--text:#30483f;--muted:#61756c;--line:#d9e3dc;--green:#12674e;--pale:#e8f3ec;--gold:#b7843b;--amber:#fff3d9;--red:#a53535;--blue:#25566e;--nav:268px;--shadow:0 12px 40px #143f3210;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 'Segoe UI',Arial,sans-serif}h1,h2,h3,h4{color:var(--ink);line-height:1.2;margin:0 0 18px}h1{font-size:clamp(34px,4vw,60px);letter-spacing:-2px}h2{font-size:clamp(28px,3vw,43px);letter-spacing:-1px}h3{font-size:20px}p{margin:0 0 18px}button,input,select,textarea{font:inherit}button,a,input,select,summary{touch-action:manipulation}button{cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:10px 16px;font-weight:600;line-height:1.4}button:hover{background:var(--pale);border-color:var(--green)}button:disabled{cursor:default;opacity:.5}button.primary{background:var(--green);color:#fff;border-color:var(--green)}button.ghost{background:transparent}a{color:var(--green)}:focus-visible{outline:3px solid var(--gold);outline-offset:4px}[hidden]{display:none!important}input,select,textarea{border:1px solid var(--line);background:var(--paper);color:var(--text);padding:10px 12px;border-radius:8px;max-width:100%}label{display:block;font-size:14px;font-weight:600}label input,label select{margin-top:6px;width:100%}small,.small{font-size:13px;color:var(--muted)}.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--green);margin-bottom:18px}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.between{justify-content:space-between}.grow{flex:1}.pill{padding:5px 10px;border-radius:30px;background:var(--pale);font-size:12px;color:var(--green);font-weight:700}.lead{font-size:19px;max-width:780px;color:var(--muted)}.muted{color:var(--muted)}.skip{position:fixed;left:15px;top:-100px;z-index:200;background:white;padding:10px}.skip:focus{top:15px}
+aside#sidebar{position:fixed;inset:0 auto 0 0;width:var(--nav);background:#123e32;color:#e0ece5;z-index:60;padding:28px 20px;display:flex;flex-direction:column;gap:20px;overflow:auto}.brand{display:flex;align-items:center;gap:11px;color:white;font-size:20px;letter-spacing:-.5px;font-weight:800}.brand-icon{height:38px;width:38px;background:#d6bc7d;color:#123e32;border-radius:10px;display:grid;place-items:center;font-size:22px}.brand small{font-size:10px;color:#adc5b6;display:block;letter-spacing:2px;font-weight:500}.sidebar-label{color:#96b5a4;text-transform:uppercase;font-size:10px;letter-spacing:2px}.sidebar-button{display:block;width:100%;text-align:left;border:0;background:transparent;color:#d2e5d9;margin:4px 0;padding:10px 12px;font-size:13px;font-weight:500;line-height:1.45}.sidebar-button:hover,.sidebar-button.active{background:#ffffff15;color:#fff}.sidebar-button.active{box-shadow:inset 3px 0 #d6bc7d}.sidebar-button .num{color:#b6cba8;font-size:11px;margin-right:8px}.sidebar-button.done .num{color:#b0e2b7}.side-footer{margin-top:auto;border-top:1px solid #ffffff20;padding-top:15px;font-size:12px;color:#b1c9bb}.side-footer strong{color:white}.progress{height:5px;background:#ffffff20;border-radius:10px;overflow:hidden;margin:9px 0}.progress i{display:block;height:100%;background:#c7d9a5;transition:width .3s}
+header#topbar{margin-left:var(--nav);height:76px;position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:var(--paper);padding:12px 34px;display:flex;align-items:center;gap:15px}.crumb{font-size:12px;color:var(--muted);flex:1}.crumb b{display:block;color:var(--ink);font-size:14px}.toolbar{display:flex;align-items:center;gap:8px}.toolbar button{padding:8px 11px;font-size:12px}.toolbar select{font-size:12px;padding:8px;max-width:170px}.mobile{display:none}.searchwrap{position:relative}#search{width:190px;font-size:12px}#search-results{position:absolute;right:0;top:45px;width:min(410px,85vw);max-height:65vh;overflow:auto;background:var(--paper);box-shadow:var(--shadow);border:1px solid var(--line);padding:10px;border-radius:12px}#search-results button{display:block;width:100%;text-align:left;font-size:13px;border:0;margin:3px 0}
+main{margin-left:var(--nav);padding:32px 38px 100px;max-width:1660px;min-height:calc(100vh - 76px)}.hero{background:linear-gradient(115deg,#133f33,#22554c);border-radius:22px;color:#dfebe3;padding:48px;display:grid;grid-template-columns:1.3fr 1fr;gap:24px;overflow:hidden;position:relative}.hero h1{color:white}.hero .eyebrow{color:#dbc28b}.hero p{color:#ccdfd3;max-width:580px}.hero button.primary{background:#e2c88f;color:#183e32;border:0}.hero button.ghost{border-color:#ffffff55;color:white}.hero button.ghost:hover{background:#ffffff12}.hero small{color:#b7cfc0}.hero-diagram{display:flex;align-items:center;justify-content:center;min-width:0}.hero svg{width:100%;max-width:400px}.stats{display:flex;gap:32px;flex-wrap:wrap;border-top:1px solid #ffffff25;margin-top:28px;padding-top:20px}.stats b{display:block;font-size:25px;color:white}.stats span{font-size:12px}.section-head{display:flex;justify-content:space-between;align-items:end;margin:36px 0 20px;gap:16px}.section-head h2{font-size:26px;margin:0}.section-head p{font-size:13px;margin:7px 0 0}.modules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.module-card{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:23px;display:grid;grid-template-columns:42px 1fr;gap:17px;text-align:left;transition:transform .15s;align-items:start}.module-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.module-card .badge{background:var(--pale);color:var(--green);height:42px;width:42px;border-radius:12px;display:grid;place-items:center;font-size:15px}.module-card h3{font-size:18px;margin:3px 0 9px}.module-card p{font-size:14px;font-weight:400;color:var(--muted);margin-bottom:14px}.module-card .meta{display:flex;justify-content:space-between;gap:10px;font-size:11px;font-weight:500;color:var(--muted)}.notice{border-left:3px solid var(--gold);padding:14px 20px;background:var(--amber);border-radius:0 9px 9px 0;font-size:14px;margin:24px 0}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px;margin:20px 0;box-shadow:var(--shadow)}.panel>h3{margin-top:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{background:var(--pale);border-radius:12px;padding:22px}.card h3{font-size:18px}.card p{font-size:15px;margin:0}.card .index{font-size:11px;color:var(--green);font-weight:800;display:block;margin-bottom:12px}.lesson{background:var(--paper);padding:36px;border-radius:20px;border:1px solid var(--line);box-shadow:var(--shadow)}.lesson-head{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:26px}.lesson-head .eyebrow{margin-bottom:14px}.lesson h2{max-width:920px}.lesson .lead{margin-bottom:0}.takeaway{margin-top:24px;border-left:4px solid var(--gold);padding:16px 20px;background:var(--amber);font-weight:600;border-radius:0 10px 10px 0}.takeaway small{display:block;color:var(--muted);font-weight:600;margin-bottom:4px}.source{font-size:12px;color:var(--muted);margin:20px 0 0}.lesson-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:22px;margin-top:22px;border-top:1px solid var(--line)}.dots{display:flex;gap:6px}.dots button{border:0;padding:0;width:30px;height:5px;border-radius:3px;background:var(--line)}.dots button.active{background:var(--green)}.dots button.seen{background:#a2c6b0}details{margin-top:18px;border:1px solid var(--line);border-radius:10px;padding:0 18px}summary{cursor:pointer;padding:13px 0;font-weight:600;font-size:14px;color:var(--green)}details p{font-size:15px}.trainer-note{border:1px dashed var(--gold);background:var(--amber);padding:18px;margin-top:18px;border-radius:12px}.trainer-note small{display:block;margin-bottom:7px}.audio{background:var(--paper);border:1px solid var(--line);border-radius:12px;display:flex;gap:9px;flex-wrap:wrap;align-items:center;padding:13px 16px;margin-top:16px;font-size:12px}.audio button,.audio select{font-size:12px;padding:7px 11px}.audio label{display:flex;align-items:center;gap:5px;font-size:12px}.audio label input{width:auto;margin:0}.audio-status{font-size:12px;color:var(--muted)}
+.visual{background:var(--bg);border:1px solid var(--line);padding:24px;border-radius:15px;margin-top:24px}.visual .eyebrow{margin-bottom:8px}.flow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.flow .node{flex:1;min-width:100px;padding:19px 12px;border:1px solid var(--line);border-radius:11px;background:var(--paper);text-align:center;font-weight:600;font-size:14px}.arrow{color:var(--green);font-size:22px}.flow .node small{display:block;font-weight:400}.ahu{display:grid;grid-template-columns:repeat(5,1fr);border:2px solid var(--blue);border-radius:12px;overflow:hidden;background:var(--paper)}.ahu button{border:0;border-right:1px dashed var(--line);border-radius:0;padding:18px 8px;font-size:12px;min-width:0}.ahu button svg{display:block;margin:0 auto 10px;width:55px;height:55px}.ahu button.active{background:var(--pale);box-shadow:inset 0 -4px var(--green)}.explanation{padding:17px 20px;background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-top:12px;font-size:15px;min-height:70px}.room{padding:22px;text-align:center;border-radius:12px;background:var(--paper);border:1px solid var(--line)}.room strong{display:block;font-size:32px}.room input{width:110px}.room h3{font-size:17px}.pressure-grid{display:grid;grid-template-columns:1fr 90px 1fr;align-items:center;gap:12px}.air-arrow{text-align:center;font-size:40px;color:var(--green)}.air-arrow small{font-size:10px;display:block;line-height:1.4}.calc{display:grid;grid-template-columns:1fr 1fr;gap:22px}.fields{display:grid;gap:12px}.metric{font-size:54px;color:var(--green);font-weight:800;line-height:1.2;letter-spacing:-2px}.metric small{font-size:15px;letter-spacing:0}.calc-result{padding:24px;background:var(--pale);border-radius:12px;display:flex;flex-direction:column;justify-content:center}.calc-result p{margin:12px 0 0}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:12px;border:1px solid var(--line);text-align:left}th{background:var(--pale);color:var(--ink)}.sequence{list-style:none;padding:0;display:grid;gap:8px}.sequence li{display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);padding:8px 14px;border-radius:10px}.sequence li span{flex:1}.sequence button{padding:5px 12px}.check-row{display:flex;gap:12px;padding:12px;border-bottom:1px solid var(--line);align-items:start}.check-row input{margin:5px 0 0;width:auto}.check-row span{font-weight:400}.choice{display:block;text-align:left;width:100%;padding:15px 18px;border:1px solid var(--line);background:var(--paper);margin:9px 0;font-weight:500}.choice.selected{background:var(--pale);border-color:var(--green);box-shadow:inset 3px 0 var(--green)}.choice.correct{border-color:var(--green);background:var(--pale)}.choice.wrong{border-color:var(--red);background:#fff1eb;color:#803020}.feedback{padding:16px;background:var(--pale);border-radius:10px;margin:14px 0;font-size:14px}.feedback.bad{background:var(--amber)}fieldset{border:0;margin:0;padding:0;min-width:0}legend{font-size:20px;color:var(--ink);font-weight:700;padding:0;margin-bottom:16px;line-height:1.5}.question-card{padding:26px;border:1px solid var(--line);border-radius:13px;margin:18px 0;background:var(--paper)}.exam-progress{position:sticky;top:76px;z-index:20;background:var(--paper);border:1px solid var(--line);padding:14px 20px;border-radius:10px;margin:20px 0}.history-item{border-top:1px solid var(--line);padding:16px 0}.certificate{border:double 6px var(--green);padding:42px;text-align:center;max-width:920px;margin:25px auto;background:var(--paper)}.certificate h2{font-size:31px}.certificate .learner-name{font-size:34px;color:var(--green);font-weight:700;margin:25px 0}.certificate .cert-line{width:90px;height:3px;background:var(--gold);margin:25px auto}.certificate p{margin:10px 0}.certificate small{display:block}.source-index li{margin:12px 0}.empty{padding:40px;text-align:center}#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#163f32;color:white;z-index:200;padding:14px 22px;border-radius:12px;max-width:90vw;box-shadow:var(--shadow);font-size:14px}dialog{border:1px solid var(--line);border-radius:20px;padding:32px;background:var(--paper);color:var(--text);width:min(540px,95vw);max-height:90vh}dialog::backdrop{background:#0a251dcc;backdrop-filter:blur(5px)}dialog h2{font-size:29px}dialog label{margin:15px 0}dialog .error{color:var(--red);font-size:14px}.storage-alert{position:sticky;top:76px;z-index:50;padding:10px 20px;background:#ffdfad;color:#563b0c;font-size:13px;margin-left:var(--nav)}
+body.dark{--bg:#10231d;--paper:#19362b;--ink:#e2ecdf;--text:#d6e5da;--muted:#a8c0b1;--line:#375347;--green:#9cd5b4;--pale:#224735;--amber:#42391f;--gold:#dabb7a;--blue:#92b7c6;color-scheme:dark}.dark button.primary{background:#a9d6b6;color:#173e35}.dark .hero button.primary{background:#e2c88f}.dark .choice.wrong{background:#4b302a;color:#f5c5b7}.dark .feedback.bad{background:#42391f}.dark .hero{background:linear-gradient(115deg,#173f32,#284f46)}
+body.present #sidebar{display:none}body.present #topbar,body.present main,body.present .storage-alert{margin-left:0}body.present main{max-width:1500px;margin:0 auto;padding:22px 35px 80px}body.present .lesson .card p{font-size:18px}body.present .lesson h2{font-size:clamp(30px,3.2vw,49px)}body.present .lesson{padding:32px 40px;zoom:var(--deck-zoom,1)}body.present .lesson .lead{font-size:21px}body.present .lesson-nav{background:var(--paper);padding-bottom:8px}body.present .source{font-size:11px}
+@media(min-width:1700px){main{margin-right:auto;margin-left:calc(var(--nav) + (100vw - 1700px)/2)}}
+@media(max-width:1150px){:root{--nav:230px}header#topbar{padding:12px 22px}main{padding:25px 22px 80px}.hero{padding:32px;grid-template-columns:1.6fr 1fr}.hero h1{font-size:40px}.grid{gap:12px}.card{padding:18px}#search{width:155px}.toolbar{gap:5px}.toolbar select{max-width:125px}}
+@media(max-width:900px){:root{--nav:0px}#sidebar{width:268px!important;transform:translateX(-100%)}#sidebar.open{transform:translateX(0)}.mobile{display:inline-flex}.toolbar .desktop{display:none}header#topbar{padding:10px 15px;height:70px}.crumb{font-size:10px}.crumb b{font-size:12px}.hero{grid-template-columns:1fr 0.8fr;padding:28px}.hero h1{font-size:36px}.grid{grid-template-columns:1fr}.card h3{margin-bottom:10px}.lesson{padding:26px}.lesson-head{padding-bottom:20px}.exam-progress,.storage-alert{top:70px}.panel{padding:24px}}
+@media(max-width:600px){main{padding:18px 12px 65px}.hero{grid-template-columns:1fr;padding:26px}.hero-diagram{display:none}.hero h1{font-size:38px}.stats{gap:24px}.modules{grid-template-columns:1fr}.module-card{padding:19px}.toolbar select{max-width:105px}.toolbar button{padding:8px}.searchwrap{display:none}.crumb span{display:none}.two{grid-template-columns:1fr}.lesson{padding:23px 18px}.lesson h2{font-size:29px}.lead{font-size:17px}.visual{padding:16px}.ahu{grid-template-columns:repeat(5,1fr)}.ahu button{font-size:10px;padding:12px 4px}.ahu button svg{width:34px;height:34px}.pressure-grid{grid-template-columns:1fr 45px 1fr;gap:6px}.room{padding:15px 8px}.room input{width:80px}.air-arrow{font-size:29px}.calc{grid-template-columns:1fr}.lesson-nav{flex-wrap:wrap}.lesson-nav small{display:none}.dots{order:3;width:100%;justify-content:center;margin-top:10px}.audio label{font-size:11px}.panel{padding:22px 17px}.certificate{padding:24px 18px}.certificate h2{font-size:24px}.question-card{padding:20px 16px}body.present main{padding:12px 10px 50px}body.present .lesson{padding:23px 18px}body.present .lesson .card p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{*{outline:none!important}body.present .lesson{zoom:1!important}#print-checklist ul{list-style:none;padding-left:0}#print-checklist li{margin:14px 0}.certificate small{color:#40584c!important}body{background:white!important;color:black!important;font-size:11pt}#sidebar,#topbar,#toast,dialog,.storage-alert,.no-print{display:none!important}main,body.present main{margin:0!important;max-width:none;padding:0!important}.panel{box-shadow:none;border:0;padding:0}.certificate{color:black!important;background:white!important;break-inside:avoid;border-color:#234b3b}.certificate h2,.certificate .learner-name{color:#173e35}.print-checklist{display:block!important}.print-checklist h2{font-size:22pt}.print-checklist li{margin:14px 0}.print-only{display:block!important}body.print-cert main>*{display:none!important}body.print-cert #cert-area{display:block!important}body.print-check main>*{display:none!important}body.print-check #print-checklist{display:block!important}a{color:black}.lesson{break-after:page}}
+.audio{position:relative}.tts-track{position:absolute;top:0;left:0;right:0;height:3px;background:var(--line);overflow:hidden;border-radius:12px}.tts-track i{display:block;height:100%;width:0;background:var(--gold)}.tts-disclosure{width:100%;font-size:10px}.audio-status{flex:1;min-width:180px}body.present .audio{position:fixed;bottom:12px;left:24px;right:24px;z-index:55;box-shadow:var(--shadow);margin:0}body.present main{padding-bottom:180px}body.present .audio label{white-space:nowrap}body.present .audio select{width:auto}body.present .audio .audio-status{font-size:11px}@media(max-width:650px){body.present .audio{left:8px;right:8px;bottom:6px;gap:6px;padding:10px}.audio button{padding:7px 9px}body.present main{padding-bottom:220px}.tts-disclosure{font-size:9px}}@media print{.audio{display:none!important}}
+/* ===== Theme v1.1: vivid module palette, gradient slide headers, motion ===== */
+:root{--bg:#f2f4fb;--paper:#fff;--ink:#131c3a;--text:#33405e;--muted:#66728f;--line:#dfe4f2;--green:#1557d6;--pale:#e8f0ff;--gold:#f59e0b;--amber:#fff4d6;--red:#d43d4f;--blue:#1557d6;--shadow:0 14px 44px #1a2a6014;--m:#1557d6;--m2:#19b5e8}
+body.dark{--bg:#0b1124;--paper:#141d3a;--ink:#eef2ff;--text:#d3dbf0;--muted:#9eabcb;--line:#2a3760;--green:#8fb6ff;--pale:#1b2850;--amber:#3a3015;--gold:#ffc55a;--blue:#8fb6ff;color-scheme:dark}
+[data-m="1"]{--m:#1557d6;--m2:#19b5e8}[data-m="2"]{--m:#6d3be0;--m2:#c14fe6}[data-m="3"]{--m:#d42f4b;--m2:#ff7a3d}[data-m="4"]{--m:#c45a00;--m2:#f5a81c}[data-m="5"]{--m:#078a77;--m2:#25c7a0}[data-m="6"]{--m:#1c8a3a;--m2:#86c92a}[data-m="7"]{--m:#bf2585;--m2:#f2609c}[data-m="8"]{--m:#3a48d0;--m2:#2aa9ea}
+.dark button.primary{background:#8fb6ff;color:#0b1124}
+aside#sidebar{background:linear-gradient(180deg,#0f1838,#1c1552)}
+.brand-icon{background:linear-gradient(135deg,#ffb020,#ff5d8f);color:#fff}.brand small{color:#a9b3da}.sidebar-label{color:#93a0cc}.sidebar-button{color:#d5dcf5;transition:background .2s,transform .2s}.sidebar-button:hover{transform:translateX(3px)}
+.sidebar-button[data-m] .num{display:inline-grid;place-items:center;min-width:24px;height:22px;padding:0 5px;border-radius:7px;background:var(--m);color:#fff;font-weight:700}.sidebar-button[data-m].active{box-shadow:inset 4px 0 var(--m2)}.sidebar-button.done .num{background:#1c8a3a;color:#fff}
+.side-footer{color:#aab4d8}.progress i{background:linear-gradient(90deg,#19b5e8,#86c92a,#f5a81c)}
+#course-progress{position:absolute;left:0;right:0;bottom:-3px;height:4px;pointer-events:none}#course-progress i{display:block;height:100%;width:0;border-radius:0 4px 4px 0;background:linear-gradient(90deg,#1557d6,#6d3be0,#d42f4b,#f5a81c,#25c7a0);transition:width .6s cubic-bezier(.2,.8,.2,1)}
+#toast{background:linear-gradient(100deg,#131c3a,#3a2bb0);animation:pop .3s both}
+.hero,.dark .hero{background:linear-gradient(125deg,#0f1b4d 0%,#3a2bb0 48%,#b0268a 100%)}
+.hero>*{position:relative;z-index:1}.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(50px);opacity:.55;animation:float 9s ease-in-out infinite}.hero::before{width:320px;height:320px;background:#19b5e8;left:-90px;bottom:-140px}.hero::after{width:280px;height:280px;background:#ff7a3d;right:-70px;top:-110px;animation-delay:-4s}
+.hero .eyebrow,.stats b{color:#ffd166}.hero p{color:#e3e6ff}.hero small,.stats span{color:#c9cdf5}
+.hero button.primary,.dark .hero button.primary{background:linear-gradient(135deg,#ffd166,#ff9f43);color:#1a1440;box-shadow:0 8px 24px #ff9f4355;transition:transform .2s,box-shadow .2s}.hero button.primary:hover{background:linear-gradient(135deg,#ffe08a,#ffb061);transform:translateY(-2px)}
+.module-card[data-m]{position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s}.module-card[data-m]::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(180deg,var(--m),var(--m2))}
+.module-card[data-m]:hover{transform:translateY(-4px);background:var(--paper);border-color:var(--m);box-shadow:0 16px 36px color-mix(in srgb,var(--m) 24%,transparent)}
+.module-card[data-m] .badge{background:linear-gradient(135deg,var(--m),var(--m2));color:#fff;font-weight:800;box-shadow:0 6px 14px color-mix(in srgb,var(--m) 35%,transparent)}.module-card[data-m] .meta span:last-child{color:var(--m);font-weight:700}
+main:not([data-m=""]) .pill{background:linear-gradient(135deg,var(--m),var(--m));color:#fff}main:not([data-m=""])>.eyebrow{color:var(--m)}
+.lesson{--lp:36px;--lpx:36px;padding:var(--lp) var(--lpx);overflow:hidden;border-color:color-mix(in srgb,var(--m) 18%,var(--line))}
+body.present .lesson{--lp:32px;--lpx:40px}
+.lesson .lesson-head{margin:calc(-1*var(--lp)) calc(-1*var(--lpx)) 26px;padding:34px var(--lpx) 30px;border:0;position:relative;overflow:hidden;color:#fff;background:linear-gradient(112deg,var(--m) 0%,var(--m) 42%,var(--m2) 135%)}
+.lesson .lesson-head>*{position:relative;z-index:1}.lesson .lesson-head h2{color:#fff;text-shadow:0 2px 12px #0003}.lesson .lesson-head .lead{color:#fffffff0;max-width:860px}.lesson .lesson-head .eyebrow{color:#ffffffd9}
+.lesson .lesson-head::after{content:attr(data-n);position:absolute;right:26px;top:50%;transform:translateY(-50%);font-size:170px;font-weight:900;line-height:1;letter-spacing:-8px;color:#ffffff1f;pointer-events:none}
+.lesson .lesson-head::before{content:"";position:absolute;top:0;bottom:0;left:0;width:30%;background:linear-gradient(90deg,transparent,#ffffff2e,transparent);transform:translateX(-120%) skewX(-18deg);pointer-events:none}
+.lesson .card{background:color-mix(in srgb,var(--m) 6%,var(--paper));border:1px solid color-mix(in srgb,var(--m) 16%,var(--line));border-top:4px solid var(--m);box-shadow:0 6px 18px #1a2a600d;transition:transform .2s,box-shadow .2s}
+.lesson .card:nth-child(2){border-top-color:color-mix(in srgb,var(--m) 50%,var(--m2))}.lesson .card:nth-child(3){border-top-color:var(--m2)}
+.lesson .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px color-mix(in srgb,var(--m) 20%,transparent)}
+.lesson .card .index{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--m),var(--m));color:#fff;font-size:13px;box-shadow:0 5px 12px color-mix(in srgb,var(--m) 35%,transparent)}
+.example{position:relative;margin-top:22px;padding:18px 22px 18px 66px;border-radius:14px;font-size:16px;color:var(--ink);background:linear-gradient(100deg,color-mix(in srgb,var(--m2) 17%,var(--paper)),color-mix(in srgb,var(--m) 7%,var(--paper)));border:1.5px dashed color-mix(in srgb,var(--m) 50%,transparent)}
+.example::before{content:"💡";position:absolute;left:18px;top:15px;font-size:28px;line-height:1.2}.example small{display:block;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--m);margin-bottom:4px}.example small i{font-style:normal;font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}
+.lesson .takeaway{background:linear-gradient(100deg,#131c3a,#2b2f7a);color:#fff;border-left:6px solid #ffb020;border-radius:12px;font-size:17px;padding:18px 22px}.lesson .takeaway small{color:#ffd166;letter-spacing:1.5px}
+.visual{border-color:color-mix(in srgb,var(--m) 28%,var(--line));background:color-mix(in srgb,var(--m) 4%,var(--bg))}.flow .node{border-top:3px solid var(--m);transition:transform .2s}.flow .node:hover{transform:translateY(-3px)}.arrow,.metric{color:var(--m)}.ahu{border-color:var(--m)}.ahu button.active{box-shadow:inset 0 -4px var(--m)}.visual .eyebrow{color:var(--m)}
+.dots button{transition:width .3s,background .3s}.dots button.active{width:48px;background:linear-gradient(90deg,var(--m),var(--m2))}.dots button.seen{background:color-mix(in srgb,var(--m) 40%,var(--line))}
+.lesson .lesson-nav button.primary{background:var(--m);border-color:var(--m);color:#fff;transition:transform .2s,filter .2s}.lesson .lesson-nav button.primary:hover{background:var(--m);filter:brightness(1.12);transform:translateX(3px)}
+.choice{transition:transform .15s,border-color .15s,background .15s}.choice:hover{transform:translateX(4px)}
+.dark .metric,.dark .arrow,.dark .example small,.dark .visual .eyebrow,.dark .module-card[data-m] .meta span:last-child,.dark main:not([data-m=""])>.eyebrow{color:var(--m2)}.dark .example small i{color:var(--muted)}
+@keyframes inR{from{opacity:0;transform:translateX(56px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes inL{from{opacity:0;transform:translateX(-56px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes sheen{to{transform:translateX(480%) skewX(-18deg)}}
+@keyframes float{50%{transform:translate(20px,-24px) scale(1.1)}}
+main[data-anim="enter-next"] .lesson{animation:inR .5s cubic-bezier(.2,.8,.2,1) both}main[data-anim="enter-prev"] .lesson{animation:inL .5s cubic-bezier(.2,.8,.2,1) both}
+main[data-anim^="enter"] .lesson-head::before{animation:sheen 1.1s .25s ease-out both}
+main[data-anim^="enter"] .lesson-head h2{animation:rise .5s .12s cubic-bezier(.2,.8,.2,1) both}main[data-anim^="enter"] .lesson-head .lead{animation:rise .5s .2s cubic-bezier(.2,.8,.2,1) both}
+main[data-anim^="enter"] .lesson .card{animation:rise .55s cubic-bezier(.2,.8,.2,1) both;animation-delay:.26s}main[data-anim^="enter"] .lesson .card:nth-child(2){animation-delay:.36s}main[data-anim^="enter"] .lesson .card:nth-child(3){animation-delay:.46s}
+main[data-anim^="enter"] .example{animation:pop .5s .58s both}main[data-anim^="enter"] .lesson .visual{animation:rise .5s .66s both}main[data-anim^="enter"] .lesson .takeaway{animation:rise .5s .72s both}
+main[data-anim^="enter"]>:not(.lesson):not(.audio):not(.modules){animation:rise .45s cubic-bezier(.2,.8,.2,1) both}
+main[data-anim^="enter"] .module-card{animation:rise .5s cubic-bezier(.2,.8,.2,1) both}main[data-anim^="enter"] .module-card:nth-child(1){animation-delay:.08s}main[data-anim^="enter"] .module-card:nth-child(2){animation-delay:.13s}main[data-anim^="enter"] .module-card:nth-child(3){animation-delay:.18s}main[data-anim^="enter"] .module-card:nth-child(4){animation-delay:.23s}main[data-anim^="enter"] .module-card:nth-child(5){animation-delay:.28s}main[data-anim^="enter"] .module-card:nth-child(6){animation-delay:.33s}main[data-anim^="enter"] .module-card:nth-child(7){animation-delay:.38s}main[data-anim^="enter"] .module-card:nth-child(8){animation-delay:.43s}
+@media(max-width:900px){.lesson{--lp:26px;--lpx:26px}.lesson .lesson-head::after{font-size:120px}}
+@media(max-width:600px){.lesson,body.present .lesson{--lp:23px;--lpx:18px}.lesson .lesson-head{padding-top:26px;padding-bottom:24px}.lesson .lesson-head::after{font-size:90px;right:10px}.example{padding-left:56px}.example::before{left:14px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@media print{*{animation:none!important}.lesson .lesson-head,.lesson .takeaway{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+/* ===== v1.2 present mode: bars auto-hide, slide fits the viewport ===== */
+body.present #topbar{position:fixed;top:0;left:0;right:0;z-index:70;transform:translateY(-110%);transition:transform .3s cubic-bezier(.2,.8,.2,1);box-shadow:var(--shadow)}
+body.present.show-top #topbar,body.present #topbar:hover,body.present #topbar:focus-within{transform:none}
+body.present .audio{transform:translateY(calc(100% + 30px));transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+body.present.show-bottom .audio,body.present .audio:hover,body.present .audio:focus-within{transform:none}
+html:has(body.present){scrollbar-width:none}
+body.present main{max-width:none;padding:14px 22px;min-height:100vh}
+body.present main:has(.lesson){display:flex;flex-direction:column;justify-content:center}
+body.present main>.row.no-print:first-child,body.present .lesson details,body.present .storage-alert{display:none!important}
+body.present .lesson .lesson-nav{margin-top:16px;padding-top:14px}
+@media(min-width:1100px){body.present .lesson{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);column-gap:22px;grid-auto-flow:row dense;align-items:start}body.present .lesson>*{grid-column:1/-1}body.present .lesson:has(>.visual)>.visual{grid-column:1;grid-row:span 2}body.present .lesson:has(>.visual)>.example,body.present .lesson:has(>.visual)>.takeaway{grid-column:2}body.present .lesson:not(:has(>.visual))>.example{grid-column:1}body.present .lesson:not(:has(>.visual))>.takeaway{grid-column:2;align-self:stretch;display:flex;flex-direction:column;justify-content:center;margin-top:22px}}
+@media print{body.present #topbar,body.present .audio{transform:none}}
+/* ===== open variant: no sign-in, author credit ===== */
+#profile,[data-profile]{display:none!important}
+.author{display:flex;gap:18px;align-items:center;margin:26px 0;padding:22px 26px;border-radius:18px;color:#fff;background:linear-gradient(120deg,#131c3a,#3a2bb0 60%,#b0268a);box-shadow:var(--shadow)}
+.author .avatar{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:20px;color:#1a1440;background:linear-gradient(135deg,#ffd166,#ff9f43)}
+.author small{display:block;color:#c9cdf5;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700}.author b{display:block;font-size:20px;color:#fff;line-height:1.3}.author a{color:#ffd166}.author p{margin:6px 0 0;font-size:12px;color:#d7daf7}
+.side-footer .copyright{margin:8px 0 0;font-size:10px;color:#fff}
+#cert-area label{margin:0;font-weight:500;font-size:13px}#cert-area label input{width:260px}
+@media(max-width:600px){.author{flex-direction:column;align-items:flex-start}}
+/* ===== HDRM course: risk matrix ===== */
+.mx{border-collapse:separate;border-spacing:4px;width:100%;margin:0}.mx th,.mx td{border:0;text-align:center;padding:9px 4px;font-size:12px;border-radius:8px;background:transparent}.mx td{color:#fff;font-weight:700;transition:transform .2s,box-shadow .2s}.mx td.sel{transform:scale(1.08);box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--ink)}
+</style></head><body>
+<a class="skip" href="#main">Bỏ qua điều hướng</a>
+<aside id="sidebar" aria-label="Điều hướng khóa học"></aside>
+<header id="topbar"><div id="course-progress" aria-hidden="true"><i></i></div><button class="mobile" id="menu" aria-label="Mở mục lục" aria-expanded="false">☰</button><div class="crumb"><b>HDRM ACADEMY</b><span>EHEDG Doc. 58 / Khóa học nội bộ</span></div><div class="toolbar"><div class="searchwrap"><input id="search" type="search" aria-label="Tìm nội dung" placeholder="Tìm bài học…"><div id="search-results" hidden></div></div><select id="role" aria-label="Chế độ học"><option value="learner">Học viên</option><option value="trainer">Giảng viên</option></select><button id="present" class="desktop">Trình chiếu</button><button id="theme" aria-label="Đổi sáng tối">◐</button><button id="profile" aria-label="Thông tin học viên">Học viên</button></div></header>
+<div id="storage-alert" class="storage-alert" role="status" hidden></div><main id="main" tabindex="-1"></main>
+<div id="toast" role="status" hidden></div>
+<dialog id="profile-dialog" aria-labelledby="profile-title"><form id="profile-form"><div class="eyebrow">HỒ SƠ HỌC TẬP</div><h2 id="profile-title">Sẵn sàng bắt đầu?</h2><p class="muted">Nhập thông tin để lưu tiến độ và ghi trên xác nhận hoàn thành.</p><label>Mã nhân viên<input id="emp-id" required maxlength="30" autocomplete="off" placeholder="Ví dụ: NV-0123"></label><label>Họ và tên<input id="emp-name" required maxlength="80" autocomplete="name" placeholder="Họ và tên của bạn"></label><label>Bộ phận<input id="emp-dept" required maxlength="60" placeholder="Ví dụ: QA / Kỹ thuật / Sản xuất"></label><p class="small">Dữ liệu lưu trong trình duyệt trên máy này. Mỗi mã nhân viên có hồ sơ riêng; không có máy chủ xác minh danh tính.</p><p class="error" id="profile-error" role="alert"></p><div class="row"><button class="primary" type="submit">Lưu & tiếp tục</button><button type="button" id="profile-cancel">Để sau</button></div></form></dialog>
+<script id="course-data" type="application/json">{
+  "id": "ild-hdrm58-2024-open-v1",
+  "version": "1.0",
+  "title": "Quản lý rủi ro thiết kế vệ sinh (HDRM)",
+  "subtitle": "Nhận diện • Đánh giá • Giảm thiểu",
+  "source": "EHEDG Doc. 58 · May 2024 · 33 trang và phụ lục",
+  "audience": "QA / QC · Kỹ thuật · Dự án · Sản xuất · Vệ sinh · Mua hàng",
+  "duration": "60–80 phút",
+  "passPercent": 85,
+  "examPerModule": 2,
+  "modules": [
+    {
+      "id": 1,
+      "title": "HDRM & phạm vi tài liệu",
+      "description": "Thiết kế vệ sinh là gì và Doc. 58 trả lời câu hỏi nào.",
+      "duration": "6–8 phút",
+      "objective": "Nêu được ba cơ chế nhiễm, phạm vi của HDRM và năm bước của mô hình."
+    },
+    {
+      "id": 2,
+      "title": "Mục tiêu & năm nguyên tắc",
+      "description": "Ba mục tiêu, năm nguyên tắc và quan hệ với HACCP.",
+      "duration": "7–9 phút",
+      "objective": "Gọi đúng năm nguyên tắc thiết kế vệ sinh; phân biệt HDRM với HACCP."
+    },
+    {
+      "id": 3,
+      "title": "Đội ngũ, giao tiếp & thông tin",
+      "description": "Ai tham gia, người mua và người bán trao đổi gì.",
+      "duration": "7–9 phút",
+      "objective": "Xác định thành phần đội HDRM, vai trò của URS và IFU, các nguồn thông tin đầu vào."
+    },
+    {
+      "id": 4,
+      "title": "Bối cảnh quyết định mức thiết kế",
+      "description": "Chuỗi cung ứng, phơi nhiễm, vòng đời, thiết bị cũ.",
+      "duration": "8–10 phút",
+      "objective": "Giải thích vì sao mức thiết kế vệ sinh thay đổi theo vị trí, vòng đời và mức tích hợp."
+    },
+    {
+      "id": 5,
+      "title": "Phạm vi, tiêu chí & nhận diện rủi ro",
+      "description": "Bước 1 và bước 2 của mô hình.",
+      "duration": "8–10 phút",
+      "objective": "Xác lập phạm vi – bối cảnh – tiêu chí; mô tả rủi ro bằng chất nhiễm và cơ chế nhiễm."
+    },
+    {
+      "id": 6,
+      "title": "Phân tích & đánh giá rủi ro",
+      "description": "Tác động, khả năng xảy ra và ma trận.",
+      "duration": "8–10 phút",
+      "objective": "Xếp mức tác động và khả năng xảy ra; dùng ma trận để trao đổi về độ lớn rủi ro."
+    },
+    {
+      "id": 7,
+      "title": "Giảm rủi ro vệ sinh",
+      "description": "Thứ bậc biện pháp và cách cân nhắc.",
+      "duration": "8–10 phút",
+      "objective": "Xếp biện pháp theo hiệu quả và độ tin cậy; cân nhắc tổng chi phí sở hữu."
+    },
+    {
+      "id": 8,
+      "title": "Kiểm chứng, giám sát & báo cáo",
+      "description": "Giữ cho thiết bị còn phù hợp mục đích.",
+      "duration": "8–10 phút",
+      "objective": "Phân biệt kiểm tra xác nhận, thẩm định, giám sát; nêu nội dung báo cáo HDRM."
+    }
+  ],
+  "slides": [
+    {
+      "id": 1,
+      "module": 1,
+      "title": "Thiết kế vệ sinh: chặn nhiễm bẩn từ bản vẽ",
+      "lead": "Thiết kế vệ sinh nhằm ngăn chất nhiễm đi vào, tích tụ hoặc phát triển trong dòng sản phẩm.",
+      "cards": [
+        {
+          "title": "Một chương trình tiên quyết",
+          "text": "Thiết kế vệ sinh hỗ trợ HACCP trong hệ thống quản lý an toàn thực phẩm bằng cách giảm số rủi ro vệ sinh lường trước được xuống mức tối thiểu thực tế."
+        },
+        {
+          "title": "Đánh giá rồi giảm thiểu",
+          "text": "HDRM gồm đánh giá rủi ro vệ sinh, giảm rủi ro bằng thiết kế, chế tạo, tích hợp, lắp đặt, và xử lý rủi ro còn lại bằng quy trình vận hành như vệ sinh, bảo trì."
+        },
+        {
+          "title": "An toàn và cả chất lượng",
+          "text": "Rủi ro vệ sinh chủ yếu là rủi ro an toàn thực phẩm, nhưng bao gồm cả rủi ro đối với chất lượng sản phẩm."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-4) Một nhà máy bơ đậu phộng phát hiện Salmonella trong hũ thành phẩm. Nguồn gốc: phân chim rơi lên bao đậu thấm nước khi vận chuyển ngoài trời, và lên hũ đã chiết nhưng chưa đóng nắp.",
+      "takeaway": "Biện pháp bằng thiết kế không phụ thuộc vào kỷ luật hằng ngày của con người; quy trình thì có.",
+      "source": "Tóm tắt & Giới thiệu, tr. 6; §5.4, tr. 27",
+      "narration": "Chào mừng bạn đến với khóa học về quản lý rủi ro thiết kế vệ sinh, gọi tắt là HDRM. Hãy bắt đầu bằng một câu chuyện có trong tài liệu. Một nhà máy bơ đậu phộng phát hiện vi khuẩn Salmonella trong hũ thành phẩm. Không ai hiểu vì sao. Quy trình vệ sinh vẫn làm đủ. Sau khi điều tra, thủ phạm lộ diện. Đó là chim bồ câu. Phân chim rơi lên những bao đậu thấm nước khi chở ngoài trời. Và rơi cả lên những hũ đã chiết nhưng chưa kịp đóng nắp. Không quy trình vệ sinh nào sửa được điều đó. Vấn đề nằm ở thiết kế. Thiết kế vệ sinh có một mục tiêu rất rõ. Không để chất nhiễm đi vào, đọng lại, hoặc sinh sôi trong dòng sản phẩm.",
+      "visual": "hero",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 2,
+      "module": 1,
+      "title": "Đúng phạm vi của EHEDG Doc. 58",
+      "lead": "Nguồn học: Hygienic Design Risk Management, tháng 5/2024.",
+      "cards": [
+        {
+          "title": "Trong phạm vi",
+          "text": "Đánh giá sự phù hợp và cải tạo nhà xưởng, thiết bị đang dùng; đặc tả và thiết kế thiết bị, cấu kiện tòa nhà, tiện ích mới; thiết bị đặt riêng theo người dùng."
+        },
+        {
+          "title": "Ai nên dùng",
+          "text": "Mọi bên liên quan tới mua sắm, thiết kế, thẩm định, chế tạo, lắp đặt, vận hành, vệ sinh và bảo trì — cả nhà cung cấp lẫn người sử dụng."
+        },
+        {
+          "title": "Giới hạn",
+          "text": "Tài liệu không phân định trách nhiệm pháp lý của từng bên. Các checklist không đầy đủ và không phải biểu mẫu để điền. Quy định pháp luật luôn được ưu tiên hơn tiêu chuẩn và hướng dẫn."
+        }
+      ],
+      "example": "(Minh họa) Nhóm dự án hỏi: “Doc. 58 yêu cầu độ nhám bề mặt bao nhiêu?” Tài liệu không đặt con số đó. Nó đưa ra cách đánh giá; chi tiết kỹ thuật nằm ở các hướng dẫn EHEDG khác như Doc. 8, 10, 13, 44.",
+      "takeaway": "Loại bỏ chất nhiễm có sẵn trong nguyên liệu có thể là việc cần làm, nhưng không thuộc phạm vi HDRM.",
+      "source": "§1–2, tr. 7–8; §4.3.2, tr. 13; §5.3.1, tr. 23",
+      "narration": "Trước khi đi sâu, cần biết tài liệu này trả lời câu hỏi nào. Tài liệu số năm mươi tám của EHEDG hướng dẫn cách đánh giá và quản lý rủi ro vệ sinh do thiết kế nhà xưởng và thiết bị. Nó dùng được cho cả thiết bị mới lẫn thiết bị đang chạy. Cho cả người bán lẫn người mua. Nhưng nó có giới hạn. Nó không đưa ra thông số kỹ thuật chi tiết như độ nhám bề mặt. Những con số đó nằm ở các hướng dẫn khác. Nó không phân định trách nhiệm pháp lý giữa các bên. Và các danh sách kiểm tra trong phụ lục chỉ để gợi ý, không phải biểu mẫu để điền. Một điều nữa. Loại bỏ chất bẩn có sẵn trong nguyên liệu là việc của quy trình, không thuộc phạm vi này. Xin lưu ý, bài học là bản diễn giải tiếng Việt, không phải bản dịch chính thức.",
+      "visual": "",
+      "trainer": "Hỏi học viên: cơ sở đang có những hướng dẫn EHEDG nào? Ai là người quyết định áp dụng hướng dẫn nào cho một dự án?"
+    },
+    {
+      "id": 3,
+      "module": 1,
+      "title": "Gọi đúng tên để nói cùng một ngôn ngữ",
+      "lead": "Người mua và người bán thiết bị chỉ hiểu nhau khi dùng cùng một bộ thuật ngữ.",
+      "cards": [
+        {
+          "title": "Rủi ro vệ sinh",
+          "text": "Khả năng một mối nguy an toàn thực phẩm hoặc chất nhiễm khác làm nhiễm dòng sản phẩm hay vật liệu, qua xâm nhập, tích tụ hoặc phát triển."
+        },
+        {
+          "title": "Cũ · đặt riêng · đại trà",
+          "text": "Legacy: đang được sử dụng. Assigned: thiết kế cho sản phẩm, quy trình hoặc người dùng cụ thể. Unassigned: thiết kế trước cho nhiều ứng dụng chưa biết."
+        },
+        {
+          "title": "URS và IFU",
+          "text": "URS: các yêu cầu cốt lõi của người dùng đối với tài sản. IFU: thông tin sử dụng mà nhà cung cấp phải giao cho khách hàng."
+        }
+      ],
+      "example": "(Minh họa) Bên mua ghi “bơm dùng cho thực phẩm”, bên bán hiểu là bơm nguyên liệu thô. Thực tế bơm đặt sau thanh trùng. Một dòng URS ghi rõ vị trí và sản phẩm lẽ ra đã tránh được hiểu lầm.",
+      "takeaway": "“Dòng vật liệu” là mọi thứ trừ con người: nguyên liệu, sản phẩm, mẫu, chất thải, bao bì, tiện ích, dụng cụ.",
+      "source": "§3, tr. 8–10",
+      "narration": "Người mua và người bán thiết bị thường nói hai thứ tiếng khác nhau. Hãy hình dung tình huống này. Bên mua ghi trong đơn hàng một cái bơm dùng cho thực phẩm. Bên bán hiểu là bơm cho nguyên liệu thô. Thực tế, cái bơm được đặt sau máy thanh trùng, nơi không còn bước nào diệt khuẩn nữa. Hiểu lầm bắt đầu từ từ ngữ. Vì vậy, hãy nhớ vài thuật ngữ. Rủi ro vệ sinh là khả năng một chất nhiễm đi vào sản phẩm qua xâm nhập, tích tụ hoặc phát triển. Bản yêu cầu người dùng là tài liệu người mua viết ra để nói mình cần gì. Thông tin sử dụng là tài liệu người bán bắt buộc phải giao. Còn thiết bị cũ nghĩa là thiết bị đang được dùng tại nhà máy.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 4,
+      "module": 1,
+      "title": "Năm bước, lặp lại cho tới khi đạt",
+      "lead": "Mô hình HDRM dựa trên các mô hình quản lý rủi ro tổng quát và có tính lặp.",
+      "cards": [
+        {
+          "title": "Phạm vi, bối cảnh, tiêu chí",
+          "text": "Làm rõ đánh giá cái gì, mục đích sử dụng, hoàn cảnh áp dụng và tiêu chí phải đạt."
+        },
+        {
+          "title": "Đánh giá rủi ro",
+          "text": "Nhận diện chất nhiễm và cơ chế nhiễm; rồi phân tích, đánh giá độ lớn từ tác động tiêu cực và khả năng xảy ra."
+        },
+        {
+          "title": "Giảm rủi ro và theo dõi",
+          "text": "Chọn biện pháp giảm rủi ro; kiểm tra xác nhận, thẩm định, giám sát, xem xét; ghi nhận và báo cáo."
+        }
+      ],
+      "example": "(Minh họa) Sau khi thêm nắp che cho băng tải, nhóm quay lại bước nhận diện: nắp che tạo thêm bề mặt phải vệ sinh và một điểm đọng nước mới. Thêm một vòng lặp trước khi chốt thiết kế.",
+      "takeaway": "Lặp lại chuỗi bước cho tới khi rủi ro vệ sinh giảm tới mức mong muốn.",
+      "source": "§5.1, tr. 20–21; Hình 2",
+      "narration": "Mô hình quản lý rủi ro thiết kế vệ sinh có năm bước. Bước một, xác định phạm vi, bối cảnh và tiêu chí. Ta đang đánh giá cái gì, dùng vào việc gì, phải đạt điều gì. Bước hai, nhận diện rủi ro. Chất nhiễm nào, đi vào bằng đường nào. Bước ba, phân tích và đánh giá. Hậu quả nặng tới đâu, dễ xảy ra tới mức nào. Bước bốn, giảm rủi ro. Và bước năm, kiểm chứng, giám sát, rồi ghi lại thành báo cáo. Điểm quan trọng nhất là mô hình có tính lặp. Giả sử ta thêm một nắp che cho băng tải. Rất tốt. Nhưng nắp che lại tạo ra bề mặt mới phải vệ sinh và một chỗ đọng nước mới. Vậy phải quay lại bước hai. Cứ thế cho tới khi rủi ro giảm tới mức mong muốn.",
+      "visual": "model",
+      "trainer": "Yêu cầu học viên kể một lần biện pháp khắc phục lại tạo ra vấn đề vệ sinh mới."
+    },
+    {
+      "id": 5,
+      "module": 2,
+      "title": "Ba mục tiêu: không vào, không đọng, không sinh sôi",
+      "lead": "Mọi rủi ro vệ sinh đều quy về một trong ba cơ chế.",
+      "cards": [
+        {
+          "title": "Ngăn xâm nhập",
+          "text": "Không để chất nhiễm đi vào nhà xưởng, thiết bị, vật liệu. Chất nhiễm có thể đến từ ngoài hoặc do chính thiết bị sinh ra, ví dụ phoi kim loại do chuyển động quay."
+        },
+        {
+          "title": "Ngăn tích tụ",
+          "text": "Không để cặn thực phẩm, mảnh vụn, bụi bẩn, hóa chất vệ sinh hay vật liệu có hại từ sản xuất, vệ sinh, bảo trì đọng lại."
+        },
+        {
+          "title": "Ngăn phát triển",
+          "text": "Không để vi sinh vật và động vật gây hại phát triển trong nhà xưởng, máy móc suốt vòng đời của chúng."
+        }
+      ],
+      "example": "(Doc. 58, §4.4.2) Chân máy có ren hở, hoặc khe hở ở chỗ nối sàn–tường nơi nước vệ sinh bị giữ lại, có thể thành nơi vi khuẩn gây bệnh phát triển trong khu có sản phẩm hở, nhạy cảm vi sinh.",
+      "takeaway": "Một rủi ro vệ sinh luôn mô tả được bằng một chất nhiễm cộng với một trong ba cơ chế này.",
+      "source": "§4.1, tr. 11",
+      "narration": "Hãy nghĩ về căn bếp nhà bạn. Có ba điều bạn không bao giờ muốn. Một, ruồi bay vào. Hai, thức ăn thừa đọng lại trong khe tủ. Ba, nấm mốc mọc lên từ chỗ ẩm. Thiết kế vệ sinh trong nhà máy cũng có đúng ba mục tiêu như vậy. Ngăn xâm nhập. Ngăn tích tụ. Và ngăn phát triển. Xâm nhập có thể từ bên ngoài, nhưng cũng có thể do chính thiết bị sinh ra, ví dụ phoi kim loại từ một trục quay. Tích tụ là cặn sản phẩm, bụi bẩn, hay cả hóa chất vệ sinh đọng lại. Phát triển là vi sinh vật và côn trùng sinh sôi. Một ví dụ từ tài liệu. Chân máy có ren hở, hoặc khe hở nơi sàn gặp tường, giữ nước vệ sinh lại. Đó chính là nơi vi khuẩn gây bệnh có thể phát triển.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 6,
+      "module": 2,
+      "title": "Nguyên tắc 1–2: vật liệu tương thích, tách biệt được",
+      "lead": "Hai nguyên tắc đầu chủ yếu chống lại sự xâm nhập.",
+      "cards": [
+        {
+          "title": "Tương thích vật liệu",
+          "text": "Trơ với sản phẩm, chất tẩy rửa, chất khử trùng; chống ăn mòn, không độc, không gây mùi vị lạ, không xốp, bền cơ học. Kể cả keo, chất trám, chất bôi trơn, vật liệu cách nhiệt."
+        },
+        {
+          "title": "Khả năng tách biệt",
+          "text": "Ngăn xâm nhập và nhiễm chéo bằng rào chắn vật lý, khoảng cách, bố trí mặt bằng, phân vùng vệ sinh hoặc trình tự; cách nhiệt để tránh ngưng tụ."
+        },
+        {
+          "title": "Vật lý hoặc thủ tục",
+          "text": "Tách biệt có thể bằng vật lý hoặc bằng thủ tục; tự động hóa cũng có thể tạo ra sự tách biệt trong quy trình."
+        }
+      ],
+      "example": "(Doc. 58, §4.4.2) Sản phẩm dễ tổn thương có thể cần cả một khu vệ sinh cao bao quanh thiết bị, ví dụ quanh máy sấy trục sản xuất thức ăn dùng ngay cho trẻ nhỏ, vì bản thân thiết bị không bảo vệ đủ.",
+      "takeaway": "Cao su và nhựa có thể giòn khi gặp nhiệt độ cao: tương thích phải xét theo điều kiện thật.",
+      "source": "§4.1, tr. 11–12; §4.4.2, tr. 16",
+      "narration": "Để đạt ba mục tiêu, có năm nguyên tắc thiết kế. Màn hình này nói về hai nguyên tắc đầu. Thứ nhất, vật liệu phải tương thích. Nghĩa là không phản ứng với sản phẩm, không bị hóa chất vệ sinh ăn mòn, không độc, không xốp, không giòn vỡ. Hãy nhớ, vật liệu không chỉ là thép. Keo dán, chất trám, chất bôi trơn cũng là vật liệu. Thứ hai, phải tách biệt được. Tách sạch khỏi bẩn. Tách sống khỏi chín. Có thể tách bằng tường, bằng khoảng cách, bằng phân vùng, hoặc bằng trình tự thời gian. Tài liệu đưa một ví dụ. Với thức ăn dùng ngay cho trẻ nhỏ, bản thân máy sấy không bảo vệ đủ sản phẩm. Vì vậy cả khu vực quanh máy phải là khu vệ sinh cao.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 7,
+      "module": 2,
+      "title": "Nguyên tắc 3–5: làm sạch, thoát, tiếp cận",
+      "lead": "Ba nguyên tắc sau chủ yếu chống lại tích tụ và phát triển.",
+      "cards": [
+        {
+          "title": "Làm sạch được",
+          "text": "Làm sạch hiệu quả trong thời gian và công sức hợp lý: bề mặt hoàn thiện phù hợp, mối nối và mối hàn vệ sinh, góc bo tròn, sàn dốc về cống."
+        },
+        {
+          "title": "Thoát được",
+          "text": "Không tích tụ; thoát hết chất lỏng, sản phẩm, bụi. Tránh đầu cụt, hốc, khe nứt, mối ghép chồng, ren hở, tiếp xúc kim loại với kim loại."
+        },
+        {
+          "title": "Tiếp cận được",
+          "text": "Mọi khu vực tiếp cận được để vệ sinh, khử trùng, kiểm tra và bảo trì; hoặc thiết bị dễ tháo rời."
+        }
+      ],
+      "example": "(Doc. 58, §4.4.2) Máy thái thịt ăn liền ở khu vệ sinh cao vẫn cần nắp an toàn che lưỡi dao quay. Nhưng nơi sản phẩm có thể tích tụ phải dễ tiếp cận để vệ sinh thường xuyên.",
+      "takeaway": "Khi không thể loại rủi ro bằng thiết kế, chính các nguyên tắc này vẫn giúp vệ sinh và bảo trì làm được việc.",
+      "source": "§4.1, tr. 12; §4.2, tr. 13",
+      "narration": "Ba nguyên tắc còn lại rất dễ nhớ. Làm sạch được. Thoát được. Và tiếp cận được. Làm sạch được nghĩa là sạch trong thời gian và công sức hợp lý. Bề mặt nhẵn, góc bo tròn, mối hàn liền. Thoát được nghĩa là không có chỗ nào giữ nước, giữ sản phẩm hay giữ bụi. Không đầu cụt, không hốc, không ren hở. Tiếp cận được nghĩa là tay người và mắt người tới được mọi chỗ cần vệ sinh, kiểm tra và bảo trì. Tài liệu có một ví dụ hay. Máy thái thịt ăn liền vẫn phải có nắp che lưỡi dao để bảo vệ người vận hành. Nhưng những chỗ thịt vụn có thể đọng lại phải mở ra được dễ dàng để vệ sinh thường xuyên. Bạn hãy bấm vào từng nguyên tắc trên màn hình để xem chi tiết.",
+      "visual": "principles",
+      "trainer": "Chọn một thiết bị quen thuộc và cho học viên chấm nhanh theo năm nguyên tắc."
+    },
+    {
+      "id": 8,
+      "module": 2,
+      "title": "HDRM và HACCP: hai việc bổ sung nhau",
+      "lead": "Thiết kế vệ sinh thường được nhắc ngầm trong các tiêu chuẩn: nhà xưởng và thiết bị phải phù hợp mục đích.",
+      "cards": [
+        {
+          "title": "HACCP",
+          "text": "Tập trung vào mối nguy an toàn thực phẩm đối với người tiêu dùng tại điểm tiêu thụ; chỉ có hiệu lực khi các chương trình tiên quyết đã sẵn sàng."
+        },
+        {
+          "title": "HDRM",
+          "text": "Giới hạn danh sách mối nguy lường trước được và các chất nhiễm khác, bằng cách ngăn chúng vào, tích tụ hoặc phát triển trong nhà xưởng và thiết bị."
+        },
+        {
+          "title": "Ba nhóm chất nhiễm",
+          "text": "Hóa học: chất gây dị ứng, chất bôi trơn, hóa chất vệ sinh. Sinh học: vi sinh vật, ký sinh trùng, động vật gây hại. Vật lý: thủy tinh, nhựa, cao su, kim loại."
+        }
+      ],
+      "example": "(Doc. 58, §4.2) Chất nhiễm không chỉ là mối nguy an toàn: lẫn một sản phẩm khác cũng là sai lỗi chất lượng, thậm chí vi phạm pháp lý, ví dụ thịt ngựa có trong thịt bò.",
+      "takeaway": "Có HACCP và PRP nghĩa là đã có sẵn nhiều đầu vào cho HDRM: mô tả sản phẩm, mục đích sử dụng, danh sách mối nguy, sơ đồ quy trình, sơ đồ phân vùng.",
+      "source": "§4.2, tr. 12–13",
+      "narration": "Nhiều người hỏi. Đã có HACCP rồi, cần thêm cái này làm gì? Câu trả lời là hai việc bổ sung cho nhau. HACCP nhìn vào người tiêu dùng. Mối nguy nào có thể tới miệng người ăn, và kiểm soát nó ở đâu. Còn quản lý rủi ro thiết kế vệ sinh nhìn vào nhà xưởng và máy móc. Mục đích là làm cho danh sách mối nguy ngắn lại ngay từ đầu, bằng cách không cho chất nhiễm đi vào, đọng lại hay sinh sôi. Chất nhiễm có ba nhóm. Hóa học, như chất gây dị ứng và chất bôi trơn. Sinh học, như vi khuẩn và côn trùng. Vật lý, như thủy tinh, nhựa, kim loại. Tin tốt là nhà máy đã có HACCP thì đã có sẵn nhiều thông tin để bắt đầu.",
+      "visual": "",
+      "trainer": "Thảo luận: danh sách mối nguy trong HACCP của cơ sở có mối nguy nào thực chất bắt nguồn từ thiết kế thiết bị?"
+    },
+    {
+      "id": 9,
+      "module": 3,
+      "title": "Đội HDRM đa ngành",
+      "lead": "Đội gồm mọi bên có lợi ích trong vận hành vệ sinh, đặc tả thiết kế và sử dụng nhà xưởng, thiết bị.",
+      "cards": [
+        {
+          "title": "Ai tham gia",
+          "text": "Dự án, tự động hóa, công nghệ, xây dựng, sản xuất, bảo trì, phát triển sản phẩm, QA/QC, vệ sinh, pháp chế, mua hàng — và nhà cung cấp khi phù hợp."
+        },
+        {
+          "title": "Năng lực phải có",
+          "text": "Yêu cầu và nguyên tắc thiết kế vệ sinh; phân tích mối nguy, đánh giá rủi ro, tìm nguyên nhân gốc; cơ bản về phân vùng vệ sinh; hiểu sản phẩm và quy trình."
+        },
+        {
+          "title": "Phối hợp",
+          "text": "Đồng bộ với đội HACCP, mua hàng, bán hàng, pháp chế; mời chuyên gia trong hoặc ngoài khi cần."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-4) Vụ Salmonella ở nhà máy bơ đậu phộng bắt đầu với đội QA và HACCP. Khi điều tra mở rộng, logistics, sản xuất, kỹ thuật, mua hàng được đưa vào; quyết định cuối do ban lãnh đạo, có tài chính hỗ trợ.",
+      "takeaway": "HDRM hiệu quả cần nhà cung cấp và người dùng hiểu chung về mục đích sử dụng, giới hạn của thiết bị và các mối nguy.",
+      "source": "§4.3.1, tr. 13",
+      "narration": "Một người không thể làm việc này một mình. Người thiết kế biết bản vẽ, nhưng không biết thợ vệ sinh phải cúi vào đâu. Người vệ sinh biết chỗ nào khó rửa, nhưng không biết vật liệu nào chịu được hóa chất. Vì vậy tài liệu yêu cầu một đội đa ngành. Dự án, sản xuất, bảo trì, chất lượng, vệ sinh, mua hàng, và cả nhà cung cấp khi cần. Câu chuyện nhà máy bơ đậu phộng cho thấy rõ điều đó. Lúc đầu chỉ có đội chất lượng điều tra. Khi vụ việc mở rộng, họ phải mời thêm vận chuyển, sản xuất, kỹ thuật và mua hàng. Quyết định cuối cùng thuộc về ban lãnh đạo. Dù thành phần thế nào, đội phải hiểu nguyên tắc thiết kế vệ sinh, cách đánh giá rủi ro, phân vùng vệ sinh, và sản phẩm của mình.",
+      "visual": "",
+      "trainer": "Hỏi học viên: dự án mua thiết bị gần nhất có bộ phận vệ sinh và bảo trì tham gia từ đầu không?"
+    },
+    {
+      "id": 10,
+      "module": 3,
+      "title": "Người dùng và nhà cung cấp: ai nói gì với ai",
+      "lead": "Cách trao đổi phụ thuộc thiết bị được đặt riêng hay bán đại trà.",
+      "cards": [
+        {
+          "title": "Thiết bị đặt riêng",
+          "text": "Người dùng nêu mục đích sử dụng và hiệu năng vệ sinh trong URS. Nhà cung cấp thiết kế theo URS và cùng khách hàng kiểm tra khả năng đáp ứng."
+        },
+        {
+          "title": "Thiết bị đại trà",
+          "text": "Nhà cung cấp làm HDRM theo cách dùng dự kiến, công bố cửa sổ vận hành, giới hạn, hạn chế, và giao IFU với hướng dẫn vận hành, bảo trì chi tiết."
+        },
+        {
+          "title": "Rủi ro còn lại",
+          "text": "Rủi ro không được thiết kế xử lý phải do người dùng kiểm soát bằng PRP: ngăn nhiễm chéo, vệ sinh và khử trùng, kiểm soát động vật gây hại, vệ sinh cá nhân — hoặc bằng một CCP phía sau."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-7) Van mix-proof bản tiêu chuẩn, bán đại trà: làm sạch được bằng CIP nhưng không kín khuẩn hoàn toàn. Ứng dụng vô trùng có rủi ro cao hơn và cần được đánh giá riêng.",
+      "takeaway": "Với thiết bị đại trà, người dùng vẫn nên viết URS và chọn thiết bị khớp nhất với đặc tả của mình.",
+      "source": "§4.3.2, tr. 13–14",
+      "narration": "Mua một bộ đồ may đo khác với mua đồ may sẵn. Với thiết bị cũng vậy. Thiết bị đặt riêng giống đồ may đo. Người mua nói rõ mình cần gì trong bản yêu cầu người dùng. Người bán thiết kế theo đó, rồi hai bên cùng kiểm tra. Thiết bị bán đại trà giống đồ may sẵn. Người bán không biết ai sẽ mua. Họ thiết kế cho cách dùng dự kiến, rồi ghi rõ giới hạn trong thông tin sử dụng. Ví dụ, một loại van chống trộn lẫn bản tiêu chuẩn. Nhà cung cấp nói rõ nó làm sạch tại chỗ được, nhưng không kín khuẩn hoàn toàn. Nếu bạn dùng nó cho dây chuyền vô trùng, rủi ro cao hơn và bạn phải tự đánh giá. Rủi ro nào thiết kế không xử lý được, người dùng phải kiểm soát bằng quy trình của mình.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 11,
+      "module": 3,
+      "title": "Thông tin đầu vào cho HDRM",
+      "lead": "Thông tin có thể đã có sẵn, hoặc được tạo ra và cập nhật trong lúc làm HDRM.",
+      "cards": [
+        {
+          "title": "Về quy trình",
+          "text": "Sơ đồ khối, sơ đồ dòng quy trình, P&ID: trình tự các bước, bước giảm rủi ro như sàng, rửa, nam châm, diệt khuẩn; điểm lưu trữ, tuần hoàn, tái sử dụng."
+        },
+        {
+          "title": "Về không gian",
+          "text": "Sơ đồ phân vùng, bản vẽ kỹ thuật và 3D, mặt bằng phòng, nhà máy, khu đất; danh mục phòng với chức năng, vùng vệ sinh, thông gió."
+        },
+        {
+          "title": "Về yêu cầu",
+          "text": "Kế hoạch HACCP, đặc tả thiết kế, tiêu chuẩn ngành, yêu cầu pháp lý, khiếu nại và sự cố vệ sinh trong quá khứ."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-8) Trước khi đổi công dụng một băng tải cũ, đội thu thập bản vẽ chế tạo, danh mục vật tư, chứng chỉ, sơ đồ điện, lịch sử sửa chữa và bảo trì, cùng đánh giá rủi ro an toàn thực phẩm.",
+      "takeaway": "Chứng nhận EHEDG hoặc 3-A cho biết thiết bị được thiết kế vệ sinh, nhưng người dùng vẫn phải đánh giá rủi ro cho ứng dụng của mình.",
+      "source": "§4.3.3, tr. 14–15",
+      "narration": "Trước khi họp đội, hãy gom tài liệu. Có ba nhóm. Nhóm một nói về quy trình. Sơ đồ các bước, sơ đồ đường ống. Chúng cho biết bước nào diệt khuẩn, chỗ nào lưu trữ, chỗ nào tuần hoàn. Nhóm hai nói về không gian. Sơ đồ phân vùng, bản vẽ, mặt bằng. Nhóm ba nói về yêu cầu. Kế hoạch HACCP, tiêu chuẩn, luật, và cả những khiếu nại trong quá khứ. Với thiết bị cũ, tài liệu ví dụ một băng tải sắp đổi công dụng. Đội phải tìm lại bản vẽ chế tạo, chứng chỉ vật liệu, sơ đồ điện và lịch sử sửa chữa. Một lưu ý quan trọng. Thiết bị có chứng nhận thiết kế vệ sinh là điểm cộng. Nhưng người dùng vẫn phải tự đánh giá rủi ro cho ứng dụng của mình.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 12,
+      "module": 3,
+      "title": "Một URS viết từ góc nhìn rủi ro",
+      "lead": "Ví dụ của tài liệu: bơm sữa đặt sau thanh trùng, cấp cho máy chiết hộp.",
+      "cards": [
+        {
+          "title": "Mô tả đủ bối cảnh",
+          "text": "Sữa bò, sữa dê và sữa đậu nành đi qua cùng một bơm; hạn dùng 10 ngày giữ lạnh; không muốn ghi nhãn “có thể chứa” chất gây dị ứng."
+        },
+        {
+          "title": "Xếp hạng rủi ro",
+          "text": "Cao: vi khuẩn gây bệnh và chất gây dị ứng không được ẩn náu trong bơm. Trung bình: hóa chất, mảnh cao su, nhựa, kim loại, chất bôi trơn, không dùng thủy tinh. Thấp: lây mùi vị giữa các mẻ."
+        },
+        {
+          "title": "Điều kiện và tiêu chuẩn",
+          "text": "Lưu lượng, khoảng pH, áp suất, nhiệt độ, hóa chất CIP; cùng các quy định, tiêu chuẩn và hướng dẫn mà thiết kế phải đáp ứng."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-2) Phía sau bơm không có máy dò kim loại và không có lưới lọc. Mảnh kim loại hay mảnh gioăng sinh ra trong bơm vì thế sẽ còn nguyên trong hộp sữa tới tay người uống.",
+      "takeaway": "URS tốt cho nhà cung cấp biết phía sau thiết bị còn hay không còn bước nào chặn được chất nhiễm.",
+      "source": "Phụ lục 5-2",
+      "narration": "Hãy xem một bản yêu cầu người dùng mẫu trong tài liệu. Đó là một cái bơm sữa, đặt sau máy thanh trùng, đẩy sữa tới máy chiết hộp. Cùng một bơm chạy sữa bò, sữa dê và sữa đậu nành. Nhà máy không muốn ghi dòng có thể chứa chất gây dị ứng trên nhãn. Từ đó, rủi ro được xếp hạng. Cao nhất là vi khuẩn gây bệnh và chất gây dị ứng ẩn náu trong bơm. Trung bình là hóa chất còn sót, mảnh gioăng, mảnh kim loại, chất bôi trơn. Thấp là lây mùi vị giữa các mẻ. Chi tiết đắt giá nhất nằm ở một câu. Phía sau bơm không có máy dò kim loại và không có lưới lọc. Nghĩa là bất cứ thứ gì rơi ra từ bơm sẽ đi thẳng vào hộp sữa. Nhà cung cấp cần biết điều đó.",
+      "visual": "",
+      "trainer": "Bài tập: viết ba dòng URS cho một thiết bị thực tế: sản phẩm, vị trí trong quy trình, và bước chặn phía sau."
+    },
+    {
+      "id": 13,
+      "module": 4,
+      "title": "Mức thiết kế thay đổi dọc chuỗi cung ứng",
+      "lead": "Thiết kế vệ sinh nên áp dụng ở mọi công đoạn; mục đích sử dụng quyết định mức chi tiết.",
+      "cards": [
+        {
+          "title": "Không cần đồng đều",
+          "text": "Không phải mọi phần của dây chuyền cần cùng mức bảo vệ sản phẩm; đôi khi xử lý mối nguy ở một bước sau hiệu quả hơn."
+        },
+        {
+          "title": "Phụ thuộc khâu sau",
+          "text": "Không phải nguyên liệu và sản phẩm nào cũng cần cùng mức bảo vệ; điều đó tùy cách bảo quản và cách người tiêu dùng sử dụng."
+        },
+        {
+          "title": "Có lúc phải chặt hơn",
+          "text": "Với người tiêu dùng dễ tổn thương, có thể cần thiết kế chặt hơn từ thượng nguồn, ví dụ với chất gây dị ứng và độc tố vi sinh không thể loại khỏi sản phẩm."
+        }
+      ],
+      "example": "(Doc. 58, §4.4.1) Máy phân loại khoai tây trước khi rửa có thể thiết kế rất cơ bản vì củ còn bám đất. Nhưng máy không được có chi tiết thủy tinh, và chất bôi trơn phải tách khỏi khoai.",
+      "takeaway": "Thứ không loại được ở bước sau — thủy tinh, dầu khoáng, chất gây dị ứng — phải được chặn ngay tại chỗ, dù công đoạn còn “bẩn”.",
+      "source": "§4.4.1, tr. 15–16",
+      "narration": "Hãy đi theo một củ khoai tây, từ cánh đồng tới gói bim bim. Ở máy thu hoạch, chỉ cần dễ vệ sinh và ít bám đất. Ở máy phân loại, trước khi rửa, thiết kế có thể rất đơn giản, vì củ khoai còn dính đầy đất. Nhưng có hai điều không được phép. Không chi tiết thủy tinh. Và chất bôi trơn không được chạm vào khoai. Vì sao? Vì các bước sau không loại được mảnh thủy tinh hay dầu máy. Tới máy thái, không được có chỗ đọng khoai vụn. Tới chảo chiên, phải vệ sinh được lớp dầu cháy. Tới máy tẩm gia vị, sản phẩm đã ăn liền, nên không được có nơi nào cho vi khuẩn ẩn náu. Cuối cùng là tủ trưng bày. Gần như không cần gì, vì bao bì đã bảo vệ sản phẩm.",
+      "visual": "chain",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 14,
+      "module": 4,
+      "title": "Phơi nhiễm: sản phẩm, quy trình, môi trường",
+      "lead": "Rủi ro và cách giảm rủi ro tùy vào điều kiện mà sản phẩm, thiết bị, nhà xưởng tiếp xúc.",
+      "cards": [
+        {
+          "title": "Khô hay ướt",
+          "text": "Giải pháp thiết kế phần lớn do mức sạch cần đạt và phương pháp vệ sinh ướt hay khô quyết định."
+        },
+        {
+          "title": "Tình huống bất thường",
+          "text": "Quy trình khô vẫn có thể phải vệ sinh ướt sau sự cố như ngập, cháy, nhiễm động vật gây hại nặng. Thiết kế có thể hỗ trợ, ví dụ cống vệ sinh đóng kín khi bình thường."
+        },
+        {
+          "title": "Sản phẩm khác, kết quả khác",
+          "text": "Thiết bị hợp với chất lỏng có thể không thoát hết khi sản phẩm quá nhớt hoặc có hạt; khi đó cần vệ sinh kỹ hơn."
+        }
+      ],
+      "example": "(Doc. 58, §4.4.2) Tấm kim loại tán đinh trên thiết bị đặt gần sản phẩm hở, trong môi trường vệ sinh ướt, là điều kiện có thể dẫn tới vi khuẩn gây bệnh phát triển.",
+      "takeaway": "Cùng một thiết bị có thể phù hợp ở chỗ này và không phù hợp ở chỗ khác.",
+      "source": "§4.4.2, tr. 16",
+      "narration": "Cùng một chiếc áo mưa. Đi dưới mưa phùn thì đủ, gặp bão thì không. Thiết bị cũng vậy. Nó phù hợp hay không tùy vào thứ nó phải đối mặt. Câu hỏi đầu tiên là vệ sinh khô hay vệ sinh ướt. Hai cách cần hai kiểu thiết kế khác nhau. Câu hỏi thứ hai là tình huống bất thường. Một xưởng bột khô không bao giờ dùng nước. Nhưng nếu có cháy hoặc ngập, vẫn phải rửa ướt. Thiết kế tốt đã tính trước điều đó, ví dụ bằng cống đóng kín khi bình thường. Câu hỏi thứ ba là sản phẩm. Một đường ống thoát sạch với sữa có thể không thoát hết với sốt đặc có hạt. Tài liệu còn nhắc một chi tiết nhỏ. Tấm kim loại tán đinh, đặt gần sản phẩm hở, trong khu rửa ướt, là nơi vi khuẩn có thể phát triển.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 15,
+      "module": 4,
+      "title": "Nghĩ theo cả vòng đời",
+      "lead": "HDRM cần xét mọi tình huống, cơ chế và sự kiện có thể gây nhiễm trong suốt đời vật lý của thiết bị.",
+      "cards": [
+        {
+          "title": "Trước khi vận hành",
+          "text": "Chế tạo tại nhà cung cấp, vận chuyển, lắp ráp và lắp đặt, chạy thử, thẩm định, khởi động: mỗi giai đoạn có rủi ro nhiễm riêng."
+        },
+        {
+          "title": "Khi vận hành",
+          "text": "Chế biến, vệ sinh và khử trùng, bảo trì và tạm dừng, quản lý thay đổi; kể cả dừng khẩn cấp và van chuyển dòng khi bắt đầu mẻ mới."
+        },
+        {
+          "title": "Biện pháp tạm thời",
+          "text": "Che lỗ hở khi vận chuyển và lắp đặt; vệ sinh ban đầu trước khi vào khu sản xuất; tách khu cải tạo khỏi khu đang sản xuất; checklist kiểm tra khi khởi động."
+        }
+      ],
+      "example": "(Doc. 58, §5.3.2) Chốt gió cho người và vật liệu có thể đủ cho lúc sản xuất, nhưng không đủ cho số người và kích thước vật tư trong một đợt dừng máy bảo trì.",
+      "takeaway": "Lý tưởng là làm HDRM ở giai đoạn thiết kế, hoặc trước khi mua với thiết bị đại trà.",
+      "source": "§4.4.3, tr. 16–18; Hình 1",
+      "narration": "Một thiết bị không sinh ra tại nhà máy của bạn. Nó được chế tạo ở xưởng nhà cung cấp. Được chở đi trên xe tải. Được lắp đặt giữa công trường. Được chạy thử. Rồi mới vận hành, vệ sinh, bảo trì trong nhiều năm. Mỗi giai đoạn có cách nhiễm bẩn riêng. Khi vận chuyển, bụi và mảnh vụn lọt vào các lỗ hở. Khi lắp đặt, thợ hàn làm việc ngay cạnh dây chuyền đang chạy. Vì vậy cần biện pháp tạm thời. Bịt kín lỗ hở. Vệ sinh trước khi đưa vào khu sản xuất. Ngăn khu thi công khỏi khu sản xuất. Tài liệu còn nêu một ví dụ ít ai nghĩ tới. Chốt gió đủ cho ca sản xuất bình thường. Nhưng tới đợt bảo trì lớn, số người và vật tư tăng vọt, và chốt gió không còn đủ nữa.",
+      "visual": "lifecycle",
+      "trainer": "Hỏi học viên: đợt bảo trì lớn gần nhất, khu sản xuất được bảo vệ khỏi khu thi công bằng cách nào?"
+    },
+    {
+      "id": 16,
+      "module": 4,
+      "title": "Thiết bị cũ và mức tích hợp",
+      "lead": "Phương pháp HDRM dùng được cho nhà xưởng, thiết bị đang sử dụng, kể cả khi thiếu hồ sơ thiết kế.",
+      "cards": [
+        {
+          "title": "Vì sao đánh giá cái cũ",
+          "text": "Có yêu cầu mới; quản lý thay đổi; trước khi mua thiết bị đã qua sử dụng; điều tra sự cố vệ sinh; tối ưu chương trình vệ sinh và bảo trì."
+        },
+        {
+          "title": "Ba kết cục",
+          "text": "Không cần hành động ngay; thay đổi vận hành như vệ sinh, bảo trì, hạn chế sản phẩm, với chi phí vận hành tăng liên tục; hoặc cải tạo để trở lại phù hợp mục đích."
+        },
+        {
+          "title": "Thu vào, mở ra",
+          "text": "Đánh giá từng mức tích hợp, từ vật liệu tới cả khu; rồi nhìn tổng thể để tìm rủi ro phát sinh do ghép nối."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-8) Băng tải vốn chở bột bánh quy trước khi nướng, vệ sinh khô hai tuần một lần. Chuyển sang chở thanh năng lượng tới khâu đóng gói: phải rửa ướt hằng ngày, tự thoát nước, linh kiện điện chịu nước.",
+      "takeaway": "Một bơm thiết kế vệ sinh nối kém với một bồn thiết kế vệ sinh vẫn là một mắt xích yếu.",
+      "source": "§4.4.4–4.4.5, tr. 18–19",
+      "narration": "Không phải lúc nào ta cũng được bắt đầu từ tờ giấy trắng. Phần lớn nhà máy đang chạy với thiết bị cũ. Phương pháp này vẫn dùng được. Kết quả có ba khả năng. Một, thiết bị vẫn phù hợp, không cần làm gì ngay. Hai, phải thay đổi cách vận hành, ví dụ vệ sinh thường xuyên hơn, và chấp nhận chi phí tăng lâu dài. Ba, phải cải tạo. Tài liệu kể về một băng tải vốn chở bột bánh quy trước khi nướng. Chỉ cần lau khô hai tuần một lần. Nay người ta muốn dùng nó chở thanh năng lượng tới khâu đóng gói. Sản phẩm không còn được nướng nữa. Băng tải giờ phải rửa nước hằng ngày, phải tự thoát nước, và linh kiện điện phải chịu nước. Một điều cuối. Hãy nhìn cả chỗ ghép nối. Hai thiết bị tốt nối với nhau kém vẫn là một điểm yếu.",
+      "visual": "",
+      "trainer": "Thảo luận: thiết bị nào ở cơ sở đang được dùng khác với mục đích ban đầu? Việc đổi công dụng đã được đánh giá chưa?"
+    },
+    {
+      "id": 17,
+      "module": 5,
+      "title": "Bước 1: phạm vi, bối cảnh, tiêu chí",
+      "lead": "Làm rõ đánh giá cái gì, trong hoàn cảnh nào và phải đạt điều gì.",
+      "cards": [
+        {
+          "title": "Phạm vi",
+          "text": "Ranh giới của bài đánh giá: mối nguy và rủi ro nào, thiết bị hay nhà xưởng nào, tới mức tích hợp nào, với vật liệu, sản phẩm và quy trình nào."
+        },
+        {
+          "title": "Bối cảnh",
+          "text": "Vị trí trong chuỗi cung ứng và vòng đời; môi trường pháp lý; lịch sử; thay đổi mục đích sử dụng; người tiêu dùng mục tiêu; các công bố về sản phẩm."
+        },
+        {
+          "title": "Tiêu chí",
+          "text": "Yêu cầu pháp lý, tiêu chuẩn ngành, yêu cầu khách hàng; độ vững trước sử dụng sai lường trước được; ràng buộc an toàn, môi trường, kinh doanh; khả năng đánh giá lại."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-3) Phòng đóng gói sữa: vùng vệ sinh trung bình, vệ sinh ướt ít nhất hai lần mỗi tuần bằng kiềm và axit, nhiệt độ môi trường, lưu thông người và vật liệu ở mức trung bình.",
+      "takeaway": "Bước này tương đương “xác định giới hạn của máy” hay “mục đích sử dụng” trong các phương pháp đánh giá rủi ro khác.",
+      "source": "§5.2, tr. 22; Phụ lục 2",
+      "narration": "Bước một nghe có vẻ hành chính, nhưng nó quyết định mọi thứ phía sau. Có ba câu hỏi. Câu một, phạm vi. Ta đánh giá cái gì? Một cái van, một dây chuyền, hay cả nhà máy? Câu hai, bối cảnh. Thiết bị nằm ở đâu trong chuỗi cung ứng? Sản phẩm dành cho ai? Trẻ sơ sinh hay người lớn khỏe mạnh? Sản phẩm có công bố gì, ví dụ không chứa đậu phộng? Câu ba, tiêu chí. Luật nào, tiêu chuẩn nào, khách hàng yêu cầu gì? Tài liệu có ví dụ về một phòng đóng gói sữa. Vùng vệ sinh trung bình. Rửa ướt ít nhất hai lần mỗi tuần bằng kiềm và axit. Chỉ từ mấy dòng đó, người thiết kế đã biết sàn phải chịu hóa chất và phòng phải có cống.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 18,
+      "module": 5,
+      "title": "Bước 2: nhận diện rủi ro vệ sinh",
+      "lead": "Rủi ro vệ sinh là tổ hợp của chất nhiễm và cơ chế nhiễm.",
+      "cards": [
+        {
+          "title": "Hai bước nhỏ",
+          "text": "Xác định nguồn: mối nguy an toàn thực phẩm và chất nhiễm khác. Rồi xác định sự kiện: cơ chế nhiễm."
+        },
+        {
+          "title": "Vì sao có rủi ro",
+          "text": "Vì thiết bị hoặc nhà xưởng thúc đẩy, hoặc không ngăn đủ, sự xâm nhập, tích tụ hay phát triển của chất nhiễm."
+        },
+        {
+          "title": "Thay đổi theo vòng đời",
+          "text": "Chất nhiễm và cơ chế nhiễm có thể khác nhau ở từng giai đoạn. Ghi lại từng rủi ro để phân tích ở bước sau."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-5) Băng tải nghiêng chở giăm bông sau bước diệt khuẩn, vệ sinh ướt bằng bọt. Rủi ro nhận diện: Listeria monocytogenes xâm nhập, tích tụ, phát triển; tồn dư hóa chất vệ sinh; dị vật.",
+      "takeaway": "Checklist ở Phụ lục 3 và 4 là gợi ý để nghĩ rộng hơn, không phải danh sách đầy đủ.",
+      "source": "§5.3.1, tr. 23; Phụ lục 3",
+      "narration": "Bây giờ tới bước hai, nhận diện rủi ro. Hãy làm như một thám tử. Thám tử luôn hỏi hai câu. Ai là thủ phạm? Và hắn vào bằng đường nào? Ở đây cũng vậy. Thủ phạm là chất nhiễm. Đường vào là cơ chế nhiễm. Ghép hai thứ lại, ta có một rủi ro vệ sinh. Ví dụ từ tài liệu. Một băng tải nghiêng chở giăm bông đã qua bước diệt khuẩn, được rửa bằng bọt. Đội đánh giá nhận diện ba rủi ro. Vi khuẩn Listeria xâm nhập, tích tụ và phát triển. Hóa chất vệ sinh còn sót lại. Và dị vật rơi vào. Mỗi rủi ro được ghi thành một dòng, để phân tích ở bước sau. Các danh sách trong phụ lục giúp ta không bỏ sót, nhưng chúng không bao giờ đầy đủ.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 19,
+      "module": 5,
+      "title": "Cơ chế nhiễm theo từng giai đoạn",
+      "lead": "Cùng một thiết bị, mỗi giai đoạn vòng đời mở ra những đường nhiễm khác nhau.",
+      "cards": [
+        {
+          "title": "Xâm nhập",
+          "text": "Từ bên ngoài: hóa chất, vi sinh, động vật gây hại, mảnh vụn xây dựng. Hoặc sinh ra bên trong: thôi nhiễm từ vật liệu, gioăng vỡ, bụi kim loại từ chi tiết quay."
+        },
+        {
+          "title": "Tích tụ",
+          "text": "Trong lúc chế biến hoặc từ cặn vệ sinh: chất gây dị ứng, chất bôi trơn, cặn sản phẩm, đóng cặn và màng sinh học."
+        },
+        {
+          "title": "Phát triển",
+          "text": "Do có nơi ẩn náu và điều kiện thuận lợi cho vi sinh vật và động vật gây hại."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-1) Bơm thùy: lắp lại sai sau bảo trì có thể làm chi tiết vỡ rơi vào sản phẩm. Biện pháp bằng thiết kế: bơm chỉ có thể tháo và lắp theo một cách duy nhất.",
+      "takeaway": "Bảo trì là giai đoạn dễ bị bỏ sót: mảnh cắt, mảnh hàn, bụi bẩn khi thiết bị mở ra môi trường.",
+      "source": "Phụ lục 3, tr. 1–2",
+      "narration": "Một thiết bị sạch lúc chạy vẫn có thể bị nhiễm lúc sửa. Vì vậy hãy xét từng giai đoạn. Xâm nhập có hai kiểu. Từ bên ngoài, như bụi, côn trùng, hóa chất. Và từ chính bên trong, như gioăng vỡ, bụi kim loại từ trục quay, hay chất thôi ra từ vật liệu. Tích tụ xảy ra trong lúc chạy máy, hoặc do rửa không hết. Phát triển xảy ra khi có chỗ ẩn náu và điều kiện thuận lợi. Giai đoạn hay bị quên nhất là bảo trì. Mảnh cắt, xỉ hàn, bụi bẩn khi mở máy ra môi trường. Tài liệu có một ví dụ thông minh về bơm. Nếu lắp lại sai sau bảo trì, chi tiết có thể vỡ và rơi vào sản phẩm. Giải pháp là thiết kế sao cho bơm chỉ lắp được theo một cách duy nhất.",
+      "visual": "mechanisms",
+      "trainer": "Cho học viên điền một dòng vào bảng cho thiết bị của mình ở giai đoạn bảo trì."
+    },
+    {
+      "id": 20,
+      "module": 5,
+      "title": "Từ rủi ro tới yêu cầu thiết kế một căn phòng",
+      "lead": "Ví dụ của tài liệu: phòng đóng gói sữa, xét từng hạng mục xây dựng.",
+      "cards": [
+        {
+          "title": "Liệt kê theo hạng mục",
+          "text": "Trần, cửa ngoài, cửa trong, cống, thang nâng, sàn, mối nối, chiếu sáng, kết cấu phụ, tường, cửa sổ — mỗi hạng mục có chất nhiễm, cơ chế nhiễm và mức rủi ro."
+        },
+        {
+          "title": "Cống và sàn",
+          "text": "Ẩm, bẩn, mảnh vụn tích tụ tạo điều kiện cho vi sinh và thu hút động vật gây hại; nước đọng trên sàn dẫn tới vi sinh phát triển."
+        },
+        {
+          "title": "Chuyển thành yêu cầu",
+          "text": "Sàn dốc về cống; góc sàn–tường bo tròn, bán kính ít nhất 30 mm; cống có bẫy nước tháo được và giỏ chắn rác; cửa tự đóng, kín sát sàn và khung."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-3) Cửa sổ trong phòng đóng gói sữa: khả năng vỡ thấp nhưng tác động cao. Yêu cầu: kính cường lực nhiều lớp hoặc vật liệu không vỡ vụn, khung lắp phẳng với tường, không mở được.",
+      "takeaway": "Ngoài biện pháp thiết kế, vẫn cần quy trình và thực hành để quản lý rủi ro còn lại và giữ nhà xưởng ở tình trạng tốt.",
+      "source": "Phụ lục 5-3",
+      "narration": "Rủi ro không chỉ nằm ở máy móc. Nó nằm cả ở căn phòng. Tài liệu lấy ví dụ phòng đóng gói sữa và đi qua từng hạng mục. Trần, cửa, cống, sàn, tường, đèn, cửa sổ. Hãy xem cống thoát nước. Ẩm, bẩn, mảnh vụn đọng lại ở đó. Vi khuẩn phát triển và côn trùng kéo tới. Rủi ro cao. Từ đó sinh ra yêu cầu thiết kế. Sàn phải dốc về cống. Góc giữa sàn và tường phải bo tròn. Cống phải có bẫy nước tháo ra được và giỏ chắn rác. Còn cửa sổ thì sao? Khả năng vỡ là thấp, nhưng nếu vỡ thì hậu quả nặng. Vậy dùng kính nhiều lớp hoặc vật liệu không vỡ vụn, và không cho mở. Cách làm là như vậy. Đi từ rủi ro tới yêu cầu, chứ không chép yêu cầu từ dự án khác.",
+      "visual": "",
+      "trainer": "Đi một vòng quanh một phòng sản xuất: hạng mục nào trong danh sách đang là điểm yếu nhất?"
+    },
+    {
+      "id": 21,
+      "module": 6,
+      "title": "Tác động tiêu cực: cao, trung bình, thấp",
+      "lead": "Tác động xét cả sức khỏe người tiêu dùng, chất lượng, thương hiệu và tổn thất vận hành.",
+      "cards": [
+        {
+          "title": "Cao",
+          "text": "Mối nguy an toàn thực phẩm đáng kể cho người tiêu dùng hoặc vượt tiêu chí của khách hàng kế tiếp; thu hồi, từ chối sản phẩm; dừng máy và tổn thất đáng kể."
+        },
+        {
+          "title": "Trung bình",
+          "text": "Mối nguy có thể ảnh hưởng người tiêu dùng; sai lỗi chất lượng dẫn tới từ chối hoặc giảm giá; dừng máy và tổn thất ở mức đáng lưu ý."
+        },
+        {
+          "title": "Thấp",
+          "text": "Không có mối nguy ảnh hưởng người tiêu dùng; sai lỗi chất lượng nhỏ, khiếu nại hạn chế; dừng máy và tổn thất lẽ ra tránh được."
+        }
+      ],
+      "example": "(Doc. 58, §5.3.2) Rò rỉ dầu khoáng từ máy phải được ngăn ở mọi khâu của chuỗi cung ứng, vì dầu khoáng là mối nguy và không thể loại khỏi thực phẩm. Còn giấm thì không cần mức bảo vệ như sữa.",
+      "takeaway": "Khi xét tác động, phải tính tới khả năng loại bỏ chất nhiễm ở các bước sau, cho tới điểm tiêu thụ.",
+      "source": "§5.3.2, tr. 24",
+      "narration": "Bước ba là cân đo rủi ro. Có hai cái cân. Cái cân thứ nhất là tác động. Nếu chuyện xấu xảy ra, hậu quả nặng tới đâu? Mức cao là khi có mối nguy đáng kể cho người tiêu dùng, phải thu hồi sản phẩm, thương hiệu bị tổn hại. Mức trung bình là sản phẩm bị từ chối hoặc phải giảm giá. Mức thấp là vài khiếu nại nhỏ và ít tổn thất. Một câu hỏi then chốt cần đặt ra. Bước sau có loại được chất nhiễm này không? Ví dụ, dầu khoáng rò từ máy. Không bước chế biến nào loại được nó khỏi thực phẩm. Vì vậy phải ngăn rò dầu ở mọi khâu. Ngược lại, giấm có tính axit mạnh nên không cần mức bảo vệ như sữa. Đặc tính sản phẩm làm thay đổi kết quả.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 22,
+      "module": 6,
+      "title": "Khả năng xảy ra: nhìn vào mức phơi nhiễm",
+      "lead": "Xét theo từng tình huống trong vòng đời và điều đó có nghĩa gì với sản phẩm.",
+      "cards": [
+        {
+          "title": "Cao",
+          "text": "Sản phẩm tiếp xúc liên tục, trực tiếp với môi trường có chất nhiễm; chất tích tụ chạm trực tiếp sản phẩm như ở đầu cụt, ống không thoát; sản phẩm rất dễ nhiễm vi sinh trong điều kiện thuận lợi."
+        },
+        {
+          "title": "Trung bình",
+          "text": "Phơi nhiễm gián đoạn, trực tiếp hoặc gián tiếp; chất tích tụ có thể rơi ra và chạm sản phẩm hở, ví dụ gần cửa kiểm tra."
+        },
+        {
+          "title": "Thấp",
+          "text": "Phơi nhiễm ngẫu nhiên hoặc gián tiếp; tích tụ ở trần giả, mặt phẳng, thiết bị không tiếp xúc thực phẩm; sản phẩm vốn không dễ nhiễm vi sinh."
+        }
+      ],
+      "example": "(Doc. 58, §5.3.2) Với hộp sữa hạn dùng dài, thiết kế vệ sinh của thiết bị sau bước tiệt trùng quan trọng hơn hẳn so với thiết bị trước bước đó.",
+      "takeaway": "Lúc lắp đặt chưa có thực phẩm, nhưng sản phẩm sẽ phơi nhiễm hoàn toàn với chất nhiễm để lại ngay khi thiết bị được đưa vào dùng.",
+      "source": "§5.3.2, tr. 24–25",
+      "narration": "Cái cân thứ hai là khả năng xảy ra. Hãy nghĩ tới một nồi canh. Để mở nắp ngay dưới cửa sổ, bụi rơi vào là chuyện gần như chắc chắn. Đậy nắp và cất trong tủ, khả năng rất thấp. Với thiết bị cũng vậy. Khả năng cao khi sản phẩm tiếp xúc trực tiếp và liên tục với nơi có chất nhiễm. Hoặc khi có đầu cụt, ống không thoát, ngay trên đường đi của sản phẩm. Khả năng trung bình khi tiếp xúc chỉ thỉnh thoảng. Khả năng thấp khi chất bẩn ở xa, ví dụ trên trần giả. Tài liệu nhắc một ví dụ dễ nhớ. Với sữa hạn dùng dài, thiết bị nằm sau bước tiệt trùng quan trọng hơn nhiều so với thiết bị nằm trước. Vì sau bước đó không còn gì sửa sai nữa.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 23,
+      "module": 6,
+      "title": "Ma trận 3 × 3: công cụ để trao đổi",
+      "lead": "Độ lớn rủi ro là tích của tác động tiêu cực và khả năng xảy ra.",
+      "cards": [
+        {
+          "title": "Ba mức cho mỗi trục",
+          "text": "Khả năng xảy ra và tác động đều được mô tả là thấp, trung bình hoặc cao; kết quả có thể tô màu để dễ nhìn."
+        },
+        {
+          "title": "Tùy tình huống",
+          "text": "Quyết định về độ lớn rủi ro là của đội HDRM. Cùng một ô có thể được xếp khác nhau ở hai doanh nghiệp."
+        },
+        {
+          "title": "Phương pháp tự chọn",
+          "text": "Có thể dùng ma trận, đồ thị, chấm điểm số, hoặc các mẫu FMEA, HAZOP, HACCP mà tổ chức đã quen."
+        }
+      ],
+      "example": "(Doc. 58, §5.3.2) Nguyên liệu từ đồng ruộng: khả năng có đất là cao, nhưng rủi ro được xếp thấp vì các bước chế biến sau sẽ loại đất đi.",
+      "takeaway": "Ma trận để xếp hạng và trao đổi; nó không thay câu hỏi cuối cùng: rủi ro đã giảm tới mức chấp nhận được chưa?",
+      "source": "§5.3.2, tr. 25–26",
+      "narration": "Ghép hai cái cân lại, ta có ma trận ba nhân ba. Một trục là khả năng xảy ra. Trục kia là tác động. Mỗi ô cho một mức rủi ro. Thấp, trung bình hoặc cao. Nhưng xin đừng coi ma trận như máy tính cho ra đáp án. Tài liệu đưa hai ma trận mẫu, và chúng khác nhau. Ở ma trận thứ nhất, khả năng cao cộng tác động thấp cho ra rủi ro trung bình. Ở ma trận thứ hai, cũng ô đó lại là rủi ro thấp. Ví dụ là nguyên liệu từ đồng ruộng. Chắc chắn có đất. Nhưng bước rửa phía sau sẽ loại đất đi, nên rủi ro được xếp thấp. Ai quyết định dùng ma trận nào? Chính đội đánh giá. Bạn hãy thử chọn các mức trên màn hình và đổi qua lại giữa hai ma trận.",
+      "visual": "matrix",
+      "trainer": "Cho hai nhóm xếp cùng một rủi ro trên hai ma trận; so sánh và thảo luận vì sao khác nhau."
+    },
+    {
+      "id": 24,
+      "module": 6,
+      "title": "Ai chấp nhận rủi ro đến đâu",
+      "lead": "Mức rủi ro giúp quyết định biện pháp cần hiệu quả và đáng tin cậy tới mức nào.",
+      "cards": [
+        {
+          "title": "Góc nhìn nhà cung cấp",
+          "text": "Có thể muốn hạn chế chuyển việc giảm rủi ro sang khách hàng qua IFU, và chọn nâng thiết kế vệ sinh dù chi phí cao hơn."
+        },
+        {
+          "title": "Góc nhìn người dùng thiết bị cũ",
+          "text": "Có thể muốn dựa nhiều hơn vào quy trình để giảm rủi ro và hạn chế đầu tư máy mới."
+        },
+        {
+          "title": "Câu hỏi có hoặc không",
+          "text": "Sau bước giảm rủi ro phải trả lời: rủi ro vệ sinh đã giảm tới mức chấp nhận được hay chưa?"
+        }
+      ],
+      "example": "(Doc. 58, §5.3.2) Nhà cung cấp máy đóng gói vô trùng có thể chọn nâng thiết kế vệ sinh với chi phí cao hơn, thay vì đẩy việc giảm rủi ro sang người dùng bằng hướng dẫn sử dụng.",
+      "takeaway": "Mức tác động phải được rút ra trước, từ mục tiêu của tổ chức, tiêu chuẩn ngành, luật và các yêu cầu khác — không phải sau khi thấy kết quả.",
+      "source": "§5.1, tr. 20; §5.3.2, tr. 25",
+      "narration": "Hai doanh nghiệp nhìn cùng một rủi ro có thể quyết định khác nhau. Điều đó hoàn toàn bình thường. Hãy xem hai ví dụ trong tài liệu. Một nhà cung cấp máy đóng gói vô trùng. Họ không muốn đẩy trách nhiệm sang khách hàng bằng một cuốn hướng dẫn dày. Họ chọn đầu tư thiết kế tốt hơn, dù đắt hơn. Ngược lại, một nhà máy đang chạy thiết bị cũ. Họ muốn hạn chế mua máy mới, nên dựa nhiều hơn vào quy trình vệ sinh và bảo trì. Cả hai cách đều hợp lệ, miễn là cuối cùng trả lời được một câu hỏi. Rủi ro đã giảm tới mức chấp nhận được hay chưa? Và hãy nhớ một kỷ luật. Thế nào là tác động cao hay thấp phải được định nghĩa trước. Không phải sau khi nhìn thấy kết quả.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 25,
+      "module": 7,
+      "title": "Thứ bậc biện pháp: từ chắc chắn tới phụ thuộc con người",
+      "lead": "Các biện pháp có thể cùng hiệu lực, nhưng khác nhau về hiệu quả và độ tin cậy.",
+      "cards": [
+        {
+          "title": "Chủ động",
+          "text": "Loại bỏ hẳn chất nhiễm, rồi tới áp dụng các nguyên tắc thiết kế vệ sinh: không phụ thuộc kỷ luật hằng ngày của con người."
+        },
+        {
+          "title": "Bị động",
+          "text": "Kiểm soát kỹ thuật như phát hiện rò, giám sát áp suất, độ dẫn điện, nhiệt độ, dò kim loại, X-quang: vẫn chứa rủi ro chứ không ngăn nó."
+        },
+        {
+          "title": "Thủ tục",
+          "text": "IFU, quy trình vận hành, hướng dẫn công việc: phụ thuộc nhiều nhất vào chương trình và con người thực hiện."
+        }
+      ],
+      "example": "(Doc. 58, §5.4) Chất bôi trơn độc có thể lọt vào sản phẩm: bỏ hẳn nhu cầu bôi trơn; đưa chất bôi trơn ra ngoài vùng tiếp xúc, dùng phớt kép và loại cấp thực phẩm; giám sát rò rỉ; hướng dẫn bảo trì.",
+      "takeaway": "Nhà cung cấp nên hướng tới giảm rủi ro chủ động bằng thiết kế; rủi ro còn lại phải được nêu trong IFU.",
+      "source": "§5.4, tr. 27; Hình 5.4.1",
+      "narration": "Giả sử bạn muốn trẻ nhỏ không bị bỏng vì ấm nước sôi. Cách chắc chắn nhất là không để ấm nước trong phòng. Cách thứ hai là đặt ấm trên kệ cao. Cách thứ ba là gắn chuông báo. Cách cuối cùng là dặn đứa trẻ đừng chạm vào. Bốn cách, độ tin cậy giảm dần. Giảm rủi ro vệ sinh có đúng thứ bậc ấy. Tốt nhất là loại bỏ hẳn chất nhiễm. Kế đến là áp dụng nguyên tắc thiết kế vệ sinh. Hai cách này không phụ thuộc vào con người. Sau đó là kiểm soát kỹ thuật, như cảm biến phát hiện rò hay máy dò kim loại. Chúng chỉ phát hiện, không ngăn chặn. Cuối cùng là hướng dẫn và quy trình, phụ thuộc hoàn toàn vào người thực hiện. Bạn hãy thử sắp xếp các biện pháp trên màn hình.",
+      "visual": "sequence",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 26,
+      "module": 7,
+      "title": "Có phương án không bao giờ được chấp nhận",
+      "lead": "Chọn biện pháp tùy vào điều khả thi, nhưng có lằn ranh không được vượt.",
+      "cards": [
+        {
+          "title": "Kết hợp biện pháp",
+          "text": "Một rủi ro có thể cần nhiều biện pháp; một biện pháp có thể xử lý nhiều rủi ro, ví dụ bề mặt dễ làm sạch, không có hốc hay khe."
+        },
+        {
+          "title": "Giới hạn thực tế",
+          "text": "Lựa chọn còn tùy an toàn lao động, hạn chế kỹ thuật, vật liệu sẵn có và yêu cầu chức năng."
+        },
+        {
+          "title": "Lằn ranh",
+          "text": "Với chất bôi trơn độc, một phớt đơn kèm bảo trì sửa chữa là không chấp nhận được trong mọi trường hợp."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-6) Van đế đơn giữa sản phẩm và hóa chất CIP: tác động cao, khả năng cao. Biện pháp: lập trình và khóa liên động để không bao giờ sản xuất và CIP cùng lúc; kiểm tra gioăng định kỳ.",
+      "takeaway": "Lý do: rủi ro nhiễm quá cao, và trên thực tế việc phát hiện luôn quá muộn.",
+      "source": "§5.4, tr. 27–28",
+      "narration": "Tài liệu dùng một ví dụ rất cụ thể. Một chi tiết quay cần chất bôi trơn, và chất bôi trơn đó độc. Nó có thể lọt vào sản phẩm. Ta làm gì? Tốt nhất, thiết kế lại để không cần bôi trơn nữa. Nếu không được, đưa chất bôi trơn ra ngoài vùng tiếp xúc với thực phẩm. Dùng phớt kép. Dùng loại chất bôi trơn cấp thực phẩm. Thêm nữa, lắp thiết bị giám sát rò rỉ. Và viết hướng dẫn bảo trì, dặn không bôi trơn quá mức. Nhưng có một phương án mà tài liệu nói thẳng là không bao giờ chấp nhận. Đó là chỉ dùng một lớp phớt, rồi hỏng thì sửa. Vì sao? Vì rủi ro quá cao. Và vì trên thực tế, khi ta phát hiện ra phớt hỏng, thì luôn luôn đã quá muộn.",
+      "visual": "",
+      "trainer": "Thảo luận: ở cơ sở có điểm nào đang chỉ dựa vào “hỏng thì sửa” cho một rủi ro tác động cao không?"
+    },
+    {
+      "id": 27,
+      "module": 7,
+      "title": "Cân nhắc khi chọn biện pháp",
+      "lead": "Giải pháp thiết kế vệ sinh luôn phải ít nhất phù hợp mục đích; sau đó mới là tối ưu.",
+      "cards": [
+        {
+          "title": "Tổng chi phí sở hữu",
+          "text": "Thiết kế vệ sinh có thể cần đầu tư ban đầu cao hơn nhưng chi phí vận hành dài hạn thấp hơn. Vệ sinh, bảo trì, lấy mẫu nhiều hơn làm tăng chi phí vận hành liên tục."
+        },
+        {
+          "title": "Xung đột",
+          "text": "Che chắn bảo vệ người vận hành có thể mâu thuẫn với khả năng tiếp cận. Tuân thủ đủ mọi nguyên tắc có thể làm mất chức năng, ví dụ chọn gang thay inox vì độ dẫn nhiệt."
+        },
+        {
+          "title": "Rủi ro tạm thời",
+          "text": "Rủi ro đặc thù của lúc lắp ráp hoặc khởi động có thể chỉ cần biện pháp giảm rủi ro tạm thời."
+        }
+      ],
+      "example": "(Doc. 58, §5.4) Bơm phải tháo rời hoàn toàn để vệ sinh giữa các mẻ gây dừng máy nhiều hơn bơm làm sạch tại chỗ được. Trao đổi nhiệt dạng tấm rủi ro hơn dạng ống, nhưng vẫn có thể hợp lý vì gọn và linh hoạt.",
+      "takeaway": "Luôn so chi phí một lần cho thiết kế lại với chi phí vận hành trong suốt tuổi thọ thiết bị.",
+      "source": "§5.4, tr. 27–28",
+      "narration": "Mua rẻ nhiều khi lại thành đắt. Một cái bơm rẻ, nhưng sau mỗi mẻ phải tháo rời hoàn toàn để rửa. Mỗi lần mất một giờ dừng máy. Nhân với vài trăm mẻ mỗi năm, trong mười năm. Cái bơm đắt hơn, rửa tại chỗ được, hóa ra rẻ hơn nhiều. Tài liệu gọi đó là tổng chi phí sở hữu. Hãy luôn so khoản đầu tư một lần với chi phí vận hành suốt đời thiết bị. Tuy nhiên, đời thực có xung đột. Tấm che bảo vệ người vận hành lại cản trở việc vệ sinh. Một vật liệu dễ rửa lại dẫn nhiệt kém. Và không phải lúc nào phương án ít rủi ro nhất cũng được chọn. Bộ trao đổi nhiệt dạng tấm dễ rò hơn dạng ống. Nhưng nó gọn và linh hoạt, nên vẫn có thể là lựa chọn hợp lý.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 28,
+      "module": 7,
+      "title": "Biện pháp mẫu theo từng nhóm",
+      "lead": "Dùng bảng này để gợi ý, rồi tra các checklist ở Phụ lục 4 và các hướng dẫn EHEDG liên quan.",
+      "cards": [
+        {
+          "title": "Loại bỏ",
+          "text": "Nhà máy riêng cho sản phẩm không chứa chất gây dị ứng; thiết kế bỏ chất bôi trơn; không dùng vật liệu có chứa chất nhiễm."
+        },
+        {
+          "title": "Nguyên tắc thiết kế vệ sinh",
+          "text": "Inox chịu hóa chất, nhựa dò được; phớt kép, phân vùng, van hai đế; đánh bóng điện, CIP thay rửa tay; bỏ đầu cụt, sàn dốc; đủ khoảng trống giữa máy và tường."
+        },
+        {
+          "title": "Kiểm soát và thủ tục",
+          "text": "Phát hiện rò, dò kim loại, X-quang; IFU, quy trình vận hành, bảo trì, vệ sinh; kiểm tra và lấy mẫu mở rộng."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-6) Bồn chứa với quả cầu phun: chọn sai loại hoặc đặt sai vị trí tạo vùng khuất. Biện pháp: chọn và định vị đúng, thêm lưới lọc trên đường hồi CIP, thẩm định khả năng làm sạch qua nhiều mẻ.",
+      "takeaway": "Sổ tay hướng dẫn và thông tin sử dụng là sản phẩm bắt buộc của nhà cung cấp; nhà máy rút quy trình vận hành của mình từ đó.",
+      "source": "§5.4, tr. 28–29",
+      "narration": "Màn hình này là một bảng tra nhanh. Hãy đọc từ trên xuống, theo thứ bậc. Nhóm loại bỏ. Ví dụ, xây một nhà máy riêng cho sản phẩm không chứa chất gây dị ứng. Nhóm nguyên tắc thiết kế. Chọn thép chịu được hóa chất. Dùng nhựa có màu khác sản phẩm để dễ phát hiện. Phân vùng. Bỏ đầu cụt. Làm sàn dốc. Để đủ khoảng trống giữa máy và tường. Nhóm kiểm soát kỹ thuật. Phát hiện rò, dò kim loại. Và nhóm thủ tục. Hướng dẫn vận hành, bảo trì, vệ sinh. Tài liệu có ví dụ về một bồn chứa. Quả cầu phun đặt sai vị trí để lại vùng không được rửa. Biện pháp là chọn đúng, đặt đúng, thêm lưới lọc trên đường hồi, rồi chứng minh bồn sạch qua nhiều mẻ thật.",
+      "visual": "measures",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 29,
+      "module": 8,
+      "title": "Kiểm tra xác nhận và thẩm định: hai câu hỏi khác nhau",
+      "lead": "Cả hai đều cần trong mọi bài HDRM; thứ tự và nội dung tùy điều kiện từng nơi.",
+      "cards": [
+        {
+          "title": "Kiểm tra xác nhận",
+          "text": "Verification: bằng chứng rằng mọi rủi ro đã được xem xét, loại bỏ hoặc giảm bằng thiết kế, được ghi lại; và rủi ro còn lại đã được truyền đạt rõ."
+        },
+        {
+          "title": "Thẩm định",
+          "text": "Validation: bằng chứng về hiệu lực của biện pháp, tức sự phù hợp mục đích, trong sử dụng thật; thường cần nhiều lượt chạy ở điều kiện thực."
+        },
+        {
+          "title": "Các mốc trong vòng đời",
+          "text": "Rà soát URS; thử nghiệm tại xưởng trước khi giao; kiểm tra sau vận chuyển; thử tại hiện trường và các bước thẩm định; cập nhật PRP và đào tạo nhân viên."
+        }
+      ],
+      "example": "(Doc. 58, §6) Bồn chứa: kiểm tra xác nhận là chứng minh bồn được chế tạo đúng độ nhám, đúng góc đáy, và nhiệt độ vệ sinh được giữ. Thẩm định là chứng minh bồn thực sự thoát hết và sạch với chất lỏng thật.",
+      "takeaway": "Chế tạo đúng đặc tả chưa chứng minh thiết bị sạch trong sử dụng thật.",
+      "source": "§6, tr. 30–31",
+      "narration": "Có hai từ rất hay bị dùng lẫn. Kiểm tra xác nhận và thẩm định. Hãy nghĩ tới một chiếc ô mới mua. Kiểm tra xác nhận là xem ô có đủ nan, đúng vải, đúng kích thước như đã đặt không. Thẩm định là mang ô ra giữa trời mưa và xem mình có khô không. Hai câu hỏi khác nhau, và cần cả hai. Tài liệu lấy ví dụ một cái bồn. Kiểm tra xác nhận là chứng minh bồn được chế tạo đúng độ nhám và đúng góc đáy như thỏa thuận. Thẩm định là chứng minh bồn thực sự thoát hết và sạch, với chính chất lỏng của nhà máy, qua nhiều lần chạy. Trong một dự án, việc kiểm tra bắt đầu rất sớm. Từ lúc rà soát bản yêu cầu, tới thử máy tại xưởng nhà cung cấp, rồi thử tại nhà máy.",
+      "visual": "",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 30,
+      "module": 8,
+      "title": "Giám sát và xem xét: giữ cho còn phù hợp",
+      "lead": "Giám sát và xem xét là phần nối dài của kiểm tra xác nhận và thẩm định.",
+      "cards": [
+        {
+          "title": "Giám sát",
+          "text": "Thu thập, đánh giá liên tục dữ liệu vệ sinh và theo dõi chỉ báo rủi ro, để chứng minh thiết bị vẫn phù hợp mục đích."
+        },
+        {
+          "title": "Xem xét định kỳ",
+          "text": "Dựa trên dữ liệu giám sát. Khi hiệu năng vệ sinh không đạt, quyết định chạy lại một phần hoặc toàn bộ HDRM; xét cả rủi ro mới nổi."
+        },
+        {
+          "title": "Thống nhất thuật ngữ",
+          "text": "Không phải công ty nào cũng hiểu các từ giám sát, xem xét, kiểm tra xác nhận, thẩm định như nhau. Hãy làm rõ kỳ vọng của các bên."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-5) Tại buổi thử nghiệm ở xưởng cho một băng tải, đội người dùng chấm “không đạt” một số điểm, ví dụ: chưa có quy trình vệ sinh từ nhà chế tạo, và tháo đầu truyền động quá phức tạp.",
+      "takeaway": "Một số thông số như độ sạch vi sinh không giám sát được theo thời gian thực; kết quả chỉ có sau, ví dụ 24–48 giờ.",
+      "source": "§6, tr. 30–31",
+      "narration": "Thẩm định xong không có nghĩa là xong mãi mãi. Gioăng mòn dần. Sản phẩm thay đổi. Người vận hành thay ca. Vì vậy cần giám sát và xem xét định kỳ. Giám sát là thu thập dữ liệu vệ sinh hằng ngày. Bề mặt có sạch không. Thiết bị có chạy ổn định không. Có dấu hiệu côn trùng không. Xem xét là ngồi lại nhìn xu hướng. Nếu kết quả xấu đi, phải quyết định làm lại một phần hoặc toàn bộ bài đánh giá. Có một điều cần nhớ. Kết quả vi sinh không có ngay. Thường phải chờ một tới hai ngày. Và một lời khuyên thực tế. Mỗi công ty hiểu các từ giám sát, kiểm tra, thẩm định theo cách riêng. Khi làm việc với nhà cung cấp, hãy thống nhất nghĩa của từng từ trước.",
+      "visual": "",
+      "trainer": "Hỏi học viên: dữ liệu vệ sinh nào ở cơ sở đang được xem xu hướng định kỳ? Ai quyết định đánh giá lại?"
+    },
+    {
+      "id": 31,
+      "module": 8,
+      "title": "Báo cáo HDRM: ảnh chụp của tình huống đã đánh giá",
+      "lead": "Hình thức báo cáo có thể khác nhau; nội dung cốt lõi thì giống nhau.",
+      "cards": [
+        {
+          "title": "Nội dung điển hình",
+          "text": "Phạm vi, bối cảnh, tiêu chí; chất nhiễm đã xét; rủi ro đã nhận diện và mức ưu tiên; quyết định giảm rủi ro; rủi ro còn lại nhưng chấp nhận được."
+        },
+        {
+          "title": "Ba kênh giảm rủi ro",
+          "text": "Bằng nguyên tắc thiết kế vệ sinh; bằng IFU; bằng quy trình vận hành, PRP hoặc OPRP."
+        },
+        {
+          "title": "Lưu ở đâu",
+          "text": "Nhà cung cấp: trong hồ sơ kỹ thuật. Nhà sản xuất thực phẩm: tài liệu tham chiếu trong hồ sơ hệ thống quản lý an toàn thực phẩm, phục vụ đánh giá."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-6) Báo cáo của một nhà cung cấp dây chuyền gồm: phạm vi và tiêu chí, P&ID, nhật ký các cuộc họp theo giai đoạn, ma trận ưu tiên, bảng rủi ro – biện pháp – kiểm tra, và thông tin sử dụng gửi người dùng.",
+      "takeaway": "Tùy tổ chức, thêm: ngày, thành viên đội, mã và tham chiếu tài liệu kỹ thuật, bằng chứng kiểm tra xác nhận, hình ảnh.",
+      "source": "§7, tr. 32",
+      "narration": "Việc không ghi lại coi như chưa làm. Báo cáo quản lý rủi ro thiết kế vệ sinh giống một tấm ảnh chụp. Nó cho thấy tình huống tại thời điểm đánh giá. Nội dung cốt lõi gồm sáu phần. Phạm vi, bối cảnh và tiêu chí. Các chất nhiễm đã xét. Các rủi ro đã nhận diện và mức ưu tiên. Quyết định giảm rủi ro, bằng thiết kế, bằng thông tin sử dụng, hay bằng quy trình. Và những rủi ro còn lại nhưng chấp nhận được. Nhà cung cấp lưu báo cáo trong hồ sơ kỹ thuật. Nhà máy thực phẩm lưu trong hồ sơ an toàn thực phẩm, để sẵn sàng khi có đánh giá. Nên ghi thêm ngày, tên thành viên và hình ảnh. Bạn có thể dùng phiếu trên màn hình làm điểm bắt đầu.",
+      "visual": "checklist",
+      "trainer": "Yêu cầu học viên liên hệ với một thiết bị, một phòng hoặc một dự án thực tế của cơ sở. Phân biệt nguyên tắc trong tài liệu với tiêu chí đã được cơ sở phê duyệt."
+    },
+    {
+      "id": 32,
+      "module": 8,
+      "title": "Tình huống tổng hợp: nhà máy bơ đậu phộng",
+      "lead": "Một sự cố ở nhà máy cũ, đi qua đủ các bước của mô hình.",
+      "cards": [
+        {
+          "title": "Nhận diện",
+          "text": "Chất nhiễm: Salmonella. Cơ chế: xâm nhập — phân chim trên bao thấm nước khi vận chuyển ngoài trời, và trong xưởng lúc hũ đã chiết nhưng chưa đóng nắp."
+        },
+        {
+          "title": "Ngắn hạn",
+          "text": "Che băng tải chở hũ đã chiết; gia cố rào chắn chim vào xưởng; dọn sạch khu ngoài trời để không còn thu hút chim."
+        },
+        {
+          "title": "Dài hạn",
+          "text": "Xây cơ sở tiếp nhận, kiểm nghiệm, làm sạch mới tại cảng; đóng lại đậu vào thùng kín, làm sạch được; giao bằng xe kín đúng lúc cần."
+        }
+      ],
+      "example": "(Doc. 58, Phụ lục 5-4) Phương án hầm vận chuyển giữa hai tòa nhà bị bác: đầu tư lớn vào một cơ sở cũ có thể bị bỏ về sau, và yêu cầu làm sạch được bên trong hầm được coi là khó đáp ứng.",
+      "takeaway": "Sau đó: đánh giá nội bộ, theo dõi chim tại chỗ, lấy mẫu tăng cường trong 3 tháng. Sự cố không lặp lại.",
+      "source": "Phụ lục 5-4",
+      "narration": "Chúng ta kết thúc bằng chính câu chuyện mở đầu. Nhà máy bơ đậu phộng và những con chim bồ câu. Đội điều tra đã làm gì? Trước hết, họ cân nhắc việc đuổi hết chim. Không khả thi. Chừng nào còn đậu rơi trên đường, chim còn tới. Họ cũng nghĩ tới đổi sang bao không thấm. Không ổn, vì mặt ngoài bao vẫn bẩn. Vậy họ làm ba việc ngay. Che băng tải chở hũ. Chặn chim vào xưởng. Dọn sạch sân. Nhưng họ biết thế vẫn chưa đủ. Về lâu dài, họ xây hẳn một cơ sở tiếp nhận mới tại cảng, và chở đậu trong thùng kín. Sau đó là ba tháng lấy mẫu tăng cường. Sự cố không lặp lại. Bây giờ, mời bạn tự đi qua các quyết định đó trên màn hình. Cảm ơn bạn đã theo dõi, và chúc bạn làm tốt bài đánh giá.",
+      "visual": "scenario",
+      "trainer": "Yêu cầu học viên chỉ ra trong câu chuyện: đâu là loại bỏ, đâu là tách biệt, đâu là biện pháp thủ tục."
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "module": 1,
+      "slide": 2,
+      "q": "Nội dung nào thuộc phạm vi của HDRM?",
+      "options": [
+        "Nhận diện, đánh giá và giảm rủi ro vệ sinh do thiết kế nhà xưởng, thiết bị",
+        "Loại bỏ chất nhiễm có sẵn trong nguyên liệu",
+        "Phân định trách nhiệm pháp lý giữa người mua và người bán"
+      ],
+      "answer": 0,
+      "why": "§1.3, tr. 7: HDRM tập trung nhận diện, đánh giá, giảm rủi ro vệ sinh. §5.3.1, tr. 23: loại bỏ chất nhiễm có sẵn không thuộc phạm vi. §4.3.2, tr. 13: tài liệu không phân định trách nhiệm."
+    },
+    {
+      "id": 2,
+      "module": 1,
+      "slide": 3,
+      "q": "“Rủi ro vệ sinh” được định nghĩa thế nào?",
+      "options": [
+        "Mọi sai lỗi của người vận hành",
+        "Khả năng một mối nguy hoặc chất nhiễm làm nhiễm dòng sản phẩm qua xâm nhập, tích tụ hoặc phát triển",
+        "Chi phí vệ sinh hằng năm của nhà máy"
+      ],
+      "answer": 1,
+      "why": "§3, tr. 9: rủi ro vệ sinh là khả năng mối nguy an toàn thực phẩm hoặc chất nhiễm khác làm nhiễm dòng sản phẩm/vật liệu qua xâm nhập, tích tụ, phát triển."
+    },
+    {
+      "id": 3,
+      "module": 1,
+      "slide": 4,
+      "q": "Mô hình HDRM “có tính lặp” nghĩa là gì?",
+      "options": [
+        "Làm lại mỗi năm một lần bất kể kết quả",
+        "Chỉ lặp lại bước viết báo cáo",
+        "Lặp lại chuỗi bước cho tới khi rủi ro giảm tới mức mong muốn"
+      ],
+      "answer": 2,
+      "why": "§5.1, tr. 20: chuỗi bước được lặp lại theo chu trình cho tới khi đạt mức giảm rủi ro vệ sinh mong muốn."
+    },
+    {
+      "id": 4,
+      "module": 2,
+      "slide": 5,
+      "q": "Ba mục tiêu của thiết kế vệ sinh là gì?",
+      "options": [
+        "Giảm chi phí, tăng tốc độ, giảm nhân công",
+        "Ngăn xâm nhập, ngăn tích tụ, ngăn phát triển",
+        "Làm sạch, khử trùng, sấy khô"
+      ],
+      "answer": 1,
+      "why": "§4.1, tr. 11: ba mục tiêu là ngăn xâm nhập, ngăn phát triển và ngăn tích tụ."
+    },
+    {
+      "id": 5,
+      "module": 2,
+      "slide": 7,
+      "q": "Mục nào KHÔNG thuộc năm nguyên tắc thiết kế vệ sinh?",
+      "options": [
+        "Tương thích vật liệu",
+        "Khả năng tiếp cận",
+        "Khả năng truy xuất nguồn gốc"
+      ],
+      "answer": 2,
+      "why": "§4.1, tr. 11–12: năm nguyên tắc là tương thích vật liệu, khả năng tách biệt, làm sạch, thoát và tiếp cận."
+    },
+    {
+      "id": 6,
+      "module": 2,
+      "slide": 8,
+      "q": "HACCP và HDRM khác nhau ở điểm nào?",
+      "options": [
+        "HACCP tập trung mối nguy với người tiêu dùng tại điểm tiêu thụ; HDRM giới hạn mối nguy và chất nhiễm bằng thiết kế nhà xưởng, thiết bị",
+        "HDRM thay thế hoàn toàn HACCP",
+        "HACCP chỉ áp dụng cho nhà cung cấp thiết bị"
+      ],
+      "answer": 0,
+      "why": "§4.2, tr. 13: HACCP tập trung mối nguy tại điểm tiêu thụ; HDRM nhằm giới hạn danh sách mối nguy lường trước được và chất nhiễm khác."
+    },
+    {
+      "id": 7,
+      "module": 3,
+      "slide": 10,
+      "q": "Với thiết bị bán đại trà (unassigned), nhà cung cấp làm HDRM dựa trên gì?",
+      "options": [
+        "URS của từng khách hàng cụ thể",
+        "Cách sử dụng dự kiến, kèm công bố cửa sổ vận hành, giới hạn và IFU",
+        "Không cần làm HDRM"
+      ],
+      "answer": 1,
+      "why": "§4.3.2, tr. 14: nhà cung cấp dựa trên cách dùng dự kiến, cung cấp thông tin cửa sổ vận hành, giới hạn, hạn chế và IFU."
+    },
+    {
+      "id": 8,
+      "module": 3,
+      "slide": 11,
+      "q": "Thiết bị đã có chứng nhận EHEDG hoặc 3-A thì người dùng cần làm gì?",
+      "options": [
+        "Không cần đánh giá gì thêm",
+        "Chỉ cần so sánh giá",
+        "Vẫn phải đánh giá rủi ro cho ứng dụng của mình"
+      ],
+      "answer": 2,
+      "why": "§4.3.3, tr. 15: thiết bị được chứng nhận được coi là thiết kế vệ sinh, nhưng người dùng luôn phải đánh giá rủi ro cho ứng dụng."
+    },
+    {
+      "id": 9,
+      "module": 3,
+      "slide": 9,
+      "q": "Đội HDRM cần bảo đảm những hiểu biết nào?",
+      "options": [
+        "Nguyên tắc thiết kế vệ sinh, đánh giá rủi ro và nguyên nhân gốc, phân vùng vệ sinh, sản phẩm và quy trình",
+        "Chỉ kỹ năng hàn và lắp đặt",
+        "Chỉ kiến thức kế toán chi phí"
+      ],
+      "answer": 0,
+      "why": "§4.3.1, tr. 13: đội cần hiểu yêu cầu và nguyên tắc HD, phương pháp phân tích mối nguy/đánh giá rủi ro/nguyên nhân gốc, phân vùng vệ sinh, sản phẩm và quy trình."
+    },
+    {
+      "id": 10,
+      "module": 4,
+      "slide": 13,
+      "q": "Máy phân loại khoai tây trước khi rửa nên được thiết kế thế nào?",
+      "options": [
+        "Đạt mức như máy đóng gói sản phẩm ăn liền",
+        "Có thể cơ bản, nhưng không có chi tiết thủy tinh và chất bôi trơn phải tách khỏi khoai",
+        "Không cần bất kỳ yêu cầu thiết kế vệ sinh nào"
+      ],
+      "answer": 1,
+      "why": "§4.4.1, tr. 15: thiết kế có thể rất cơ bản, nhưng không được có thủy tinh và chất bôi trơn phải tách khỏi khoai vì bước sau có thể không loại được."
+    },
+    {
+      "id": 11,
+      "module": 4,
+      "slide": 16,
+      "q": "Kết quả đánh giá thiết bị cũ có thể là gì?",
+      "options": [
+        "Luôn phải thay thiết bị mới",
+        "Luôn được giữ nguyên",
+        "Không cần hành động ngay, thay đổi vận hành, hoặc cải tạo"
+      ],
+      "answer": 2,
+      "why": "§4.4.4, tr. 19: ba kết cục — không cần hành động ngay; cần thay đổi vận hành; hoặc cần cải tiến/cải tạo."
+    },
+    {
+      "id": 12,
+      "module": 4,
+      "slide": 15,
+      "q": "Biện pháp tạm thời nào phù hợp với giai đoạn vận chuyển và lắp đặt?",
+      "options": [
+        "Che kín các lỗ hở để ngăn mảnh vụn xây dựng và môi trường",
+        "Tăng tần suất CIP trong sản xuất",
+        "Lắp thêm máy dò kim loại cuối dây chuyền"
+      ],
+      "answer": 0,
+      "why": "§4.4.3, tr. 17: ví dụ biện pháp tạm thời là che các lỗ hở khi vận chuyển và lắp đặt."
+    },
+    {
+      "id": 13,
+      "module": 5,
+      "slide": 17,
+      "q": "“Người tiêu dùng mục tiêu là trẻ sơ sinh” thuộc phần nào của bước 1?",
+      "options": [
+        "Phạm vi",
+        "Bối cảnh",
+        "Báo cáo"
+      ],
+      "answer": 1,
+      "why": "§5.2, tr. 22: người tiêu dùng mục tiêu (trẻ nhỏ, người cao tuổi, người suy giảm miễn dịch) thuộc bối cảnh."
+    },
+    {
+      "id": 14,
+      "module": 5,
+      "slide": 18,
+      "q": "Một rủi ro vệ sinh được nhận diện là tổ hợp của những gì?",
+      "options": [
+        "Chất nhiễm và cơ chế nhiễm",
+        "Chi phí và thời gian",
+        "Nhà cung cấp và người dùng"
+      ],
+      "answer": 0,
+      "why": "§5.1, tr. 20: rủi ro vệ sinh là tổ hợp của chất nhiễm và cơ chế nhiễm."
+    },
+    {
+      "id": 15,
+      "module": 5,
+      "slide": 19,
+      "q": "Đâu là ví dụ về “xâm nhập sinh ra từ bên trong”?",
+      "options": [
+        "Chim bay vào xưởng",
+        "Bụi từ công trường bên cạnh",
+        "Mảnh gioăng vỡ hoặc bụi kim loại từ chi tiết quay"
+      ],
+      "answer": 2,
+      "why": "Phụ lục 3: xâm nhập sinh ra bên trong gồm gioăng vỡ, bụi/mảnh kim loại từ thiết bị quay, thôi nhiễm từ vật liệu chế tạo."
+    },
+    {
+      "id": 16,
+      "module": 6,
+      "slide": 21,
+      "q": "Vì sao rò rỉ dầu khoáng phải được ngăn ở mọi khâu của chuỗi cung ứng?",
+      "options": [
+        "Vì dầu khoáng đắt tiền",
+        "Vì nó là mối nguy và không thể loại khỏi thực phẩm ở bước sau",
+        "Vì nó làm bẩn sàn nhà xưởng"
+      ],
+      "answer": 1,
+      "why": "§5.3.2, tr. 24: dầu khoáng là mối nguy và không thể loại khỏi sản phẩm thực phẩm."
+    },
+    {
+      "id": 17,
+      "module": 6,
+      "slide": 23,
+      "q": "Độ lớn của rủi ro vệ sinh được xác định từ hai yếu tố nào?",
+      "options": [
+        "Tác động tiêu cực và khả năng xảy ra",
+        "Số lượng và tuổi của thiết bị",
+        "Chi phí đầu tư và chi phí vận hành"
+      ],
+      "answer": 0,
+      "why": "§5.3.2, tr. 23–25: độ lớn rủi ro là tích của tác động tiêu cực và khả năng xảy ra xâm nhập, tích tụ hoặc phát triển."
+    },
+    {
+      "id": 18,
+      "module": 6,
+      "slide": 24,
+      "q": "Sau bước giảm rủi ro, câu hỏi nào bắt buộc phải trả lời?",
+      "options": [
+        "Thiết bị đã rẻ nhất chưa?",
+        "Đã điền bao nhiêu checklist?",
+        "Rủi ro vệ sinh đã giảm tới mức chấp nhận được hay chưa?"
+      ],
+      "answer": 2,
+      "why": "§5.3.2, tr. 25: sau bước giảm rủi ro phải trả lời câu hỏi nhị phân — rủi ro đã giảm tới mức chấp nhận được hay chưa."
+    },
+    {
+      "id": 19,
+      "module": 7,
+      "slide": 25,
+      "q": "Nhóm biện pháp nào hiệu quả và đáng tin cậy nhất?",
+      "options": [
+        "Loại bỏ chất nhiễm bằng thiết kế",
+        "Hướng dẫn công việc cho người vận hành",
+        "Dò kim loại ở cuối dây chuyền"
+      ],
+      "answer": 0,
+      "why": "§5.4, tr. 27: biện pháp chủ động như loại bỏ và nguyên tắc HD không phụ thuộc kỷ luật hằng ngày; kiểm soát kỹ thuật và thủ tục kém tin cậy hơn."
+    },
+    {
+      "id": 20,
+      "module": 7,
+      "slide": 26,
+      "q": "Với chất bôi trơn độc, phương án nào không được chấp nhận trong mọi trường hợp?",
+      "options": [
+        "Phớt kép kèm chất bôi trơn cấp thực phẩm",
+        "Phớt đơn kèm bảo trì sửa chữa (hỏng mới sửa)",
+        "Thiết kế bỏ hẳn nhu cầu bôi trơn"
+      ],
+      "answer": 1,
+      "why": "§5.4, tr. 28: phớt đơn với bảo trì sửa chữa không chấp nhận được vì rủi ro quá cao và phát hiện luôn quá muộn."
+    },
+    {
+      "id": 21,
+      "module": 7,
+      "slide": 27,
+      "q": "Vì sao nên so sánh các phương án theo tổng chi phí sở hữu?",
+      "options": [
+        "Vì thiết kế vệ sinh luôn rẻ hơn lúc mua",
+        "Vì luật bắt buộc chọn phương án đắt nhất",
+        "Vì vệ sinh, bảo trì, lấy mẫu nhiều hơn làm tăng chi phí vận hành liên tục"
+      ],
+      "answer": 2,
+      "why": "§5.4, tr. 27–28: cách xử lý tạm như vệ sinh/bảo trì/lấy mẫu nhiều hơn làm tăng chi phí vận hành; cần so chi phí một lần với chi phí suốt tuổi thọ."
+    },
+    {
+      "id": 22,
+      "module": 8,
+      "slide": 29,
+      "q": "Thẩm định (validation) trả lời câu hỏi nào?",
+      "options": [
+        "Bồn có được chế tạo đúng đặc tả không?",
+        "Biện pháp có hiệu lực trong sử dụng thật không, thường qua nhiều lượt chạy?",
+        "Nhiệt độ mỗi ca đã được ghi lại chưa?"
+      ],
+      "answer": 1,
+      "why": "§6, tr. 30: thẩm định là thu thập bằng chứng về hiệu lực của biện pháp — sự phù hợp mục đích — trong sử dụng thật, thường cần nhiều lượt chạy."
+    },
+    {
+      "id": 23,
+      "module": 8,
+      "slide": 31,
+      "q": "Nội dung điển hình của một báo cáo HDRM gồm gì?",
+      "options": [
+        "Phạm vi, bối cảnh, tiêu chí; chất nhiễm; rủi ro và ưu tiên; quyết định giảm rủi ro; rủi ro còn lại chấp nhận được",
+        "Chỉ danh sách thiết bị và giá mua",
+        "Chỉ kết quả vi sinh thành phẩm"
+      ],
+      "answer": 0,
+      "why": "§7, tr. 32: báo cáo gồm phạm vi, bối cảnh, tiêu chí, chất nhiễm đã xét, rủi ro và ưu tiên, quyết định giảm rủi ro, rủi ro còn lại chấp nhận được."
+    },
+    {
+      "id": 24,
+      "module": 8,
+      "slide": 30,
+      "q": "Khi dữ liệu giám sát cho thấy hiệu năng vệ sinh không đạt, cần làm gì?",
+      "options": [
+        "Bỏ qua nếu chưa có khiếu nại",
+        "Chỉ tăng nồng độ hóa chất vệ sinh",
+        "Quyết định chạy lại một phần hoặc toàn bộ quy trình HDRM"
+      ],
+      "answer": 2,
+      "why": "§6, tr. 30: khi hiệu năng vệ sinh không đạt, việc xem xét nên dẫn tới quyết định chạy lại (một phần) quy trình HDRM."
+    }
+  ]
+}</script>
+<script>
+'use strict';
+const C=JSON.parse(document.getElementById('course-data').textContent),KEY=C.id, $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fold=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[đĐ]/g,'d').toLowerCase();
+function fresh(){return {seen:[],completed:[],practice:{},lastSlide:1,attempts:[],exam:null,checklist:[],scenario:[],created:new Date().toISOString()}}
+let db={active:'',profiles:{},theme:'light'},storageOK=true;try{const d=JSON.parse(localStorage.getItem(KEY)||'null');if(d&&d.profiles&&typeof d.profiles==='object')db=d;}catch(e){storageOK=false}
+let guest={info:{id:'',name:'',dept:''},state:fresh()},mode='learner',route={type:'home'},sequence=['Kiểm soát kỹ thuật: thiết bị giám sát rò rỉ','Loại bỏ: thiết kế để không cần bôi trơn','Thông tin sử dụng: hướng dẫn bảo trì, tránh bôi trơn quá mức','Nguyên tắc thiết kế vệ sinh: phớt kép, đưa chất bôi trơn ra ngoài vùng tiếp xúc'],SEQ_CORRECT=['Loại bỏ: thiết kế để không cần bôi trơn','Nguyên tắc thiết kế vệ sinh: phớt kép, đưa chất bôi trơn ra ngoài vùng tiếp xúc','Kiểm soát kỹ thuật: thiết bị giám sát rò rỉ','Thông tin sử dụng: hướng dẫn bảo trì, tránh bôi trơn quá mức'],seqResult='',trainerPractice={},scenarioStep=0,scenarioWrong='',pending=null,navDir='';
+const profile=()=>db.profiles[db.active]||guest, state=()=>profile().state;
+function validateState(){const s=state();for(const k of ['seen','completed','attempts','checklist','scenario'])if(!Array.isArray(s[k]))s[k]=[];if(!s.practice||typeof s.practice!=='object')s.practice={};if(!C.slides.some(x=>x.id===s.lastSlide))s.lastSlide=1;s.seen=s.seen.filter(n=>C.slides.some(x=>x.id===n));s.completed=s.completed.filter(n=>C.modules.some(x=>x.id===n));if(s.exam&&(!Array.isArray(s.exam.ids)||s.exam.ids.some(id=>!C.questions.some(q=>q.id===id))||!s.exam.answers))s.exam=null;}
+if(!db.active||!db.profiles[db.active]){db.profiles['person:OPEN']=db.profiles['person:OPEN']||{info:{id:'open',name:'',dept:''},state:fresh()};db.active='person:OPEN'}
+validateState();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(db));storageOK=true;}catch(e){storageOK=false}storageStatus()}
+function storageStatus(){const a=$('#storage-alert');a.hidden=storageOK;a.textContent='Trình duyệt không lưu được dữ liệu. Giữ trang mở và xuất kết quả trước khi đóng; thử mở bằng trình duyệt cho phép lưu trữ.'}
+function notify(t){$('#toast').textContent=t;$('#toast').hidden=false;clearTimeout(notify.timer);notify.timer=setTimeout(()=>$('#toast').hidden=true,5000)}
+function go(type,id){speech.stop();navDir=type==='slide'&&route.type==='slide'&&id<route.id?'enter-prev':'enter-next';route={type,id};if(type==='slide'&&mode==='learner'){const s=state();s.lastSlide=id;if(!s.seen.includes(id)){s.seen.push(id)}if(db.active)save();}render();$('#sidebar').classList.remove('open');$('#menu').setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'instant'});$('#main').focus({preventScroll:true});}
+function source(s){return `<p class="source">Nguồn: EHEDG Doc. 58 (05/2024), ${esc(s.source)}.</p>`}
+function moduleSlides(m){return C.slides.filter(s=>s.module===m)}
+function practiceQuestions(m){return C.questions.filter(q=>q.module===m).slice(0,2)}
+function countPractice(m){const p=mode==='trainer'?trainerPractice:state().practice;return practiceQuestions(m).filter(q=>p[q.id]===q.answer).length}
+function canComplete(m){return moduleSlides(m).every(s=>state().seen.includes(s.id))&&countPractice(m)===practiceQuestions(m).length}
+function ready(){return C.modules.every(m=>state().completed.includes(m.id))}
+const needed=()=>Math.ceil(C.modules.length*C.examPerModule*C.passPercent/100);
+function nav(){const st=state(),m=route.type==='slide'?C.slides.find(s=>s.id===route.id)?.module:route.type==='practice'?route.id:0;$('#sidebar').innerHTML=`<div class="brand"><span class="brand-icon">◈</span><div>HDRM ACADEMY<small>HYGIENIC DESIGN</small></div></div><div><div class="sidebar-label">RỦI RO THIẾT KẾ VỆ SINH</div><button class="sidebar-button ${route.type==='home'?'active':''}" data-go="home">⌂ &nbsp; Tổng quan khóa học</button></div><nav aria-label="Các bài học"><div class="sidebar-label">LỘ TRÌNH HỌC</div>${C.modules.map(x=>`<button class="sidebar-button ${m===x.id?'active':''} ${st.completed.includes(x.id)?'done':''}" data-m="${x.id}" data-slide="${moduleSlides(x.id)[0].id}"><span class="num">${st.completed.includes(x.id)?'✓':String(x.id).padStart(2,'0')}</span>${esc(x.title)}</button>`).join('')}</nav><div><button class="sidebar-button ${route.type==='exam'?'active':''}" data-go="exam">◎ &nbsp; Đánh giá cuối khóa</button><button class="sidebar-button ${route.type==='results'?'active':''}" data-go="results">▤ &nbsp; Kết quả & xác nhận</button><button class="sidebar-button ${route.type==='resources'?'active':''}" data-go="resources">↗ &nbsp; Tài liệu & công cụ</button></div><div class="side-footer"><strong>${esc(profile().info.name||'Học tự do · không cần đăng nhập')}</strong><div class="progress"><i style="width:${st.completed.length/C.modules.length*100}%"></i></div><span>${st.completed.length}/${C.modules.length} bài hoàn thành · ${st.seen.length}/${C.slides.length} màn hình đã xem</span><p style="margin:14px 0 0;font-size:10px">Biên soạn từ EHEDG Doc. 58, 2024<br>Đào tạo nội bộ · Phiên bản ${C.version}</p><p class="copyright">© 2026 Đặng Thanh Bình</p></div>`}
+function home(){const s=state();return `<section class="hero"><div><div class="eyebrow">EHEDG DOC. 58 / HỌC ĐỂ ÁP DỤNG</div><h1>Rủi ro vệ sinh.<br>Chặn từ<br>bản vẽ.</h1><p>Nhận diện chất nhiễm và đường nhiễm. Cân tác động và khả năng xảy ra. Chọn biện pháp giảm rủi ro đáng tin cậy nhất cho nhà xưởng và thiết bị thực phẩm.</p><div class="row"><button class="primary" data-start>▶ ${db.active&&s.seen.length?'Tiếp tục trình chiếu':'Bắt đầu tự trình chiếu'}</button><button class="ghost" data-manual>Tự xem thủ công</button><button class="ghost" data-go="resources">Tài liệu & phạm vi</button></div><p class="small" style="margin-top:14px">Tự đọc tiếng Việt · 1,2× mặc định · tự chuyển màn hình<br>Cần Internet. Lời thuyết minh được gửi tới Google Translate TTS.</p><div class="stats"><div><b>08</b><span>Bài học ngắn</span></div><div><b>32</b><span>Màn hình nội dung</span></div><div><b>16</b><span>Câu đánh giá</span></div></div></div><div class="hero-diagram">${heroSVG()}</div></section><div class="section-head"><div><div class="eyebrow" style="margin-bottom:9px">LỘ TRÌNH CỦA BẠN</div><h2>Từ nhận diện đến báo cáo</h2><p>${C.audience} · Dự kiến ${C.duration}</p></div><span class="pill">${s.completed.length}/8 hoàn thành</span></div><div class="modules">${C.modules.map(m=>`<button class="module-card" data-m="${m.id}" data-slide="${moduleSlides(m.id)[0].id}"><span class="badge">${s.completed.includes(m.id)?'✓':String(m.id).padStart(2,'0')}</span><div><h3>${esc(m.title)}</h3><p>${esc(m.description)}</p><div class="meta"><span>${m.duration} · 4 màn hình</span><span>${s.completed.includes(m.id)?'Đã hoàn thành':moduleSlides(m.id).some(x=>s.seen.includes(x.id))?'Đang học':'Bắt đầu →'}</span></div></div></button>`).join('')}</div><div class="notice"><b>Cách hoàn thành:</b> xem đủ 4 màn hình mỗi bài và trả lời đúng 2 câu luyện tập. Sau 8 bài, làm bài đánh giá 16 câu; cần ít nhất ${needed()}/16 câu đúng (ngưỡng ${C.passPercent}%).</div><section class="author"><span class="avatar" aria-hidden="true">ĐB</span><div><small>Biên soạn & thiết kế khóa học</small><b>Đặng Thanh Bình</b><a href="mailto:dangthanhbinh53@gmail.com">dangthanhbinh53@gmail.com</a><p>© 2026 Đặng Thanh Bình. Bản quyền thuộc về tác giả đối với phần biên soạn tiếng Việt, ví dụ minh họa, thiết kế và phần mềm khóa học. Nội dung gốc EHEDG Doc. 58 © EHEDG.</p></div></section><p class="small">Nội dung diễn giải từ bản tháng 5/2024 do người dùng cung cấp. Không phải bản dịch chính thức, chương trình chứng nhận EHEDG hoặc đặc tả thiết kế cho một nhà máy cụ thể.</p>`}
+function heroSVG(){return `<svg viewBox="0 0 400 360" role="img" aria-label="Minh họa: ba cơ chế nhiễm bị chặn bởi thiết kế vệ sinh trước khi tới sản phẩm"><defs><linearGradient id="hg" x1="0" x2="1"><stop stop-color="#e5c985"/><stop offset="1" stop-color="#91ccb0"/></linearGradient></defs><g fill="none" stroke="#a5cbb5" opacity=".22"><circle cx="200" cy="180" r="150"/><circle cx="200" cy="180" r="115"/><circle cx="200" cy="180" r="78"/></g><g stroke="#ffb3a8" stroke-width="3" stroke-linecap="round" fill="none"><path d="M18 138H104"/><path d="m92 130 12 8-12 8"/><path d="M18 180H104"/><path d="m92 172 12 8-12 8"/><path d="M18 222H104"/><path d="m92 214 12 8-12 8"/></g><path d="M160 104c18 10 34 12 46 12v62c0 34-22 58-46 70-24-12-46-36-46-70v-62c12 0 28-2 46-12z" fill="#ffffff14" stroke="#e5c985" stroke-width="3" stroke-linejoin="round"/><path d="m141 180 14 14 26-30" stroke="#e5c985" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M210 180H262" stroke="url(#hg)" stroke-width="3" stroke-dasharray="6 6"/><rect x="266" y="124" width="100" height="112" rx="16" fill="#c0d8ba"/><path d="M290 164h52M290 182h52M290 200h34" stroke="#174d37" stroke-width="6" stroke-linecap="round"/><g fill="#d6e8da" font-family="Segoe UI,Arial" font-size="10" text-anchor="middle"><text x="58" y="126">XÂM NHẬP</text><text x="58" y="168">TÍCH TỤ</text><text x="58" y="210">PHÁT TRIỂN</text><text x="160" y="270">THIẾT KẾ VỆ SINH</text><text x="316" y="258">SẢN PHẨM</text></g><text x="200" y="318" text-anchor="middle" fill="#d8c18c" font-family="Segoe UI,Arial" font-size="11" letter-spacing="3">RISK-BASED HYGIENIC DESIGN</text></svg>`}
+function slideView(id){const s=C.slides.find(x=>x.id===id);if(!s)return home();const m=C.modules[s.module-1],siblings=moduleSlides(s.module),idx=siblings.findIndex(x=>x.id===id);return `<div class="row between no-print" style="margin-bottom:18px"><span class="pill">Bài ${s.module} / 8 · ${esc(m.title)}</span><button data-present>${document.body.classList.contains('present')?'Thoát trình chiếu':'⛶ Trình chiếu'}</button></div><article class="lesson"><header class="lesson-head" data-n="${String(id).padStart(2,'0')}"><div class="eyebrow">${String(id).padStart(2,'0')} / ${C.slides.length} &nbsp; · &nbsp; ${idx+1} / 4 TRONG BÀI</div><h2>${esc(s.title)}</h2><p class="lead">${esc(s.lead)}</p></header><div class="grid">${s.cards.map((c,i)=>`<section class="card"><span class="index">0${i+1}</span><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></section>`).join('')}</div>${s.example?`<aside class="example"><small>Ví dụ <i>· nguồn ghi ở đầu câu</i></small>${esc(s.example)}</aside>`:''}${visual(s.visual)}<div class="takeaway"><small>ĐIỀU CẦN NHỚ</small>${esc(s.takeaway)}</div>${source(s)}${mode==='trainer'?`<aside class="trainer-note"><small>GỢI Ý CHO GIẢNG VIÊN · Không ghi nhận tiến độ ở chế độ này</small>${esc(s.trainer)}<p style="margin:10px 0 0"><b>Mục tiêu bài:</b> ${esc(m.objective)}</p></aside>`:''}<details><summary>Lời thuyết minh & bản đọc</summary><p>${esc(s.narration)}</p></details><footer class="lesson-nav"><button data-slide="${id-1}" ${id===1?'disabled':''}>← Trước</button><div class="dots" aria-label="Các màn hình trong bài">${siblings.map(x=>`<button class="${x.id===id?'active':state().seen.includes(x.id)?'seen':''}" data-slide="${x.id}" aria-label="Màn hình ${x.id}: ${esc(x.title)}" title="${esc(x.title)}"></button>`).join('')}</div><small>${mode==='learner'?'Đã ghi nhận xem màn hình':'Chế độ giảng viên'}</small>${idx===3?`<button class="primary" data-practice="${s.module}">Luyện tập bài ${s.module} →</button>`:`<button class="primary" data-slide="${id+1}">Tiếp theo →</button>`}</footer></article>${audioBar()}`}
+function audioBar(){return `<div class="audio no-print"><div class="tts-track"><i id="tts-progress"></i></div><button data-tts-prev aria-label="Màn hình trước" ${route.id===1?'disabled':''}>←</button><button data-pause class="primary">${speech.active?(speech.paused?'▶ Tiếp tục':'Ⅱ Tạm dừng'):'▶ Phát'}</button><button data-tts-next aria-label="Màn hình tiếp" ${route.id===C.slides.length?'disabled':''}>→</button><button data-speak>Đọc lại</button><button data-stop>Dừng</button><button data-mute aria-pressed="${speech.muted}">${speech.muted?'Bật tiếng':'Tắt tiếng'}</button><label>Tốc độ <select id="rate">${[0.9,1,1.2,1.4].map(r=>`<option value="${r}" ${speech.rate===r?'selected':''}>${String(r).replace('.',',')}×</option>`).join('')}</select></label><label><input id="auto-read" type="checkbox" ${speech.auto?'checked':''}>Tự chuyển</label><label><input id="pause-practice" type="checkbox" ${speech.stopAtPractice?'checked':''}>Dừng ở luyện tập</label><span id="audio-status" class="audio-status" role="status">${esc(speech.message)}</span><small class="tts-disclosure">Google Translate TTS · Cần Internet. Lời thuyết minh được gửi tới Google; không gửi thông tin học viên.</small></div>`}
+const principleInfo=[['Vật liệu','Tương thích vật liệu: trơ với sản phẩm, chất tẩy rửa và khử trùng; chống ăn mòn, không độc, không gây mùi vị lạ, không xốp, bền cơ học. Tính cả keo, chất trám, chất bôi trơn, vật liệu cách nhiệt (§4.1, tr. 11).'],['Tách biệt','Khả năng tách biệt: quản lý mối nguy và các tác nhân mang chúng — người, vật liệu, tiện ích — bằng rào chắn vật lý, khoảng cách, bố trí, phân vùng vệ sinh hoặc trình tự; cách nhiệt để tránh ngưng tụ (§4.1, tr. 12).'],['Làm sạch','Khả năng làm sạch: làm sạch hiệu quả trong thời gian và công sức hợp lý. Bề mặt hoàn thiện phù hợp, mối nối và mối hàn vệ sinh, góc bo tròn, sàn dốc về cống, nóc tủ dốc (§4.1, tr. 12).'],['Thoát','Khả năng thoát: không tích tụ và thoát hết chất lỏng, sản phẩm, bụi. Tránh đầu cụt, hốc, góc nhọn, khe nứt, mối ghép chồng, gờ, tiếp xúc kim loại với kim loại, ren hở (§4.1, tr. 12).'],['Tiếp cận','Khả năng tiếp cận: mọi khu vực tiếp cận được để vệ sinh, khử trùng, kiểm tra và bảo trì. Bề mặt tiếp cận được tại chỗ, hoặc thiết bị dễ tháo rời (§4.1, tr. 12).']];
+const MATRICES=[{name:'Ví dụ 5.3.2.1 · khả năng cao thì ít nhất là trung bình',g:[['M','H','H'],['L','M','H'],['L','M','M']]},{name:'Ví dụ 5.3.2.2 · tác động thấp thì rủi ro thấp',g:[['L','M','H'],['L','M','H'],['L','L','M']]}],LEVEL={L:['Thấp','#1c8a3a'],M:['Trung bình','#c47a00'],H:['Cao','#d42f4b']},LIKE=['Cao','Trung bình','Thấp'],IMPACT=['Thấp','Trung bình','Cao'];
+let matrixSel={v:0,l:1,i:1};
+function matrixTable(){const g=MATRICES[matrixSel.v].g,r=LEVEL[g[matrixSel.l][matrixSel.i]];return `<table class="mx"><thead><tr><th></th>${IMPACT.map(x=>`<th>Tác động ${x.toLowerCase()}</th>`).join('')}</tr></thead><tbody>${g.map((row,a)=>`<tr><th>Khả năng ${LIKE[a].toLowerCase()}</th>${row.map((c,b)=>`<td class="${a===matrixSel.l&&b===matrixSel.i?'sel':''}" style="background:${LEVEL[c][1]}">${LEVEL[c][0]}</td>`).join('')}</tr>`).join('')}</tbody></table><p>Kết quả trên ma trận này: <b style="color:${r[1]}">rủi ro ${r[0].toLowerCase()}</b>.<br><small>Hai ma trận đều là ví dụ trong tài liệu. Đội HDRM tự chọn và giải trình ma trận của mình.</small></p>`}
+function icon(i){const drawings=['<path d="M30 8 52 20 30 32 8 20z"/><path d="M8 30l22 12 22-12M8 40l22 12 22-12"/>','<path d="M30 6v48"/><rect x="7" y="16" width="15" height="28" rx="3"/><rect x="38" y="16" width="15" height="28" rx="3"/>','<path d="M30 8C18 22 14 29 14 36a16 16 0 0 0 32 0c0-7-4-14-16-28z"/><path d="M23 38a7 7 0 0 0 7 7"/>','<path d="M8 12h44L36 32v16l-12 6V32z"/>','<circle cx="26" cy="26" r="16"/><path d="M38 38l14 14"/>'];return `<svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">${drawings[i]}</svg>`}
+function visual(kind){if(!kind||kind==='hero')return '';let b='';
+const flow=(nodes)=>`<div class="flow">${nodes.map((x,i)=>`${i?'<span class="arrow">→</span>':''}<div class="node">${x[0]}<small>${x[1]}</small></div>`).join('')}</div>`;
+if(kind==='model')b=flow([['1 · Phạm vi','Bối cảnh · tiêu chí'],['2 · Nhận diện','Chất nhiễm + cơ chế'],['3 · Phân tích','Tác động × khả năng'],['4 · Giảm rủi ro','Theo thứ bậc biện pháp'],['5 · Kiểm chứng','Giám sát · báo cáo']])+`<p class="small" style="margin:12px 0 0">↺ Chưa đạt mức mong muốn thì quay lại các bước trước. Sơ đồ biên soạn từ §5.1 và Hình 2.</p>`;
+if(kind==='principles')b=`<div class="eyebrow">NĂM NGUYÊN TẮC · CHỌN TỪNG MỤC</div><p class="small">Ba mục tiêu được hiện thực hóa bằng năm nguyên tắc thiết kế vệ sinh.</p><div class="ahu">${principleInfo.map((x,i)=>`<button data-ahu="${i}" class="${i===0?'active':''}">${icon(i)}${x[0]}</button>`).join('')}</div><div class="explanation" id="ahu-info" role="status">${principleInfo[0][1]}</div>`;
+if(kind==='chain')b=flow([['Thu hoạch','Dễ vệ sinh, ít bám đất'],['Phân loại','Cơ bản; không thủy tinh, tách chất bôi trơn'],['Thái lát','Không đọng; vật liệu cấp thực phẩm'],['Chiên','Tiếp cận để vệ sinh; chịu nhiệt, hóa chất'],['Tẩm & đóng gói','Ăn liền: không nơi ẩn náu vi khuẩn'],['Trưng bày','Ít yêu cầu: bao bì đã bảo vệ']])+`<p class="small" style="margin:12px 0 0">Ví dụ chuỗi khoai tây lát chiên ở §4.4.1. Mức thiết kế vệ sinh của cơ sở phải do đánh giá rủi ro riêng xác định.</p>`;
+if(kind==='lifecycle')b=flow([['Chế tạo','Tại nhà cung cấp'],['Vận chuyển','Tới nhà máy'],['Lắp đặt','Lắp ráp & lắp đặt'],['Khởi động','Chạy thử · thẩm định'],['Vận hành','Chế biến · vệ sinh · bảo trì · thay đổi'],['Kết thúc','Ngừng dùng · thải bỏ']])+`<p class="small" style="margin:12px 0 0">Các giai đoạn vòng đời vật lý theo Hình 1. Thiết bị cũ được mua lại hoặc tái sử dụng đi vào từ giai đoạn lắp đặt.</p>`;
+if(kind==='mechanisms')b=`<div class="table-wrap"><table><caption style="text-align:left;margin-bottom:10px">Tóm tắt Phụ lục 3 · EHEDG Doc. 58 (2024) · ví dụ, không đầy đủ</caption><thead><tr><th>Cơ chế</th><th>Hóa học</th><th>Sinh học</th><th>Vật lý</th></tr></thead><tbody><tr><td>Xâm nhập<br><small>từ bên ngoài</small></td><td>Hóa chất vệ sinh, chất bôi trơn, chất lỏng kỹ thuật</td><td>Vi sinh vật, động vật gây hại</td><td>Mảnh vụn xây dựng, mảnh chi tiết máy, vật liệu bảo hộ</td></tr><tr><td>Xâm nhập<br><small>sinh ra bên trong</small></td><td>Thôi nhiễm từ vật liệu chế tạo</td><td>—</td><td>Gioăng vỡ, bụi kim loại từ chi tiết quay, bu lông lỏng</td></tr><tr><td>Tích tụ</td><td>Chất gây dị ứng, chất bôi trơn, cặn hóa chất vệ sinh</td><td>Đóng cặn, màng sinh học</td><td>Cặn sản phẩm khác (hạt, màu, mùi)</td></tr><tr><td>Phát triển</td><td>—</td><td>Vi sinh vật và động vật gây hại ở nơi ẩn náu</td><td>—</td></tr></tbody></table></div><p class="small" style="margin:10px 0 0">Chất nhiễm và cơ chế thay đổi theo giai đoạn: lắp đặt, khởi động, chế biến, vệ sinh, bảo trì.</p>`;
+if(kind==='matrix')b=`<div class="eyebrow">THỬ MA TRẬN · VÍ DỤ, KHÔNG PHẢI CHUẨN</div><div class="calc"><div class="fields"><label>Ma trận<select id="mx-v">${MATRICES.map((x,i)=>`<option value="${i}" ${i===matrixSel.v?'selected':''}>${x.name}</option>`).join('')}</select></label><label>Khả năng xảy ra<select id="mx-l">${LIKE.map((x,i)=>`<option value="${i}" ${i===matrixSel.l?'selected':''}>${x}</option>`).join('')}</select></label><label>Tác động tiêu cực<select id="mx-i">${IMPACT.map((x,i)=>`<option value="${i}" ${i===matrixSel.i?'selected':''}>${x}</option>`).join('')}</select></label></div><div class="calc-result" id="mx-out" role="status">${matrixTable()}</div></div>`;
+if(kind==='measures')b=`<div class="table-wrap"><table><caption style="text-align:left;margin-bottom:10px">Tóm tắt bảng ví dụ ở §5.4 · EHEDG Doc. 58 (2024), tr. 28–29</caption><thead><tr><th>Nhóm biện pháp</th><th>Ví dụ</th><th>Phụ thuộc con người</th></tr></thead><tbody><tr><td><b>1 · Loại bỏ</b></td><td>Nhà máy riêng cho sản phẩm không chất gây dị ứng; thiết kế bỏ chất bôi trơn</td><td>Không</td></tr><tr><td><b>2 · Nguyên tắc thiết kế vệ sinh</b><br><small>chủ động</small></td><td>Phớt kép, phân vùng, van hai đế; bỏ đầu cụt, sàn dốc; CIP thay rửa tay; nhựa dò được</td><td>Không</td></tr><tr><td><b>3 · Kiểm soát kỹ thuật</b><br><small>bị động</small></td><td>Phát hiện rò; giám sát áp suất, độ dẫn điện, nhiệt độ; dò kim loại; X-quang</td><td>Một phần</td></tr><tr><td><b>4 · IFU, SOP, hướng dẫn công việc</b></td><td>Quy trình vận hành, bảo trì, vệ sinh; kiểm tra và lấy mẫu mở rộng</td><td>Nhiều nhất</td></tr></tbody></table></div><p class="small" style="margin:10px 0 0">Cột “Phụ thuộc con người” là diễn giải của người biên soạn từ đoạn mô tả thứ bậc ở tr. 27.</p>`;
+if(kind==='sequence')b=`<div class="eyebrow">BÀI TẬP SẮP XẾP</div><p>Rủi ro: chất bôi trơn độc lọt vào sản phẩm. Xếp các biện pháp từ hiệu quả và đáng tin cậy nhất xuống ít nhất. Dùng ↑ ↓.</p><ol class="sequence">${sequence.map((x,i)=>`<li><b>${i+1}</b><span>${x}</span><button data-seq="${i}" data-delta="-1" ${i===0?'disabled':''} aria-label="Đưa ${x} lên">↑</button><button data-seq="${i}" data-delta="1" ${i===sequence.length-1?'disabled':''} aria-label="Đưa ${x} xuống">↓</button></li>`).join('')}</ol><button data-seq-check>Kiểm tra thứ tự</button><div id="seq-result" role="status">${seqResult?`<p class="feedback">${seqResult}</p>`:''}</div>`;
+if(kind==='scenario')b=scenarioView();
+if(kind==='checklist')b=checklistView();
+return `<section class="visual">${b}</section>`}
+const checks=['Phạm vi, bối cảnh và tiêu chí của bài đánh giá được nêu rõ.','Các chất nhiễm đã xét (hóa học, sinh học, vật lý) được liệt kê.','Từng rủi ro vệ sinh được mô tả bằng chất nhiễm, cơ chế nhiễm và mức ưu tiên.','Quyết định giảm rủi ro được ghi theo kênh: nguyên tắc thiết kế vệ sinh, IFU, quy trình vận hành/PRP/OPRP.','Rủi ro còn lại nhưng chấp nhận được được nêu rõ, cùng người chịu trách nhiệm kiểm soát.','Có ngày, thành viên đội, tham chiếu tài liệu kỹ thuật, bằng chứng kiểm tra xác nhận và hình ảnh.'];
+function checklistView(){return `<div class="eyebrow">CHECKLIST THỰC HÀNH</div>${checks.map((x,i)=>`<label class="check-row"><input type="checkbox" data-check="${i}" ${state().checklist.includes(i)?'checked':''}><span>${esc(x)}</span></label>`).join('')}<div class="row" style="margin-top:17px"><button data-print-check>In phiếu mang về</button><small>Phiếu học tập · Điều chỉnh theo SOP trước khi áp dụng.</small></div>`}
+function scenarioView(){if(scenarioStep>=2)return `<h3>Đã đi hết tình huống</h3><p class="feedback">Bạn đã đi theo các quyết định trong ví dụ ở Phụ lục 5-4: che chắn và dọn dẹp ngay, rồi tách hẳn khâu tiếp nhận và làm sạch ra một cơ sở mới. Mỗi nhà máy phải tự cân nhắc hiệu quả, chi phí và logistics của mình.</p><button data-scenario-reset>Làm lại tình huống</button>`;
+const steps=[{q:'Xét nghiệm định kỳ thấy Salmonella rất cao trong một hũ bơ đậu phộng. Kết quả định kiểu gợi ý nguồn từ chim. Đội đã chọn biện pháp ngắn hạn nào?',opts:['Loại bỏ hết chim trong khu vực và giữ nguyên cách vận chuyển.','Che băng tải chở hũ đã chiết, gia cố rào chắn chim vào xưởng, dọn sạch đậu rơi ngoài trời.','Đổi sang bao không thấm cho quãng vận chuyển ngắn trong nhà máy.'],a:1},{q:'Các biện pháp ngắn hạn được thừa nhận là chưa đủ tin cậy về lâu dài. Phương án dài hạn nào được chọn?',opts:['Tăng lấy mẫu thành phẩm vĩnh viễn và giữ nguyên hiện trạng.','Xây hầm vận chuyển kín giữa kho và xưởng.','Xây cơ sở tiếp nhận, kiểm nghiệm, làm sạch mới tại cảng; đóng lại vào thùng kín, làm sạch được; giao bằng xe kín.'],a:2}];const x=steps[scenarioStep];return `<div class="eyebrow">QUYẾT ĐỊNH ${scenarioStep+1} / 2 · VÍ DỤ PHỤ LỤC 5-4</div><h3>${x.q}</h3>${x.opts.map((o,i)=>`<button class="choice" data-scenario="${i}" data-answer="${x.a}">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}${scenarioWrong?`<div class="feedback bad" role="status">${scenarioWrong}</div>`:''}<small>Chọn để xem hệ quả. Có thể thử lại; không tính vào điểm thi cuối khóa.</small>`}
+function practiceView(m){const module=C.modules[m-1],qs=practiceQuestions(m),s=state();return `<div class="eyebrow">LUYỆN TẬP / BÀI ${m}</div><h2>${esc(module.title)}</h2><p class="lead">Trả lời để nhận giải thích ngay. Có thể chọn lại sau khi ôn; kết quả này không phải điểm thi cuối khóa.</p>${qs.map(q=>{const v=(mode==='trainer'?trainerPractice:s.practice)[q.id],answered=Number.isInteger(v);return `<fieldset class="question-card"><legend>${esc(q.q)}</legend>${q.options.map((o,j)=>`<button class="choice ${v===j?(j===q.answer?'correct':'wrong'):''}" data-practice-q="${q.id}" data-option="${j}" aria-pressed="${v===j}">${String.fromCharCode(65+j)}. ${esc(o)}</button>`).join('')}${answered?`<div class="feedback ${v===q.answer?'':'bad'}" role="status"><b>${v===q.answer?'Chính xác.':'Cần ôn lại.'}</b> ${esc(q.why)} <button data-slide="${q.slide}">Ôn màn hình ${q.slide}</button></div>`:''}</fieldset>`}).join('')}<div class="panel"><h3>${s.completed.includes(m)?'✓ Bài học đã hoàn thành':'Hoàn thành bài học'}</h3><p>Đã xem ${moduleSlides(m).filter(x=>s.seen.includes(x.id)).length}/4 màn hình · Luyện tập đúng ${countPractice(m)}/${qs.length} câu.</p>${mode==='trainer'?'<p class="notice">Chế độ giảng viên không cấp trạng thái hoàn thành. Chuyển về Học viên để ghi nhận việc học.</p>':`<button class="primary" data-complete="${m}" ${!canComplete(m)?'disabled':''}>${m<8?'Hoàn thành & sang bài tiếp →':'Hoàn thành & đến đánh giá →'}</button>`}<button data-slide="${moduleSlides(m)[0].id}">Xem lại bài</button></div>`}
+function shuffled(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startExam(){if(!db.active){askProfile(()=>startExam());return}if(!ready()||mode!=='learner'){notify('Hoàn thành 8 bài ở chế độ Học viên trước khi thi.');return}const s=state();if(s.exam&&!confirm('Bỏ lượt thi đang dở và tạo lượt mới?'))return;const ids=C.modules.flatMap(m=>shuffled(C.questions.filter(q=>q.module===m.id)).slice(0,C.examPerModule).map(q=>q.id));s.exam={ids:shuffled(ids),answers:{},started:new Date().toISOString()};save();go('exam')}
+function examView(){const s=state(),exam=s.exam;if(!exam)return `<div class="eyebrow">ĐÁNH GIÁ CUỐI KHÓA</div><h2>Kiểm tra điều bạn đã hiểu.</h2><p class="lead">16 câu, chọn 2 câu từ mỗi bài trong ngân hàng 24 câu. Điểm và giải thích chỉ xuất hiện sau khi nộp.</p><div class="panel"><div class="grid"><div><h3>Đủ 8 bài</h3><p>Hiện tại: ${s.completed.length}/8 bài hoàn thành.</p></div><div><h3>Ngưỡng ${C.passPercent}%</h3><p>Cần đúng ít nhất ${needed()}/16 câu (${(needed()/16*100).toLocaleString('vi-VN')}%).</p></div><div><h3>Lưu từng lần làm</h3><p>Có thể thi lại. Các lượt đã nộp được giữ trong hồ sơ trên máy.</p></div></div><button class="primary" data-exam-start ${!ready()||mode!=='learner'?'disabled':''}>Bắt đầu đánh giá →</button>${!ready()?'<p class="small" style="margin:12px 0 0">Mở từng bài, xem đủ nội dung và hoàn thành luyện tập để mở bài thi.</p>':''}${mode==='trainer'?'<p class="notice">Chuyển sang Học viên để làm bài đánh giá.</p>':''}</div><button data-go="results">Xem lịch sử kết quả</button>`;
+return `<div class="eyebrow">LƯỢT THI ĐANG THỰC HIỆN</div><h2>Đánh giá cuối khóa</h2><p class="muted">Có thể đổi lựa chọn trước khi nộp. Trả lời đủ 16 câu để chấm điểm.</p><div class="exam-progress row between"><strong id="exam-count">Đã trả lời ${Object.keys(exam.answers).length}/${exam.ids.length}</strong><button class="primary" data-submit-exam>Nộp bài</button></div>${exam.ids.map((id,i)=>{const q=C.questions.find(x=>x.id===id);return `<fieldset class="question-card" id="exam-q-${q.id}"><legend><small>CÂU ${i+1} / ${exam.ids.length} · BÀI ${q.module}</small><br>${esc(q.q)}</legend><div role="radiogroup" aria-label="Đáp án câu ${i+1}">${q.options.map((o,j)=>`<label class="choice ${exam.answers[id]===j?'selected':''}"><input type="radio" name="exam-${id}" data-exam-q="${id}" value="${j}" ${exam.answers[id]===j?'checked':''} style="width:auto;margin:0 10px 0 0">${String.fromCharCode(65+j)}. ${esc(o)}</label>`).join('')}</div></fieldset>`}).join('')}<div class="row"><button class="primary" data-submit-exam>Nộp bài & xem kết quả</button><button data-abandon-exam>Hủy lượt đang làm</button></div>`}
+function submitExam(){const s=state(),e=s.exam;if(!e||mode!=='learner')return;if(!ready()){notify('Cần hoàn thành đủ các bài.');return}const missing=e.ids.find(id=>!Number.isInteger(e.answers[id]));if(missing){notify('Hãy trả lời đủ tất cả câu hỏi trước khi nộp.');$('#exam-q-'+missing).scrollIntoView({block:'center'});return}const score=e.ids.filter(id=>e.answers[id]===C.questions.find(q=>q.id===id).answer).length;const a={...e,score,total:e.ids.length,percent:score/e.ids.length*100,pass:score/e.ids.length*100>=C.passPercent,submitted:new Date().toISOString(),id:'HDRM58-'+Date.now().toString(36).toUpperCase(),learner:{...profile().info},completed:[...s.completed],version:C.version};s.attempts.push(a);s.exam=null;save();go('results');}
+function resultView(){const s=state(),attempt=s.attempts.at(-1);if(!attempt)return `<div class="eyebrow">HỒ SƠ HỌC TẬP</div><h2>Kết quả của bạn</h2><div class="panel"><p>Chưa có lượt đánh giá đã nộp. Bạn đã hoàn thành ${s.completed.length}/8 bài.</p><button class="primary" data-go="exam">Đến đánh giá</button> <button data-export>Xuất tiến độ hiện tại</button></div>`;return `<div class="no-print"><div class="eyebrow">KẾT QUẢ / LƯỢT GẦN NHẤT</div><h2>${attempt.pass?'Bạn đã đạt bài đánh giá.':'Hãy ôn lại rồi thử tiếp.'}</h2><div class="panel"><div class="row between"><div><div class="metric">${attempt.score}<small> / ${attempt.total} câu</small></div><p>${attempt.percent.toLocaleString('vi-VN')}% · ${attempt.pass?'Đạt':'Chưa đạt'} · Ngưỡng ${C.passPercent}%</p></div><div><button class="primary" data-exam-start>Thi lại</button> <button data-export>Xuất JSON</button> <button data-csv>Xuất CSV</button></div></div><div class="table-wrap"><table><thead><tr><th>Nhóm kiến thức</th><th>Kết quả</th><th>Ôn tập</th></tr></thead><tbody>${C.modules.map(m=>{const ids=attempt.ids.filter(id=>C.questions.find(q=>q.id===id)?.module===m.id);const correct=ids.filter(id=>attempt.answers[id]===C.questions.find(q=>q.id===id).answer).length;return `<tr><td>${m.id}. ${esc(m.title)}</td><td>${correct}/${ids.length}</td><td><button data-slide="${moduleSlides(m.id)[0].id}">Ôn bài</button></td></tr>`}).join('')}</tbody></table></div></div></div>${attempt.pass?certificate(attempt):''}<div class="no-print"><h3 style="margin-top:30px">Xem lại đáp án & giải thích</h3>${attempt.ids.map((id,i)=>{const q=C.questions.find(x=>x.id===id),a=attempt.answers[id];return `<details><summary>${i+1}. ${a===q.answer?'✓':'○'} ${esc(q.q)}</summary><p>Bạn chọn: ${esc(q.options[a])}<br><b>Đáp án: ${esc(q.options[q.answer])}</b></p><p>${esc(q.why)}</p><button data-slide="${q.slide}" style="margin-bottom:15px">Ôn màn hình ${q.slide}</button></details>`}).join('')}<div class="panel"><h3>Lịch sử ${s.attempts.length} lượt thi</h3>${[...s.attempts].reverse().map(a=>`<div class="history-item"><b>${a.score}/${a.total} · ${a.pass?'Đạt':'Chưa đạt'}</b> <small>${new Date(a.submitted).toLocaleString('vi-VN')}</small><br><small>${esc(a.id)}</small></div>`).join('')}</div></div>`}
+function certificate(a){return `<section id="cert-area"><div class="row no-print" style="margin-top:25px"><button class="primary" data-print-cert>In / lưu PDF xác nhận</button><small>Chọn “Lưu dưới dạng PDF” trong hộp thoại in của trình duyệt.</small><label>Họ tên in trên xác nhận (tùy chọn)<input id="cert-name" maxlength="80" autocomplete="name" value="${esc(a.learner.name)}" placeholder="Có thể để trống"></label></div><div class="certificate"><div class="eyebrow">HDRM ACADEMY · ĐÀO TẠO NỘI BỘ</div><h2>XÁC NHẬN HOÀN THÀNH KHÓA HỌC</h2><div class="cert-line"></div><p class="learner-name">${esc(a.learner.name)||'……………………………………'}</p><p>Đã hoàn thành 8 bài học và bài đánh giá</p><h3>${esc(C.title)}</h3><p>Điểm: <b>${a.score}/${a.total} · ${a.percent.toLocaleString('vi-VN')}%</b></p><p>Ngày hoàn thành: ${new Date(a.submitted).toLocaleDateString('vi-VN')}</p><div class="cert-line"></div><small>Nội dung biên soạn từ EHEDG Doc. 58, tháng 5/2024 · Khóa ${esc(C.id)} · v${esc(a.version)}</small><small>Mã bản ghi cục bộ: ${esc(a.id)}</small><small>Biên soạn khóa học: Đặng Thanh Bình · dangthanhbinh53@gmail.com</small><small style="margin-top:15px">Đây là xác nhận học tập nội bộ do ứng dụng tạo từ dữ liệu trên máy.<br>Không phải chứng nhận của EHEDG; chưa xác minh danh tính hoặc năng lực thực hành.</small></div></section>`}
+function resources(){return `<div class="eyebrow">TRA CỨU & MANG VỀ CÔNG VIỆC</div><h2>Tài liệu, công cụ & phạm vi</h2><p class="lead">Các bài học dẫn về trang và mục của tài liệu gốc để QA, kỹ thuật và giảng viên kiểm tra lại.</p><div class="panel"><h3>Nguồn chính</h3><p><b>EHEDG Doc. 58 — Hygienic Design Risk Management.</b><br>May 2024 · 33 trang nội dung chính, kèm phụ lục checklist và ví dụ · © EHEDG.</p><p>Biên soạn tiếng Việt từ PDF do người dùng cung cấp. Bản tiếng Anh là bản chính thức. App không bao gồm toàn bộ PDF và không xác nhận các tiêu chuẩn, quy định viện dẫn trong bản 2024 là phiên bản hiện hành.</p><p class="notice">Khi dùng để thiết kế, mua sắm hoặc xây SOP: đối chiếu bản tài liệu gốc, tiêu chuẩn áp dụng, yêu cầu địa phương, các hướng dẫn EHEDG liên quan, thông tin của nhà cung cấp thiết bị, đánh giá rủi ro và tiêu chí đã được cơ sở phê duyệt.</p><ol class="source-index">${C.modules.map(m=>`<li><b>${esc(m.title)}</b><br><small>${moduleSlides(m.id).map(s=>`${s.id}: ${esc(s.source)}`).join(' · ')}</small></li>`).join('')}</ol></div><div class="panel"><h3>Bảng thuật ngữ ngắn</h3><div class="table-wrap"><table><tbody>${[['HD','Thiết kế vệ sinh: thiết kế nhà xưởng, thiết bị, tiện ích để chúng vận hành vệ sinh và hỗ trợ GMP'],['HDRM / HDRA','Quản lý rủi ro thiết kế vệ sinh / Đánh giá rủi ro thiết kế vệ sinh'],['Rủi ro vệ sinh','Khả năng mối nguy hoặc chất nhiễm làm nhiễm dòng sản phẩm qua xâm nhập, tích tụ hoặc phát triển'],['Ingress · Accumulation · Growth','Xâm nhập · Tích tụ · Phát triển: ba cơ chế nhiễm'],['Legacy','Nhà xưởng, thiết bị đang được doanh nghiệp sử dụng'],['Assigned / Unassigned','Đặt riêng cho sản phẩm, quy trình, người dùng cụ thể / thiết kế trước cho nhiều ứng dụng chưa biết'],['URS','Đặc tả yêu cầu người dùng: các yêu cầu cốt lõi đối với tài sản'],['IFU','Thông tin sử dụng mà nhà cung cấp phải giao cho khách hàng'],['PRP','Chương trình tiên quyết: điều kiện và hoạt động cơ bản để duy trì an toàn thực phẩm'],['Kiểm soát kỹ thuật','Biện pháp giảm rủi ro bị động: phát hiện rò, giám sát áp suất, độ dẫn điện, nhiệt độ, dò kim loại, X-quang'],['TCO','Tổng chi phí sở hữu: chi phí đầu tư và chi phí vận hành trong tuổi thọ xác định'],['Verification / Validation','Kiểm tra xác nhận đã làm đúng và đủ / Thẩm định hiệu lực trong sử dụng thật']].map(x=>`<tr><th>${x[0]}</th><td>${x[1]}</td></tr>`).join('')}</tbody></table></div></div><div class="panel"><h3>Phiếu áp dụng tại cơ sở</h3><p>Chọn một thiết bị, một phòng hoặc một dự án thực tế. Ghi phạm vi, rủi ro ưu tiên, biện pháp và người chịu trách nhiệm. Phiếu cần được cơ sở duyệt trước khi đưa vào SOP.</p>${checklistView()}</div><section class="author"><span class="avatar" aria-hidden="true">ĐB</span><div><small>Biên soạn & thiết kế khóa học</small><b>Đặng Thanh Bình</b><a href="mailto:dangthanhbinh53@gmail.com">dangthanhbinh53@gmail.com</a><p>© 2026 Đặng Thanh Bình. Bản quyền thuộc về tác giả đối với phần biên soạn tiếng Việt, ví dụ minh họa, thiết kế và phần mềm khóa học. Nội dung gốc EHEDG Doc. 58 © EHEDG.</p></div></section><div class="panel"><h3>Dữ liệu & cách sử dụng</h3><p>App chạy trong một file HTML, không gửi điểm hoặc thông tin học viên tới máy chủ. Không cần nhập thông tin cá nhân. Tiến độ lưu trong trình duyệt hiện tại; xóa dữ liệu trình duyệt hoặc chuyển máy có thể mất tiến độ.</p><p>Chức năng đọc dùng Google Translate TTS giống app mẫu: tiếng Việt, chia đoạn ngắn, thử tw-ob rồi gtx khi có lỗi. Cần Internet; lời thuyết minh được gửi tới Google, không gửi hồ sơ học viên. Dịch vụ có thể chặn hoặc giới hạn yêu cầu; khi không phát được, app dừng và cho phép đọc lại hoặc xem thủ công.</p><div class="row"><button data-export>Xuất hồ sơ JSON</button><button data-csv>Xuất lịch sử CSV</button><button data-profile>Đổi học viên</button><button data-reset>Xóa tiến độ học</button></div><p class="small" style="margin-top:15px">File xuất chứa thông tin học viên. JSON là bản lưu để kiểm tra/tổng hợp; bản này chưa có chức năng nhập phục hồi. CSV gồm các lượt thi đã nộp.</p></div><div id="print-checklist" hidden>${printChecklist()}</div>`}
+function printChecklist(){return `<h2>Phiếu áp dụng · Nội dung báo cáo HDRM</h2><p>Khóa học từ EHEDG Doc.58 (2024) · Phiếu học tập, chưa phải biểu mẫu chính thức.</p><p>Người học: ................................................ Bộ phận: ................................</p><p>Thiết bị / phòng / dây chuyền được đánh giá: ..................................................</p><p>Giai đoạn vòng đời & mục đích sử dụng: ........................................................</p><p>Thành viên đội HDRM: ......................................................................................</p><ul>${checks.map(x=>`<li>□ ${x}</li>`).join('')}</ul><p>Rủi ro ưu tiên / biện pháp / người phụ trách: ..................................................</p><p>...................................................................................................................</p><p>Người xem xét: ..................................... Ngày: ..........................................</p><p><small>Tham chiếu: §7, tr.32; Phụ lục 5. Điều chỉnh theo hệ thống quản lý và tiêu chí của cơ sở.</small></p>`}
+function fitDeck(){const el=document.querySelector('.lesson');if(!el)return;el.style.setProperty('--deck-zoom','1');if(!document.body.classList.contains('present'))return;const avail=innerHeight-28;let z=1;for(let i=0;i<10;i++){const height=el.getBoundingClientRect().height;if(!height)break;const next=Math.min(1.7,Math.max(.5,z*Math.pow(avail/height,.6)));if(Math.abs(next-z)<.003)break;z=next;el.style.setProperty('--deck-zoom',String(z))}}
+let chromeTimer=null;
+function peekChrome(ms=2600,which='both'){const b=document.body;if(which!=='bottom')b.classList.add('show-top');if(which!=='top')b.classList.add('show-bottom');clearTimeout(chromeTimer);chromeTimer=setTimeout(()=>b.classList.remove('show-top','show-bottom'),ms)}
+function enterPresent(){document.body.classList.add('present');peekChrome(3500);notify('Đưa chuột tới mép trên hoặc mép dưới để hiện thanh điều khiển. Esc để thoát.')}
+document.addEventListener('mousemove',e=>{if(!document.body.classList.contains('present'))return;if(e.clientY<70)peekChrome(2600,'top');else if(e.clientY>innerHeight-110)peekChrome(2600,'bottom')});
+document.addEventListener('touchstart',()=>{if(document.body.classList.contains('present'))peekChrome(4000)},{passive:true});
+document.addEventListener('animationend',e=>{if(e.target.classList&&e.target.classList.contains('lesson'))fitDeck()});
+window.addEventListener('resize',()=>requestAnimationFrame(fitDeck));
+document.addEventListener('toggle',()=>requestAnimationFrame(fitDeck),true);
+function render(){nav();const mainEl=$('#main'),curSlide=route.type==='slide'?C.slides.find(s=>s.id===route.id):null;mainEl.dataset.anim=navDir;navDir='';mainEl.dataset.m=curSlide?curSlide.module:route.type==='practice'?route.id:'';$('#course-progress i').style.width=(curSlide?curSlide.id/C.slides.length*100:route.type==='practice'?moduleSlides(route.id).at(-1).id/C.slides.length*100:['exam','results'].includes(route.type)?100:0)+'%';mainEl.innerHTML=route.type==='slide'?slideView(route.id):route.type==='practice'?practiceView(route.id):route.type==='exam'?examView():route.type==='results'?resultView():route.type==='resources'?resources():home();$('#profile').textContent=db.active?profile().info.id:'Học viên';$('#present').textContent=document.body.classList.contains('present')?'Thoát trình chiếu':'Trình chiếu';$('#role').value=mode;storageStatus();speech.sync();requestAnimationFrame(fitDeck)}
+function askProfile(cb){speech.stop();pending=cb||null;const i=profile().info;$('#emp-id').value=i.id;$('#emp-name').value=i.name;$('#emp-dept').value=i.dept;$('#profile-error').textContent='';$('#profile-dialog').showModal()}
+function exportData(){if(!db.active){notify('Chọn học viên trước khi xuất hồ sơ.');return}download('HDRM58-'+safeName(profile().info.id)+'.json',JSON.stringify({course:{id:C.id,version:C.version,source:C.source},exported:new Date().toISOString(),profile:profile()},null,2),'application/json')}
+function safeName(s){return String(s).replace(/[^\p{L}\p{N}_-]/gu,'_').slice(0,40)||'learner'}
+function download(name,data,type){const url=URL.createObjectURL(new Blob([data],{type:type+';charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)}
+function csv(){if(!db.active)return notify('Chọn học viên trước khi xuất.');const quote=v=>'"'+String(v??'').replace(/^[=+@-]/,"'$&").replace(/"/g,'""')+'"';const rows=[['Mã nhân viên','Họ tên','Bộ phận','Khóa','Phiên bản','Ngày nộp','Đúng','Tổng','Phần trăm','Kết quả','Mã bản ghi'],...state().attempts.map(a=>[a.learner.id,a.learner.name,a.learner.dept,C.id,a.version,a.submitted,a.score,a.total,a.percent,a.pass?'Đạt':'Chưa đạt',a.id])];download('HDRM58-'+safeName(profile().info.id)+'.csv','\ufeff'+rows.map(r=>r.map(quote).join(',')).join('\r\n'),'text/csv')}
+function present(){if(document.body.classList.contains('present')){speech.stop();document.body.classList.remove('present');render();if(document.fullscreenElement)document.exitFullscreen?.();return}if(route.type!=='slide')go('slide',state().lastSlide);enterPresent();speech.auto=true;render();document.documentElement.requestFullscreen?.().catch(()=>notify('Có thể dùng F11 để mở toàn màn hình.'));speech.start()}
+function printMode(kind){speech.stop();if(kind==='cert'){if(route.type!=='results'||!state().attempts.at(-1)?.pass)return;document.body.classList.add('print-cert')}else{let el=$('#print-checklist');if(!el){el=document.createElement('section');el.id='print-checklist';el.hidden=true;el.innerHTML=printChecklist();$('#main').appendChild(el)}document.body.classList.add('print-check')}window.print();setTimeout(()=>document.body.classList.remove('print-cert','print-check'),500)}
+window.addEventListener('afterprint',()=>document.body.classList.remove('print-cert','print-check'));
+// Same Google Translate TTS endpoint and client fallback as the supplied HACCP app.
+// Only course narration is sent; learner records never enter a request URL.
+const speech={audio:new Audio(),available:true,auto:true,stopAtPractice:false,muted:false,token:0,active:false,paused:false,rate:1.2,parts:[],index:0,pending:null,timer:null,advanceTimer:null,message:'Sẵn sàng · Google TTS · cần Internet',loadTimeout:25000,
+ status(t){this.message=t;this.sync();if(/chặn|Không phát được/.test(t)&&document.body.classList.contains('present'))peekChrome(8000)},
+ sync(){const el=$('#audio-status');if(el)el.textContent=this.message;const p=$('[data-pause]');if(p)p.textContent=this.active?(this.paused?'▶ Tiếp tục':'Ⅱ Tạm dừng'):'▶ Phát';const mute=$('[data-mute]');if(mute){mute.textContent=this.muted?'Bật tiếng':'Tắt tiếng';mute.setAttribute('aria-pressed',String(this.muted))}const line=$('#tts-progress');if(line)line.style.width=(this.parts.length?this.index/this.parts.length*100:0)+'%';},
+ url(text,client='tw-ob'){return 'https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&total=1&idx=0&client='+client+'&q='+encodeURIComponent(text)+'&textlen='+text.length},
+ normalize(t){return t.replace(/\bHDRM\b/g,'hát đi a em').replace(/\bHACCP\b/g,'hát xắp').replace(/\bEHEDG\b/g,'i hát i đi gi').replace(/\bCIP\b/g,'xi ai pi').replace(/\bURS\b/g,'iu a ét').replace(/\bIFU\b/g,'ai ép iu').replace(/\bQA\b/g,'kiu ây').replace(/Salmonella/g,'san mô nen la').replace(/Listeria/g,'lít tê ri a').replace(/axit/gi,'a xít').replace(/\s+/g,' ').trim()},
+ split(t){const sentences=this.normalize(t).match(/[^.!?]+[.!?]?/g)||[];const out=[];for(const sentence of sentences){let line='';for(const word of sentence.trim().split(/\s+/)){if((line+' '+word).trim().length>170){if(line)out.push(line);line='';}if(word.length>170){for(let i=0;i<word.length;i+=170)out.push(word.slice(i,i+170));}else line=(line+' '+word).trim();}if(line)out.push(line);}return out},
+ settle(ok){clearTimeout(this.timer);this.timer=null;const resolve=this.pending;this.pending=null;this.audio.onended=null;this.audio.onerror=null;this.audio.onplaying=null;this.audio.onwaiting=null;this.audio.onstalled=null;if(resolve)resolve(ok)},
+ stop(){this.token++;clearTimeout(this.advanceTimer);this.advanceTimer=null;this.active=false;this.paused=false;this.audio.pause();this.settle(false);this.audio.removeAttribute('src');this.audio.load();this.status('Đã dừng đọc.')},
+ speak(text,token){return new Promise(resolve=>{this.pending=resolve;let attemptId=0;const attempt=client=>{const attemptToken=++attemptId;if(token!==this.token){this.settle(false);return}const valid=()=>token===this.token&&attemptToken===attemptId&&!!this.pending;const a=this.audio;const fail=err=>{if(!valid())return;clearTimeout(this.timer);if(err?.name==='NotAllowedError'){this.settle(false);this.status('Trình duyệt chặn âm thanh. Bấm Phát hoặc Đọc lại để tiếp tục.');return}if(client==='tw-ob')attempt('gtx');else{this.settle(false);this.status('Không phát được Google TTS. Kiểm tra Internet rồi bấm Đọc lại; vẫn có thể xem thủ công.')}};this.armTimeout=()=>{clearTimeout(this.timer);if(valid()&&!this.paused)this.timer=setTimeout(()=>fail(),this.loadTimeout)};a.pause();a.onended=()=>{if(valid())this.settle(true)};a.onerror=fail;a.onplaying=()=>{if(valid()){clearTimeout(this.timer);this.timer=null}};a.onwaiting=this.armTimeout;a.onstalled=this.armTimeout;a.src=this.url(text,client);a.playbackRate=this.rate;a.preservesPitch=true;a.muted=this.muted;this.armTimeout();if(!this.paused){try{a.play().catch(fail)}catch(err){fail(err)}}};attempt('tw-ob')})},
+ async start(){this.stop();if(route.type!=='slide')return;const slide=C.slides.find(s=>s.id===route.id);const token=this.token;this.parts=this.split(slide.narration);this.index=0;this.active=true;this.status('Đang tải giọng Google · màn hình '+slide.id);for(this.index=0;this.index<this.parts.length;this.index++){if(token!==this.token)return;while(this.paused){await new Promise(r=>setTimeout(r,80));if(token!==this.token)return}this.status('Google TTS · màn hình '+slide.id+' · đoạn '+(this.index+1)+'/'+this.parts.length);const ok=await this.speak(this.parts[this.index],token);if(token!==this.token)return;if(!ok){this.active=false;this.paused=false;this.audio.pause();this.sync();return}}if(token!==this.token)return;this.status('Đã đọc xong màn hình '+slide.id);if(!this.auto){this.active=false;this.sync();return}this.status('Đã đọc xong · sắp chuyển màn hình');const advance=()=>{if(token!==this.token||!this.auto){this.active=false;this.sync();return}if(this.paused){this.advanceTimer=setTimeout(advance,100);return}this.active=false;const last=moduleSlides(slide.module).at(-1).id;if(this.stopAtPractice&&slide.id===last){go('practice',slide.module);notify('Đã dừng để luyện tập bài '+slide.module+'.');return}if(slide.id===C.slides.at(-1).id){this.status('Đã trình chiếu hết 32 màn hình. Hoàn thành luyện tập các bài để mở đánh giá.');notify('Đã đọc hết khóa học. Việc xem tự động không thay thế luyện tập và bài thi.');return}go('slide',slide.id+1);this.start()};this.advanceTimer=setTimeout(advance,900)},
+ pause(){if(!this.active){this.start();return}if(this.paused){this.paused=false;this.status('Đang tiếp tục đọc');if(this.pending){this.armTimeout?.();this.audio.play().catch(e=>{if(e.name==='NotAllowedError'){this.stop();this.status('Âm thanh bị chặn. Bấm Đọc lại.')}})}}else{this.paused=true;clearTimeout(this.timer);this.audio.pause();this.status('Đã tạm dừng')}this.sync()},
+ setRate(v){this.rate=Number(v);this.audio.playbackRate=this.rate},
+ mute(){this.muted=!this.muted;this.audio.muted=this.muted;this.sync()}
+};
+function beginAutomatic(){const run=()=>{go('slide',state().lastSlide);enterPresent();speech.auto=true;render();document.documentElement.requestFullscreen?.().catch(()=>{});speech.start()};if(!db.active)askProfile(run);else run()}
+function moveSlide(n){const resume=speech.active&&!speech.paused&&document.body.classList.contains('present');go('slide',Math.max(1,Math.min(C.slides.length,n)));if(resume)speech.start()}
+
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;const d=b.dataset;
+if(d.go){go(d.go);return}if(d.slide){moveSlide(+d.slide);return}if(d.practice){go('practice',+d.practice);return}
+if('start'in d){beginAutomatic();return}if('manual'in d){const run=()=>{document.body.classList.remove('present');go('slide',state().lastSlide)};if(!db.active)askProfile(run);else run();return}if('ttsPrev'in d){moveSlide(route.id-1);return}if('ttsNext'in d){moveSlide(route.id+1);return}if('mute'in d){speech.mute();return}
+if('profile'in d){askProfile();return}if('present'in d){present();return}
+if('ahu'in d){$$('[data-ahu]').forEach(x=>x.classList.toggle('active',x===b));$('#ahu-info').textContent=principleInfo[+d.ahu][1];return}
+if('seq'in d){const i=+d.seq,j=i+(+d.delta);[sequence[i],sequence[j]]=[sequence[j],sequence[i]];seqResult='';render();$(`[data-seq="${j}"][data-delta="${d.delta}"]`)?.focus();return}
+if('seqCheck'in d){seqResult=sequence.every((x,i)=>x===SEQ_CORRECT[i])?'Chính xác. Loại bỏ → nguyên tắc thiết kế vệ sinh → kiểm soát kỹ thuật → thông tin sử dụng và quy trình. Càng về sau càng phụ thuộc con người.':'Chưa đúng. Biện pháp chủ động (loại bỏ, rồi nguyên tắc thiết kế vệ sinh) đứng trước; kiểm soát kỹ thuật chỉ phát hiện; hướng dẫn và quy trình phụ thuộc con người nhiều nhất.';$('#seq-result').innerHTML=`<p class="feedback">${seqResult}</p>`;return}
+if('scenario'in d){if(+d.scenario===+d.answer){scenarioStep++;scenarioWrong='';notify(scenarioStep===1?'Đúng với ví dụ: tách biệt ngay tại điểm sản phẩm hở và giảm sức hút với chim.':'Đã hoàn thành tình huống.')}else scenarioWrong=scenarioStep===0?'Chưa đúng với ví dụ. Loại bỏ hẳn chim được coi là không thể hoặc không đáng tin cậy; bao không thấm vẫn bẩn mặt ngoài và mang chất nhiễm vào xưởng.':'Chưa đúng với ví dụ. Hầm vận chuyển bị bác vì đầu tư lớn vào cơ sở cũ và khó bảo đảm làm sạch được; chỉ lấy mẫu thêm thì phụ thuộc con người và không ngăn được xâm nhập.';render();return}
+if('scenarioReset'in d){scenarioStep=0;scenarioWrong='';render();return}
+if('practiceQ'in d){if(mode==='trainer')trainerPractice[+d.practiceQ]=+d.option;else{state().practice[+d.practiceQ]=+d.option;if(db.active)save();}const y=scrollY;render();window.scrollTo(0,y);return}
+if('complete'in d){const m=+d.complete;if(mode!=='learner'||!canComplete(m))return;if(!db.active){askProfile(()=>{notify('Đã chọn hồ sơ. Hãy kiểm tra tiến độ và luyện tập của hồ sơ này.');go('practice',m)});return}if(!state().completed.includes(m))state().completed.push(m);save();notify('Đã hoàn thành bài '+m+'.');if(m<8)go('slide',moduleSlides(m+1)[0].id);else go('exam');return}
+if('examStart'in d){startExam();return}if('submitExam'in d){submitExam();return}if('abandonExam'in d){if(confirm('Hủy các câu trả lời của lượt chưa nộp? Lịch sử lượt đã nộp được giữ.')){state().exam=null;save();render()}return}
+if('export'in d){exportData();return}if('csv'in d){csv();return}if('printCert'in d){printMode('cert');return}if('printCheck'in d){printMode('check');return}
+if('reset'in d){if(db.active&&confirm('Xóa toàn bộ tiến độ và lịch sử thi trên trình duyệt này? Hãy xuất kết quả trước nếu cần giữ.')){profile().state=fresh();save();go('home')}return}
+if('speak'in d){speech.start();return}if('pause'in d){speech.pause();return}if('stop'in d){speech.stop();return}
+});
+document.addEventListener('change',e=>{const d=e.target.dataset;if(d.examQ){const id=+d.examQ;state().exam.answers[id]=+e.target.value;save();const root=e.target.closest('fieldset');root.querySelectorAll('.choice').forEach(x=>x.classList.toggle('selected',x.querySelector('input').checked));$('#exam-count').textContent=`Đã trả lời ${Object.keys(state().exam.answers).length}/${state().exam.ids.length}`;}if('check'in d){const i=+d.check;state().checklist=state().checklist.filter(x=>x!==i);if(e.target.checked)state().checklist.push(i);if(db.active)save()}if(['mx-v','mx-l','mx-i'].includes(e.target.id)){matrixSel={v:+$('#mx-v').value,l:+$('#mx-l').value,i:+$('#mx-i').value};$('#mx-out').innerHTML=matrixTable()}if(e.target.id==='auto-read')speech.auto=e.target.checked;if(e.target.id==='rate')speech.setRate(e.target.value);if(e.target.id==='pause-practice')speech.stopAtPractice=e.target.checked;});
+// (no numeric tools in this course)
+$('#profile-form').addEventListener('submit',e=>{e.preventDefault();const info={id:$('#emp-id').value.trim(),name:$('#emp-name').value.trim(),dept:$('#emp-dept').value.trim()};if(Object.values(info).some(x=>!x)){ $('#profile-error').textContent='Vui lòng nhập đủ thông tin.';return}const key='person:'+info.id.toLocaleUpperCase('vi-VN');const existing=db.profiles[key];if(existing&&(existing.info.name!==info.name||existing.info.dept!==info.dept)&&!confirm('Mã này đã có hồ sơ '+existing.info.name+'. Cập nhật tên/bộ phận? Lượt thi cũ giữ nguyên thông tin lúc nộp.'))return;if(!existing)db.profiles[key]={info,state:fresh()};else existing.info=info;db.active=key;validateState();save();$('#profile-dialog').close();scenarioStep=0;scenarioWrong='';const cb=pending;pending=null;if(cb)cb();else go('home')});
+$('#profile-cancel').onclick=()=>{$('#profile-dialog').close();pending=null};$('#profile-dialog').addEventListener('cancel',()=>pending=null);
+$('#profile').onclick=()=>askProfile();$('#present').onclick=present;$('#menu').onclick=()=>{const open=$('#sidebar').classList.toggle('open');$('#menu').setAttribute('aria-expanded',String(open))};
+$('#theme').onclick=()=>{document.body.classList.toggle('dark');db.theme=document.body.classList.contains('dark')?'dark':'light';save()};
+$('#role').onchange=e=>{speech.stop();mode=e.target.value;if(mode==='trainer'&&route.type==='exam'&&state().exam)go('home');else render();notify(mode==='trainer'?'Chế độ giảng viên: hiện gợi ý, không ghi nhận xem bài.':'Chế độ học viên.');};
+$('#search').addEventListener('input',e=>{const q=fold(e.target.value.trim()),r=$('#search-results');r.hidden=!q;if(!q)return;const found=C.slides.filter(s=>fold([s.title,s.lead,...s.cards.map(c=>c.title+' '+c.text),s.example||''].join(' ')).includes(q));r.innerHTML=found.length?found.map(s=>`<button data-slide="${s.id}"><small>Bài ${s.module} · Màn hình ${s.id}</small><br>${esc(s.title)}</button>`).join(''):'<p class="small">Không tìm thấy. Thử “xâm nhập”, “ma trận”, “URS”…</p>'});
+$('#search-results').addEventListener('click',()=>{$('#search-results').hidden=true;$('#search').value=''});document.addEventListener('click',e=>{if(!e.target.closest('.searchwrap'))$('#search-results').hidden=true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){speech.stop();if(document.body.classList.contains('present')){document.body.classList.remove('present');render()}$('#sidebar').classList.remove('open');$('#search-results').hidden=true;}if($('#profile-dialog').open||/INPUT|TEXTAREA|SELECT|BUTTON/.test(e.target.tagName)||route.type!=='slide')return;if(e.key==='ArrowRight'){e.preventDefault();moveSlide(route.id+1)}if(e.key==='ArrowLeft'){e.preventDefault();moveSlide(route.id-1)}if(e.code==='Space'&&document.body.classList.contains('present')){e.preventDefault();speech.pause()}});
+window.addEventListener('beforeunload',()=>speech.stop());if(db.theme==='dark')document.body.classList.add('dark');document.addEventListener('input',e=>{if(e.target.id!=='cert-name')return;const a=state().attempts.at(-1);if(!a)return;const v=e.target.value.trim();a.learner.name=v;profile().info.name=v;save();const el=$('.certificate .learner-name');if(el)el.textContent=v||'……………………………………'});render();
+</script></body></html>
